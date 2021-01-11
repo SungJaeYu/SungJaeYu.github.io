@@ -1,0 +1,12 @@
+moon9342:
+  username: SungJaeYu # user name : martin
+  name: SungJae Yu # user full name : Martin Luther King
+  url_full: # Homepage url
+  url:
+  bio:
+
+    # 회사정보
+  picture: assets/built/images/economy-author-logo.jpg # author image
+  facebook: # facebook ID
+  twitter: # twitter ID
+  cover: False
