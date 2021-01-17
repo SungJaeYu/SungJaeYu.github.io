@@ -55,5 +55,6 @@ SungJae Yu(유승재)
 
 ### Certification
 
-- Deep Learning Specialization(Coursera)
+- Neural Networks and Deep Learning(Coursera)
+- Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization(Coursera)
 - Engineer Information Communication(Republic of Korea, Ministry of Science and ICT)
