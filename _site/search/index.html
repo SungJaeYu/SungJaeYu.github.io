@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="About" />
+<meta property="og:title" content="Search" />
 <meta property="og:type" content="article" />
 
  
@@ -39,16 +39,16 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>About &middot; SungJae Yu's Blog</title>
+<title>Search &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="SungJae Yu’s Blog for Study
+  content="Search this site
 "
 />
 <meta
   property="og:description"
-  content="SungJae Yu’s Blog for Study
+  content="Search this site
 "
 />
 
@@ -63,8 +63,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/about.html" />
-<meta property="og:url" content="http://localhost:4000/about.html" />
+<link rel="canonical" href="http://localhost:4000/search/" />
+<meta property="og:url" content="http://localhost:4000/search/" />
 
 <link
   rel="alternate"
@@ -163,44 +163,51 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <div id="_yPushState">
   <div class="fade-in">
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
-      
-
-<article class="page" role="article">
-
-  <h1 class="page-title hr" style="padding-bottom:1rem">About</h1>
-
-  <div class="author-body">
-
-  
+      <article class="page" role="article">
+  <header style="margin-bottom:2rem">
+    <h1 class="page-title">Search</h1>
     
   
-
   
-
-  <img
-    src="/assets/img/me.png"
-    class="me"
-    alt="SungJae Yu"
-    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
-    
-  />
+<p class="message">Search this site</p>
 
 
-  
-    <div class="author-body-description">
-      <p>Study Deep Learning and Software Engineering</p>
 
-    </div>
+
+  </header>
+
+  <form action="/search/">
+  <div class="tipue_search_left">
+    <img src="/assets/tipuesearch/search.png"
+    class="tipue_search_icon">
   </div>
-  <div class="markdown-body">
-    <h2 id="about">About</h2>
-
-<p>I am Embedded Software Engineer at Republic of Korea Airforce,<br />
-To study Deep Learning, Embedded Software, Algorithm etc..<br />
-I made this blog</p>
-
+  <div class="tipue_search_right">
+    <input
+      type="text"
+      name="q"
+      id="tipue_search_input"
+      pattern=".{3,}"
+      title="At least 3 characters"
+      required
+    />
   </div>
+  <div style="clear: both"></div>
+</form>
+
+<div id="tipue_search_content"></div>
+
+<script>
+  $(document).ready(function () {
+    $("#tipue_search_input").tipuesearch({
+      wholeWords: false,
+      showTime: false,
+      minimumLength: 1,
+    });
+  });
+</script>
+
 </article>
+
 
 
       
@@ -311,7 +318,7 @@ I made this blog</p>
     <li>
       <input type="checkbox" id="list-item-2"/>
       <div  class="list-wrapper">
-      <a class="sidebar-nav-item active" href="/about.html">About</a>
+      <a class="sidebar-nav-item" href="/about.html">About</a>
        
     </div>
      <ul class="list-body">
