@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Deeplearning
-slug: deeplearning
+title: Computer Science
+slug: computerscience
 category: study
 menu: false
 order: 1

@@ -6,9 +6,109 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Jan 2021 17:57:12 +0900</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2021 17:57:12 +0900</lastBuildDate>
+    <pubDate>Wed, 20 Jan 2021 21:56:11 +0900</pubDate>
+    <lastBuildDate>Wed, 20 Jan 2021 21:56:11 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Compiler, Linker, Builder</title>
+        <description>&lt;h2 id=&quot;compiler&quot;&gt;Compiler&lt;/h2&gt;
+
+&lt;p&gt;First computer is pragrammed by maching language, But Maching Language is so difficult for human to understand
+So, they made some method&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Made text document that express set of machine language&lt;/li&gt;
+  &lt;li&gt;Made program that change text document to machine language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This program is &lt;strong&gt;Compiler&lt;/strong&gt;, and the text document is &lt;strong&gt;source code file, source file&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;linker&quot;&gt;Linker&lt;/h2&gt;
+
+&lt;p&gt;Growing source code size big, they knew writing source code on one file is uncomfortable
+they came up with a method divide source code into multi files
+but this method needs to link multiple source files
+So, they made &lt;strong&gt;Linker&lt;/strong&gt; to link source files&lt;/p&gt;
+
+&lt;h2 id=&quot;builder&quot;&gt;Builder&lt;/h2&gt;
+
+&lt;p&gt;Steps of making excutable file is&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Write source code&lt;/li&gt;
+  &lt;li&gt;Compile source code files&lt;/li&gt;
+  &lt;li&gt;Link object files that compiler made&lt;/li&gt;
+  &lt;li&gt;Excutable File is created&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;this steps is &lt;strong&gt;Build&lt;/strong&gt;, and program to build is &lt;strong&gt;Builder&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Compile + Link = Build&lt;br /&gt;
+Compiler + Linker = Builder&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/20/cs-clb.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/cs-clb.html</guid>
+        
+        <category>computerscience</category>
+        
+        
+        <category>study</category>
+        
+      </item>
+    
+      <item>
+        <title>Classification Evaluation Metrices</title>
+        <description>&lt;h2 id=&quot;precision--recall&quot;&gt;Precision &amp;amp; Recall&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/study/ML/Precisionrecall.svg&quot; alt=&quot;Precision &amp;amp; Recall&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;precision&quot;&gt;Precision&lt;/h2&gt;
+
+&lt;p&gt;In a classification task, the &lt;strong&gt;Precision&lt;/strong&gt; for a class is the number of true positives&lt;br /&gt;
+divided by the total number of elements labelled as belonging to the positive class&lt;br /&gt;
+&lt;img src=&quot;/assets/img/study/ML/Precision.png&quot; alt=&quot;Precision&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;recall&quot;&gt;Recall&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Recall&lt;/strong&gt; is defined as the number of true positives&lt;br /&gt;
+divided by the total number of elements that actually belong to the positive class&lt;br /&gt;
+&lt;img src=&quot;/assets/img/study/ML/Recall.png&quot; alt=&quot;Recall&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;precision-recall-trade-off&quot;&gt;Precision-Recall Trade-off&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/study/ML/precision-recall-tradeoff.png&quot; alt=&quot;Precision-Recall Trade-off&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In an ideal scenario is both precision and recall can get maximum value 1.0&lt;br /&gt;
+But in most of practical situations,&lt;br /&gt;
+there is noise in the dataset and the dataset is not perfectly separable.&lt;/p&gt;
+
+&lt;h2 id=&quot;accuracy&quot;&gt;Accuracy&lt;/h2&gt;
+
+&lt;p&gt;Precision and recall use only True situation, But we can think about false&lt;br /&gt;
+Accuracy uses False situation&lt;br /&gt;
+&lt;img src=&quot;/assets/img/study/ML/Accuracy.png&quot; alt=&quot;Accuracy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Accuracy is an evaluation metric that can most intuitively represent the performance of the model. However, there is something to consider. &lt;em&gt;Bias of domain&lt;/em&gt;&lt;br /&gt;
+Therefore, we need a metric to supplement this.&lt;/p&gt;
+
+&lt;h2 id=&quot;f1-score&quot;&gt;F1 Score&lt;/h2&gt;
+
+&lt;p&gt;F1 score is the harmonic mean of Precision and Recall.&lt;br /&gt;
+&lt;img src=&quot;/assets/img/study/ML/F1score.png&quot; alt=&quot;F1-score&quot; /&gt;
+When the data label is unbalanced, F1 score can evaluate with just one number.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/20/ML-ClEvMet.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/ML-ClEvMet.html</guid>
+        
+        <category>machinelearning</category>
+        
+        
+        <category>study</category>
+        
+      </item>
     
   </channel>
 </rss>

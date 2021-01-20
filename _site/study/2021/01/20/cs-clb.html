@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Deeplearning" />
+<meta property="og:title" content="Compiler, Linker, Builder" />
 <meta property="og:type" content="article" />
 
  
@@ -39,16 +39,18 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>Deeplearning &middot; SungJae Yu's Blog</title>
+<title>Compiler, Linker, Builder &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="
+  content="Compiler
+
 "
 />
 <meta
   property="og:description"
-  content="
+  content="Compiler
+
 "
 />
 
@@ -63,8 +65,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/tag/study-deeplearning/" />
-<meta property="og:url" content="http://localhost:4000/tag/study-deeplearning/" />
+<link rel="canonical" href="http://localhost:4000/study/2021/01/20/cs-clb.html" />
+<meta property="og:url" content="http://localhost:4000/study/2021/01/20/cs-clb.html" />
 
 <link
   rel="alternate"
@@ -74,7 +76,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 />
 
 
-<link rel="prev" href="http://localhost:4000/tag/study-backend/" />
+<link rel="prev" href="http://localhost:4000/study/2021/01/20/ML-ClEvMet.html" />
  
 
 <link
@@ -167,25 +169,225 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
 
+<article id="post-study/2021/01/20/cs-clb" class="post" role="article">
+  <header>
+
+    <h1 class="post-title">
+      
+        Compiler, Linker, Builder
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2021-01-20T00:00:00+09:00">20 Jan 2021</time>
+      
 
 
-<h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading" role="navigation">
-  <ul>
-    <li class="pagination-item older" >
+
+
+
+
+
+
+
+in <a href="/category/study/" data-flip="title">Study</a>
+
       
-        <span>Older</span>
+
+
+
+
+
+
+
+
+
+on <a href="/tag/study-computerscience/" data-flip="title">Computer Science</a>
+
+    </p>
+
+    
+  <div class="hr" style="padding-bottom:0"></div>
+
+
+  </header>
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+    <div class="markdown-body">
+
+
+
+<style>
+.googleads { display:block; width:98%; height: 280px; }
+@media(min-width: 600px) { .googleads { display: none; } }
+</style>
+<!--구글 에드센스
+<ins class="adsbygoogle myAd1190"
+    data-ad-client="ca-pub-1200017190012992"
+></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+-->
+      <!--게시물 내용-->
+      <h2 id="compiler">Compiler</h2>
+
+<p>First computer is pragrammed by maching language, But Maching Language is so difficult for human to understand
+So, they made some method</p>
+
+<ul>
+  <li>Made text document that express set of machine language</li>
+  <li>Made program that change text document to machine language</li>
+</ul>
+
+<p>This program is <strong>Compiler</strong>, and the text document is <strong>source code file, source file</strong></p>
+
+<h2 id="linker">Linker</h2>
+
+<p>Growing source code size big, they knew writing source code on one file is uncomfortable
+they came up with a method divide source code into multi files
+but this method needs to link multiple source files
+So, they made <strong>Linker</strong> to link source files</p>
+
+<h2 id="builder">Builder</h2>
+
+<p>Steps of making excutable file is</p>
+
+<ul>
+  <li>Write source code</li>
+  <li>Compile source code files</li>
+  <li>Link object files that compiler made</li>
+  <li>Excutable File is created</li>
+</ul>
+
+<p>this steps is <strong>Build</strong>, and program to build is <strong>Builder</strong></p>
+
+<p><strong>Compile + Link = Build<br />
+Compiler + Linker = Builder</strong></p>
+
+      <br/>
+      <!-- 블로그-하단-반응형 
+      <br/>
       
-    </li>
-    <li class="pagination-item newer" >
+      <ins class="adsbygoogle"
+          style="display:block; width:100%; height:300px;"
+          data-ad-client="ca-pub-1200017190012992"
+          data-ad-format="auto"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
       
-        <span>Newer</span>
+    </div>
+    
+    <script>
+
+    </script>
+    -->
+  
+
+</article>
+
+  <hr class="dingbat" />
+<!--공유, 트위터, 페이스북-->
+  <div class="share">
+      <h2>Share this post</h2>
+      <div class="share-body">
+        <a href="http://twitter.com/share?text=Compiler, Linker, Builder&amp;url=http://localhost:4000/study/2021/01/20/cs-clb.html"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="icon-twitter">
+            </span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/study/2021/01/20/cs-clb.html"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="icon-facebook">
+            </span>
+        </a>
+    </div>
+  </div>
+  <br/>
+
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  <h2 class="page-title hr">
+    About
+  </h2>
+<div class="author-body">
+  
+    
+  
+
+  
+
+  <img
+    src="/assets/img/me.png"
+    class="me"
+    alt="SungJae Yu"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
+    
+  />
+
+
+  
+  <div class="author-body-description">
+    <p>Study Deep Learning and Software Engineering</p>
+
+  </div>
+</div>
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
       
-    </li>
+      
+      
+        
+          
+          
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/2021/01/20/ML-ClEvMet.html" data-flip="title">
+    <span>Classification Evaluation Metrices</span>
+  </a>
+  <small><time datetime="2021-01-20T00:00:00+09:00">
+    20 Jan 2021
+  </time></small>
+</li>
+
+        
+      
+    
   </ul>
-</nav>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
+
+</aside>
 
       
 
@@ -287,6 +489,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
          
            
          
+           
+         
      </ul>
     </li>
 
@@ -300,6 +504,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     </div>
      <ul class="list-body">
        
+           
+         
            
          
            
@@ -325,6 +531,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
          
            
          
+           
+         
      </ul>
     </li>
 
@@ -340,13 +548,19 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
        
            
              <li>
-               <a class="sidebar-nav-subitem" href="/tag/study-backend/">Backend</a>
+               <a class="sidebar-nav-subitem" href="/tag/study-computerscience/">Computer Science</a>
              </li>
            
          
            
              <li>
-               <a class="sidebar-nav-subitem active" href="/tag/study-deeplearning/">Deeplearning</a>
+               <a class="sidebar-nav-subitem" href="/tag/study-machinelearning/">Machinelearning</a>
+             </li>
+           
+         
+           
+             <li>
+               <a class="sidebar-nav-subitem" href="/tag/study-backend/">Backend</a>
              </li>
            
          
@@ -369,6 +583,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     </div>
      <ul class="list-body">
        
+           
+         
            
          
            
