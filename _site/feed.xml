@@ -2,47 +2,153 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SungJae Yu's Blog</title>
-    <description>SungJae Yu's Blog for Study
+    <description>For Study
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jan 2021 21:56:11 +0900</pubDate>
-    <lastBuildDate>Wed, 20 Jan 2021 21:56:11 +0900</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2021 01:06:24 +0900</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2021 01:06:24 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>OSI Model</title>
+        <description>&lt;h1 id=&quot;osi-model&quot;&gt;OSI Model&lt;/h1&gt;
+&lt;p&gt;OSI(Open System Interconnection Reference Model)은 국제표준화기구(ISO)에서 개발한 모델로,&lt;br /&gt;
+컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 것이다. 일반적으로
+&lt;strong&gt;OSI 7 Layer&lt;/strong&gt;라고 한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;physical-layer&quot;&gt;Physical Layer&lt;/h2&gt;
+&lt;p&gt;물리 계층은 네트워크의 기본 네트워크 하드웨어 전송 기술을 이룬다. &lt;br /&gt;
+네트워크의 높은 수준의 논리 데이터 구조를 기초로 하는 필수 계층이다.&lt;br /&gt;
+다양한 특징의 하드웨어 기술이 접목되어 있기에 OSI 아키텍처에서 가장 복잡한 계층으로 간주된다.&lt;br /&gt;
+Switch 이전에 사용되던 &lt;strong&gt;Hub&lt;/strong&gt;와, &lt;strong&gt;Cabling&lt;/strong&gt; 등이 물리 계층이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;cable&quot;&gt;Cable&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Cable&lt;/strong&gt;은 두 종류로 나누어 진다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fiber&lt;/li&gt;
+  &lt;li&gt;Copper&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fiber&lt;/strong&gt;는 일명 광케이블로 빛을 전송하는 한개 혹은 여러개의 optical fibers(광섬유)로 구성된다.&lt;br /&gt;
+Fiber optics는 전송속도가 빠르고 이동간 에너지 손실이 없기 때문에 원거리 통신에 사용가능하다.
+또한 전파 간섭이 없기 때문에 간섭을 통한 신호 에러도 피할 수 있다. &lt;br /&gt;
+하지만 광섬유를 통한 광신호를 전자 신호로 변화하여 사용해야 하며,&lt;br /&gt;
+제조 물성이 한정적이며, 공정 다양성이 상대적으로 적고 제조가 까다롭다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Copper&lt;/strong&gt;은 Fiber cable의 단점이 장점이나,&lt;br /&gt;
+Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;datalink-layer&quot;&gt;Datalink Layer&lt;/h2&gt;
+&lt;p&gt;데이터 링크 계층은 포인트 투 포인트 간 신뢰성 있는 전송을 보장하기 위한 계층으로 CRC 기반의 오류 제어와 흐름제어가 필요하다. 네트워크 위의 개체들간 데이터를 전달하고, 물리 계층에서 발생할 수 있는 오류를 찾아 내고, 수정하는 데 필요한 기능적, 절차적 수단을 제공한다. 주소 값은 물리적으로 할당 받는 MAC 주소를 사용한다.&lt;br /&gt;
+&lt;em&gt;MAC 주소는 네트워크 카드가 만들어질때 설정되는 고유한 물리 주소이다.&lt;/em&gt;&lt;br /&gt;
+데이터 링크 계층의 예는 이더넷이다. 이 외에도 HDLC나 ADCCP 같은 포인트 투 포인트 프로토콜이나&lt;br /&gt;
+패킷 스위칭 네트워크 LLC, ALOHA 같은 근거리 네트워크용 프로토콜이 있다.&lt;br /&gt;
+네트워크 &lt;strong&gt;Bridge(브릿지)&lt;/strong&gt; 나 &lt;strong&gt;Switch(스위치)&lt;/strong&gt; 등이 이 계층에서 동작한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;network-layer&quot;&gt;Network Layer&lt;/h2&gt;
+&lt;p&gt;네트워크 계층은 여러 개의 노드를 거칠 때마다 경로를 찾아주는 역할을 하는 계층이다.
+다양한 길이의 데이터를 네트워크를 통해 전달하고, 그 과정에서 전송 계층이 요구하는 서비스 품질(QoS)를&lt;br /&gt;
+제공하기 위한 기능적, 절차적 수단을 제공한다.&lt;br /&gt;
+네트워크 계층은&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Routing&lt;/li&gt;
+  &lt;li&gt;흐름 제어&lt;/li&gt;
+  &lt;li&gt;세그멘테이션(segmentation/desegmentation)&lt;/li&gt;
+  &lt;li&gt;오류 제어&lt;/li&gt;
+  &lt;li&gt;인터네트워킹(Internetworking)
+등을 수행한다.
+&lt;strong&gt;Router&lt;/strong&gt;가 이 계층에서 동작하고 이 계층에서 동작하는 &lt;strong&gt;Switch&lt;/strong&gt;도 있다.
+&lt;strong&gt;IP(Internet Protocol)&lt;/strong&gt; 이 Network Layer 프로토콜이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;transport-layer&quot;&gt;Transport Layer&lt;/h2&gt;
+&lt;p&gt;전송 계층은 양 끝단 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해주며,
+상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다.&lt;br /&gt;
+시퀀스 넘버 기반의 오류 제어 방식을 사용한다. 전송 계층은 특정 연결의 유효성을 제어하고,&lt;br /&gt;
+일부 프로토콜은 상태 개념이 있고, 연결 기반이다. 이는 전송 계층이 패킷들의 전송이 유효한지 확인하고&lt;br /&gt;
+전송 실패한 패킷들을 다시 전송한다는 것을 뜻한다.
+&lt;strong&gt;TCP(Transmission Control Protocol)&lt;/strong&gt; 과 &lt;strong&gt;UDP(User Datagram Protocl)&lt;/strong&gt; 가 전송 계층의 프로토콜이다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;session-layer&quot;&gt;Session Layer&lt;/h2&gt;
+&lt;p&gt;세션 계층은 양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Duplex&lt;/li&gt;
+  &lt;li&gt;Half-duplex&lt;/li&gt;
+  &lt;li&gt;Full-duplex
+의 통신과 함께 체크 포인팅과 유휴, 종류, 다시 시작 과정 등을 수행한다.&lt;br /&gt;
+이 계층은 TCP/IP 세션을 만들고 없애는 책임을 진다.
+통신하는 사용자들을 동기화하고 오류복구 명령들을 일괄적으로 다룬다.&lt;/li&gt;
+  &lt;li&gt;통신을 하기 위한 세션을 확립/유지/중단 (운영체제가 처리)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;presentation-layer&quot;&gt;Presentation Layer&lt;/h2&gt;
+&lt;p&gt;표현 계층은 코드 간의 번역을 담당하여 사용자 시스템에서 데이터의 형식상 차이를 다루는 부담을&lt;br /&gt;
+응용 계층으로 부터 덜어준다. MIME 인코딩이나 암호화 등의 동작이 표현 계층에서 이루어진다.&lt;br /&gt;
+&lt;em&gt;예로 EBCDIC로 인코딩된 문서 파일을 ASCII로 인코딩된 파일로 바꾸어주는 것이 표현 계층의 역할이다&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;사용자의 명령어를 완성 및 결과 표현&lt;/li&gt;
+  &lt;li&gt;포장/압축/암호화&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;application-layer&quot;&gt;Application Layer&lt;/h2&gt;
+&lt;p&gt;응용 계층은 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. 일반적인 응용 서비스는&lt;br /&gt;
+관련된 응용 프로세스들 사이의 전환을 제공한다. 응용 서비스의 예로, 가성 터미널 등이 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;네트워크 소프트웨어 UI&lt;/li&gt;
+  &lt;li&gt;사용자의 입출력&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/22/CS-osi.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/22/CS-osi.html</guid>
+        
+        <category>computerscience</category>
+        
+        
+        <category>study</category>
+        
+      </item>
     
       <item>
         <title>Compiler, Linker, Builder</title>
         <description>&lt;h2 id=&quot;compiler&quot;&gt;Compiler&lt;/h2&gt;
 
-&lt;p&gt;First computer is pragrammed by maching language, But Maching Language is so difficult for human to understand
-So, they made some method&lt;/p&gt;
+&lt;p&gt;초기에 컴퓨터는 기계어로 프로그래밍 되었다. 하지만 기계어는 인간이 해석하기에 굉장히 어렵기때문에 새로운 방법이 필요했다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Made text document that express set of machine language&lt;/li&gt;
-  &lt;li&gt;Made program that change text document to machine language&lt;/li&gt;
+  &lt;li&gt;기계어 집합을 표현하는 텍스트 문서를 만든다.&lt;/li&gt;
+  &lt;li&gt;텍스트 문서를 기계어로 변환하는 프로그램을 만든다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This program is &lt;strong&gt;Compiler&lt;/strong&gt;, and the text document is &lt;strong&gt;source code file, source file&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;이 프로그램이 &lt;strong&gt;Compiler&lt;/strong&gt; 이고,  텍스트 문서는 &lt;strong&gt;Source Code File&lt;/strong&gt; 또는 &lt;strong&gt;Source File&lt;/strong&gt;이다.&lt;/p&gt;
 &lt;h2 id=&quot;linker&quot;&gt;Linker&lt;/h2&gt;
 
-&lt;p&gt;Growing source code size big, they knew writing source code on one file is uncomfortable
-they came up with a method divide source code into multi files
-but this method needs to link multiple source files
-So, they made &lt;strong&gt;Linker&lt;/strong&gt; to link source files&lt;/p&gt;
-
+&lt;p&gt;소스코드의 규모가 커지면서, 모든 소스코드를 한 파일안에 작성하는것은 불편하고 비효율적이었다.&lt;br /&gt;
+따라서 한 소스 파일을 여러 소스 파일로 분리하는 방법이 창안되었다.&lt;br /&gt;
+하지만 여러 소스 파일을 연결해야 하기때문에,
+&lt;strong&gt;Linker&lt;/strong&gt;라는 프로그램이 만들어졌다.&lt;/p&gt;
 &lt;h2 id=&quot;builder&quot;&gt;Builder&lt;/h2&gt;
 
-&lt;p&gt;Steps of making excutable file is&lt;/p&gt;
+&lt;p&gt;실행 파일을 만드는 절차는 아래와 같다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Write source code&lt;/li&gt;
-  &lt;li&gt;Compile source code files&lt;/li&gt;
-  &lt;li&gt;Link object files that compiler made&lt;/li&gt;
+  &lt;li&gt;Write Source Code File&lt;/li&gt;
+  &lt;li&gt;Compile Source Code&lt;/li&gt;
+  &lt;li&gt;Link object files that Compiler made&lt;/li&gt;
   &lt;li&gt;Excutable File is created&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;this steps is &lt;strong&gt;Build&lt;/strong&gt;, and program to build is &lt;strong&gt;Builder&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이 절차를 &lt;strong&gt;Build&lt;/strong&gt;한다고 하고, 이 때 사용되는 프로그램을 &lt;strong&gt;Builder&lt;/strong&gt;라고 한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Compile + Link = Build&lt;br /&gt;
 Compiler + Linker = Builder&lt;/strong&gt;&lt;/p&gt;
@@ -66,13 +172,15 @@ Compiler + Linker = Builder&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;precision&quot;&gt;Precision&lt;/h2&gt;
 
-&lt;p&gt;In a classification task, the &lt;strong&gt;Precision&lt;/strong&gt; for a class is the number of true positives&lt;br /&gt;
+&lt;p&gt;머신러닝에서 분류 작업을 할 때, &lt;strong&gt;Precision&lt;/strong&gt;은 Positive로 분류된 element 중 실제 Positive element의 비율이다.&lt;br /&gt;
+In a classification task, the &lt;strong&gt;Precision&lt;/strong&gt; for a class is the number of true positives&lt;br /&gt;
 divided by the total number of elements labelled as belonging to the positive class&lt;br /&gt;
 &lt;img src=&quot;/assets/img/study/ML/Precision.png&quot; alt=&quot;Precision&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;recall&quot;&gt;Recall&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Recall&lt;/strong&gt; is defined as the number of true positives&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Recall&lt;/strong&gt;은 실제 Positive class 중 positive로 올바르게 분류된 것의 비율이다.
+&lt;strong&gt;Recall&lt;/strong&gt; is defined as the number of true positives&lt;br /&gt;
 divided by the total number of elements that actually belong to the positive class&lt;br /&gt;
 &lt;img src=&quot;/assets/img/study/ML/Recall.png&quot; alt=&quot;Recall&quot; /&gt;&lt;/p&gt;
 
@@ -80,24 +188,29 @@ divided by the total number of elements that actually belong to the positive cla
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/study/ML/precision-recall-tradeoff.png&quot; alt=&quot;Precision-Recall Trade-off&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In an ideal scenario is both precision and recall can get maximum value 1.0&lt;br /&gt;
-But in most of practical situations,&lt;br /&gt;
-there is noise in the dataset and the dataset is not perfectly separable.&lt;/p&gt;
+&lt;p&gt;이상적인 시나리오는 &lt;strong&gt;Precision&lt;/strong&gt;과 &lt;strong&gt;Recall&lt;/strong&gt;이 둘 다 1.0인 경우이다.&lt;br /&gt;
+하지만 대부분의 상황에서 이 두가지가 모두 만점을 받게 하긴 어렵다.&lt;br /&gt;
+왜냐하면 대부분의 데이터셋에는 noise가 존재하기 때문에 완벽하게 분리하기란 어렵다.
+따라서 모델은 Threshold를 사용하여 &lt;strong&gt;Precision&lt;/strong&gt;과 &lt;strong&gt;Recall&lt;/strong&gt;의 trade-off를 반영하여 선택되어야 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;accuracy&quot;&gt;Accuracy&lt;/h2&gt;
 
-&lt;p&gt;Precision and recall use only True situation, But we can think about false&lt;br /&gt;
-Accuracy uses False situation&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Precision&lt;/strong&gt;과 &lt;strong&gt;Recall&lt;/strong&gt;은 Positive 상황만 고려한다. 하지만 False 상황 또한 고려할 수 있는 요소이다.&lt;br /&gt;
+&lt;strong&gt;Accuracy&lt;/strong&gt;는 False 상황을 고려하여 계산된다. 이를 통해 False와 True가 모두 고려된 평가를 할 수 있다.
 &lt;img src=&quot;/assets/img/study/ML/Accuracy.png&quot; alt=&quot;Accuracy&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Accuracy is an evaluation metric that can most intuitively represent the performance of the model. However, there is something to consider. &lt;em&gt;Bias of domain&lt;/em&gt;&lt;br /&gt;
-Therefore, we need a metric to supplement this.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Accuracy&lt;/strong&gt;는 가장 직관적으로 모델의 성능을 나타내는 지표이다.&lt;br /&gt;
+그러나, &lt;strong&gt;Bias of Domain&lt;/strong&gt;이 고려되어야 하므로 이를 보완하는 지표가 필요하다.&lt;br /&gt;
+만약 입력 데이터가 불균형 데이터라면 &lt;strong&gt;Accuracy&lt;/strong&gt;는 올바른 평가를 내지 못한다.&lt;br /&gt;
+즉, 데이터가 균형적일때 &lt;strong&gt;Accuracy&lt;/strong&gt;는 좋은 선택이 된다.&lt;/p&gt;
 
 &lt;h2 id=&quot;f1-score&quot;&gt;F1 Score&lt;/h2&gt;
 
-&lt;p&gt;F1 score is the harmonic mean of Precision and Recall.&lt;br /&gt;
-&lt;img src=&quot;/assets/img/study/ML/F1score.png&quot; alt=&quot;F1-score&quot; /&gt;
-When the data label is unbalanced, F1 score can evaluate with just one number.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;F1 Score&lt;/strong&gt;는 &lt;strong&gt;Precision&lt;/strong&gt;과 &lt;strong&gt;Recall&lt;/strong&gt;의 harmonic mean(조화평균)이다.
+&lt;img src=&quot;/assets/img/study/ML/F1score.png&quot; alt=&quot;F1-score&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;F1 Score&lt;/strong&gt;는 불균형 데이터에서도 준수한 성능 측정을 보여준다.
+왜냐하면 사용되는 조화평균이 Precision과 Recall 사이의 불균형을 잘 보정해주기 때문이다.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/study/2021/01/20/ML-ClEvMet.html</link>

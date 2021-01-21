@@ -239,13 +239,15 @@ on <a href="/tag/study-machinelearning/" data-flip="title">Machinelearning</a>
 
 <h2 id="precision">Precision</h2>
 
-<p>In a classification task, the <strong>Precision</strong> for a class is the number of true positives<br />
+<p>머신러닝에서 분류 작업을 할 때, <strong>Precision</strong>은 Positive로 분류된 element 중 실제 Positive element의 비율이다.<br />
+In a classification task, the <strong>Precision</strong> for a class is the number of true positives<br />
 divided by the total number of elements labelled as belonging to the positive class<br />
 <img src="/assets/img/study/ML/Precision.png" alt="Precision" /></p>
 
 <h2 id="recall">Recall</h2>
 
-<p><strong>Recall</strong> is defined as the number of true positives<br />
+<p><strong>Recall</strong>은 실제 Positive class 중 positive로 올바르게 분류된 것의 비율이다.
+<strong>Recall</strong> is defined as the number of true positives<br />
 divided by the total number of elements that actually belong to the positive class<br />
 <img src="/assets/img/study/ML/Recall.png" alt="Recall" /></p>
 
@@ -253,24 +255,29 @@ divided by the total number of elements that actually belong to the positive cla
 
 <p><img src="/assets/img/study/ML/precision-recall-tradeoff.png" alt="Precision-Recall Trade-off" /></p>
 
-<p>In an ideal scenario is both precision and recall can get maximum value 1.0<br />
-But in most of practical situations,<br />
-there is noise in the dataset and the dataset is not perfectly separable.</p>
+<p>이상적인 시나리오는 <strong>Precision</strong>과 <strong>Recall</strong>이 둘 다 1.0인 경우이다.<br />
+하지만 대부분의 상황에서 이 두가지가 모두 만점을 받게 하긴 어렵다.<br />
+왜냐하면 대부분의 데이터셋에는 noise가 존재하기 때문에 완벽하게 분리하기란 어렵다.
+따라서 모델은 Threshold를 사용하여 <strong>Precision</strong>과 <strong>Recall</strong>의 trade-off를 반영하여 선택되어야 한다.</p>
 
 <h2 id="accuracy">Accuracy</h2>
 
-<p>Precision and recall use only True situation, But we can think about false<br />
-Accuracy uses False situation<br />
+<p><strong>Precision</strong>과 <strong>Recall</strong>은 Positive 상황만 고려한다. 하지만 False 상황 또한 고려할 수 있는 요소이다.<br />
+<strong>Accuracy</strong>는 False 상황을 고려하여 계산된다. 이를 통해 False와 True가 모두 고려된 평가를 할 수 있다.
 <img src="/assets/img/study/ML/Accuracy.png" alt="Accuracy" /></p>
 
-<p>Accuracy is an evaluation metric that can most intuitively represent the performance of the model. However, there is something to consider. <em>Bias of domain</em><br />
-Therefore, we need a metric to supplement this.</p>
+<p><strong>Accuracy</strong>는 가장 직관적으로 모델의 성능을 나타내는 지표이다.<br />
+그러나, <strong>Bias of Domain</strong>이 고려되어야 하므로 이를 보완하는 지표가 필요하다.<br />
+만약 입력 데이터가 불균형 데이터라면 <strong>Accuracy</strong>는 올바른 평가를 내지 못한다.<br />
+즉, 데이터가 균형적일때 <strong>Accuracy</strong>는 좋은 선택이 된다.</p>
 
 <h2 id="f1-score">F1 Score</h2>
 
-<p>F1 score is the harmonic mean of Precision and Recall.<br />
-<img src="/assets/img/study/ML/F1score.png" alt="F1-score" />
-When the data label is unbalanced, F1 score can evaluate with just one number.</p>
+<p><strong>F1 Score</strong>는 <strong>Precision</strong>과 <strong>Recall</strong>의 harmonic mean(조화평균)이다.
+<img src="/assets/img/study/ML/F1score.png" alt="F1-score" /></p>
+
+<p><strong>F1 Score</strong>는 불균형 데이터에서도 준수한 성능 측정을 보여준다.
+왜냐하면 사용되는 조화평균이 Precision과 Recall 사이의 불균형을 잘 보정해주기 때문이다.</p>
 
       <br/>
       <!-- 블로그-하단-반응형 
@@ -360,6 +367,22 @@ When the data label is unbalanced, F1 score can evaluate with just one number.</
     
       
       
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/2021/01/22/CS-osi.html" data-flip="title">
+    <span>OSI Model</span>
+  </a>
+  <small><time datetime="2021-01-22T00:00:00+09:00">
+    22 Jan 2021
+  </time></small>
+</li>
+
+        
       
         
         
@@ -462,7 +485,7 @@ When the data label is unbalanced, F1 score can evaluate with just one number.</
         <p>SungJae Yu’s Blog</p>
 
       </div>
-      <p>SungJae Yu’s Blog for Study</p>
+      <p>For Study</p>
   
 
       <br />
