@@ -6,9 +6,46 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2021 01:06:24 +0900</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2021 01:06:24 +0900</lastBuildDate>
+    <pubDate>Sat, 23 Jan 2021 22:53:22 +0900</pubDate>
+    <lastBuildDate>Sat, 23 Jan 2021 22:53:22 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Bayes Errr</title>
+        <description>&lt;h2 id=&quot;bayes-error&quot;&gt;Bayes Error&lt;/h2&gt;
+&lt;p&gt;Bayes error는 모든 machine learning 모델의 &lt;strong&gt;최소 오차&lt;/strong&gt;이다.&lt;br /&gt;
+즉, 모델의 error 참조점이 된다.&lt;br /&gt;
+모델의 Bayes error 기준으로 train error와 test error를 비교하여,&lt;br /&gt;
+모델의 bias를 줄여야 하는지 variance를 줄여야 하는 지 결정할 수 있다.&lt;br /&gt;
+Bayes err는 &lt;strong&gt;human level error&lt;/strong&gt;로 추정 할 수있지만, 요즘에는 인간의 능력치를 넘어서는 기계학습 분야와 모델이 존재하기 때문에&lt;br /&gt;
+모델을 학습시키면서 추정해야 할 수도 있다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bayes err : 2%&lt;/li&gt;
+  &lt;li&gt;train err : 3%&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;test err : 3.5% 
+이 경우에는 Bayes err와 train err의 차이가 1%인 반면에 train과 test err 차이가 0.5%이기 때문에 &lt;strong&gt;bias&lt;/strong&gt;를 줄이는 것을 목표로 해야된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Bayes err : 2%&lt;/li&gt;
+  &lt;li&gt;train err : 3%&lt;/li&gt;
+  &lt;li&gt;test err : 5% 
+이 경우에는 Bayes err와 train err의 차이가 1%, train과 test err 차이가 2%이므로 &lt;strong&gt;variance&lt;/strong&gt;를 줄이기 위해 노력해야함을 알 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 23 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/23/ML-bayeserror.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/23/ML-bayeserror.html</guid>
+        
+        <category>machinelearning</category>
+        
+        
+        <category>study</category>
+        
+      </item>
     
       <item>
         <title>OSI Model</title>
@@ -120,51 +157,6 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
       </item>
     
       <item>
-        <title>Compiler, Linker, Builder</title>
-        <description>&lt;h2 id=&quot;compiler&quot;&gt;Compiler&lt;/h2&gt;
-
-&lt;p&gt;초기에 컴퓨터는 기계어로 프로그래밍 되었다. 하지만 기계어는 인간이 해석하기에 굉장히 어렵기때문에 새로운 방법이 필요했다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;기계어 집합을 표현하는 텍스트 문서를 만든다.&lt;/li&gt;
-  &lt;li&gt;텍스트 문서를 기계어로 변환하는 프로그램을 만든다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이 프로그램이 &lt;strong&gt;Compiler&lt;/strong&gt; 이고,  텍스트 문서는 &lt;strong&gt;Source Code File&lt;/strong&gt; 또는 &lt;strong&gt;Source File&lt;/strong&gt;이다.&lt;/p&gt;
-&lt;h2 id=&quot;linker&quot;&gt;Linker&lt;/h2&gt;
-
-&lt;p&gt;소스코드의 규모가 커지면서, 모든 소스코드를 한 파일안에 작성하는것은 불편하고 비효율적이었다.&lt;br /&gt;
-따라서 한 소스 파일을 여러 소스 파일로 분리하는 방법이 창안되었다.&lt;br /&gt;
-하지만 여러 소스 파일을 연결해야 하기때문에,
-&lt;strong&gt;Linker&lt;/strong&gt;라는 프로그램이 만들어졌다.&lt;/p&gt;
-&lt;h2 id=&quot;builder&quot;&gt;Builder&lt;/h2&gt;
-
-&lt;p&gt;실행 파일을 만드는 절차는 아래와 같다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Write Source Code File&lt;/li&gt;
-  &lt;li&gt;Compile Source Code&lt;/li&gt;
-  &lt;li&gt;Link object files that Compiler made&lt;/li&gt;
-  &lt;li&gt;Excutable File is created&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이 절차를 &lt;strong&gt;Build&lt;/strong&gt;한다고 하고, 이 때 사용되는 프로그램을 &lt;strong&gt;Builder&lt;/strong&gt;라고 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Compile + Link = Build&lt;br /&gt;
-Compiler + Linker = Builder&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/20/cs-clb.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/cs-clb.html</guid>
-        
-        <category>computerscience</category>
-        
-        
-        <category>study</category>
-        
-      </item>
-    
-      <item>
         <title>Classification Evaluation Metrices</title>
         <description>&lt;h2 id=&quot;precision--recall&quot;&gt;Precision &amp;amp; Recall&lt;/h2&gt;
 
@@ -217,6 +209,51 @@ divided by the total number of elements that actually belong to the positive cla
         <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/ML-ClEvMet.html</guid>
         
         <category>machinelearning</category>
+        
+        
+        <category>study</category>
+        
+      </item>
+    
+      <item>
+        <title>Compiler, Linker, Builder</title>
+        <description>&lt;h2 id=&quot;compiler&quot;&gt;Compiler&lt;/h2&gt;
+
+&lt;p&gt;초기에 컴퓨터는 기계어로 프로그래밍 되었다. 하지만 기계어는 인간이 해석하기에 굉장히 어렵기때문에 새로운 방법이 필요했다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기계어 집합을 표현하는 텍스트 문서를 만든다.&lt;/li&gt;
+  &lt;li&gt;텍스트 문서를 기계어로 변환하는 프로그램을 만든다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 프로그램이 &lt;strong&gt;Compiler&lt;/strong&gt; 이고,  텍스트 문서는 &lt;strong&gt;Source Code File&lt;/strong&gt; 또는 &lt;strong&gt;Source File&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;h2 id=&quot;linker&quot;&gt;Linker&lt;/h2&gt;
+
+&lt;p&gt;소스코드의 규모가 커지면서, 모든 소스코드를 한 파일안에 작성하는것은 불편하고 비효율적이었다.&lt;br /&gt;
+따라서 한 소스 파일을 여러 소스 파일로 분리하는 방법이 창안되었다.&lt;br /&gt;
+하지만 여러 소스 파일을 연결해야 하기때문에,
+&lt;strong&gt;Linker&lt;/strong&gt;라는 프로그램이 만들어졌다.&lt;/p&gt;
+&lt;h2 id=&quot;builder&quot;&gt;Builder&lt;/h2&gt;
+
+&lt;p&gt;실행 파일을 만드는 절차는 아래와 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Write Source Code File&lt;/li&gt;
+  &lt;li&gt;Compile Source Code&lt;/li&gt;
+  &lt;li&gt;Link object files that Compiler made&lt;/li&gt;
+  &lt;li&gt;Excutable File is created&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 절차를 &lt;strong&gt;Build&lt;/strong&gt;한다고 하고, 이 때 사용되는 프로그램을 &lt;strong&gt;Builder&lt;/strong&gt;라고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Compile + Link = Build&lt;br /&gt;
+Compiler + Linker = Builder&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/20/CS-clb.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/CS-clb.html</guid>
+        
+        <category>computerscience</category>
         
         
         <category>study</category>
