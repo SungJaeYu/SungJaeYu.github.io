@@ -6,18 +6,19 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Jan 2021 22:53:22 +0900</pubDate>
-    <lastBuildDate>Sat, 23 Jan 2021 22:53:22 +0900</lastBuildDate>
+    <pubDate>Sat, 23 Jan 2021 23:05:42 +0900</pubDate>
+    <lastBuildDate>Sat, 23 Jan 2021 23:05:42 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
-        <title>Bayes Errr</title>
+        <title>Bayes Error</title>
         <description>&lt;h2 id=&quot;bayes-error&quot;&gt;Bayes Error&lt;/h2&gt;
-&lt;p&gt;Bayes error는 모든 machine learning 모델의 &lt;strong&gt;최소 오차&lt;/strong&gt;이다.&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Bayes error&lt;/strong&gt;는 모든 machine learning 모델의 &lt;strong&gt;최소 오차&lt;/strong&gt;이다.&lt;br /&gt;
 즉, 모델의 error 참조점이 된다.&lt;br /&gt;
 모델의 Bayes error 기준으로 train error와 test error를 비교하여,&lt;br /&gt;
 모델의 bias를 줄여야 하는지 variance를 줄여야 하는 지 결정할 수 있다.&lt;br /&gt;
-Bayes err는 &lt;strong&gt;human level error&lt;/strong&gt;로 추정 할 수있지만, 요즘에는 인간의 능력치를 넘어서는 기계학습 분야와 모델이 존재하기 때문에&lt;br /&gt;
+&lt;strong&gt;Bayes err&lt;/strong&gt;는 &lt;strong&gt;human level error&lt;/strong&gt;로 추정 할 수있지만,&lt;br /&gt;
+요즘에는 인간의 능력치를 넘어서는 기계학습 분야와 모델이 존재하기 때문에&lt;br /&gt;
 모델을 학습시키면서 추정해야 할 수도 있다.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -27,12 +28,12 @@ Bayes err는 &lt;strong&gt;human level error&lt;/strong&gt;로 추정 할 수있
   &lt;li&gt;Bayes err : 2%&lt;/li&gt;
   &lt;li&gt;train err : 3%&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;test err : 3.5% 
+    &lt;p&gt;test err : 3.5%&lt;br /&gt;
 이 경우에는 Bayes err와 train err의 차이가 1%인 반면에 train과 test err 차이가 0.5%이기 때문에 &lt;strong&gt;bias&lt;/strong&gt;를 줄이는 것을 목표로 해야된다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Bayes err : 2%&lt;/li&gt;
   &lt;li&gt;train err : 3%&lt;/li&gt;
-  &lt;li&gt;test err : 5% 
+  &lt;li&gt;test err : 5%&lt;br /&gt;
 이 경우에는 Bayes err와 train err의 차이가 1%, train과 test err 차이가 2%이므로 &lt;strong&gt;variance&lt;/strong&gt;를 줄이기 위해 노력해야함을 알 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
