@@ -15,7 +15,7 @@ SungJae Yu(유승재)
 </span>
 </center>
 
-<center>MAJOR : Military Information Communication & Computer Science</center>
+<center>MAJOR : Military Digital Convergence(Computer Science & Information Communication & Military System)</center>
 
 <center>Ajou University</center>
 
@@ -30,6 +30,8 @@ SungJae Yu(유승재)
 > Email: ysj8781@gmail.com
 
 > Github : <a href="https://github.com/SungJaeYu">https://github.com/SungJaeYu</a>
+
+> LinkedIn : <a href="https://www.linkedin.com/in/sungjae-yu-582b95203/">https://www.linkedin.com/in/sungjae-yu-582b95203/</a>
 
 ## Education
 
@@ -51,10 +53,10 @@ SungJae Yu(유승재)
 
 - Python
 - C
-- Javascript
 
 ### Certification
 
-- Neural Networks and Deep Learning(Coursera)
-- Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization(Coursera)
+- Neural Networks and Deep Learning(DeepLearning.AI/Coursera)
+- Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization(DeepLearning.AI/Coursera)
+- Technical Support Fundamentals(Google/Coursera)
 - Engineer Information Communication(Republic of Korea, Ministry of Science and ICT)

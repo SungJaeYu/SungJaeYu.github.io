@@ -6,9 +6,85 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Jan 2021 23:05:42 +0900</pubDate>
-    <lastBuildDate>Sat, 23 Jan 2021 23:05:42 +0900</lastBuildDate>
+    <pubDate>Sun, 24 Jan 2021 19:24:56 +0900</pubDate>
+    <lastBuildDate>Sun, 24 Jan 2021 19:24:56 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Training and Testing on different distribution</title>
+        <description>&lt;p&gt;Training을 시킬 때 우리는 많은 데이터셋을 필요로한다.&lt;br /&gt;
+하지만 우리가 학습시킬 수 있는 데이터셋이 많지 않을 때 비슷한 환경의 데이터 셋을 가져와서 학습시킬 수 있다.&lt;br /&gt;
+예를 들어, 핸드폰 이미지 인식을 할 때, 우리가 가지고 있는 데이터 셋이 10000개 뿐이라고 가정하자,&lt;br /&gt;
+하지만 인터넷에 카메라로 찍은 사진 데이터는 20만개가 존재한다.&lt;br /&gt;
+카메라로 찍은 사진 데이터와 핸드폰으로 찍은 사진 데이터는 서로 다르다. 하지만 핸드폰 이미지 인식을 학습시킬 때,&lt;br /&gt;
+카메라로 찍은 데이터를 사용하여 정확도를 높일 수 있다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;데이터-구성&quot;&gt;데이터 구성&lt;/h2&gt;
+&lt;p&gt;위 예에서 사용할 수 있는 데이터 구성은 이렇다.&lt;/p&gt;
+&lt;h3 id=&quot;1-option-1&quot;&gt;1. Option 1&lt;/h3&gt;
+&lt;p&gt;카메라 데이터와 핸드폰 데이터를 무작위로 섞은 뒤,&lt;br /&gt;
+흔히 하는 대로 적절한 비율로 Train, Dev, Test로 분리한다.&lt;br /&gt;
+하지만, 이렇게 할경우 Dev, Test Set이 우리가 원하는 환경과 다르게 된다.
+우리의 목표는 핸드폰 이미지를 인식하는 것이다.&lt;br /&gt;
+하지만 카메라 이미지를 Dev, Test Set에 놓는 것은 옳지 못한 결과를 낼 수 있다.&lt;br /&gt;
+즉 이 방법은 옳지 못하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-option-2&quot;&gt;2. Option 2&lt;/h3&gt;
+&lt;p&gt;우리가 원하는 결과를 얻기 위해 Dev, Test Set은 핸드폰 이미지로만 구성한다.
+그리고 Train Set에만 카메라 이미지를 포함시킨다.
+즉, Train Set을 20만개의 카메라 데이터 + 5000개의 핸드폰 데이터로 설정한다.&lt;br /&gt;
+그리고 Dev, Test를 각 2500개로 설정한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;에러의-중의성&quot;&gt;에러의 중의성&lt;/h2&gt;
+&lt;p&gt;Train error가 1%라고 할 때, Dev error가 8%라면 이는 Train에 과대적합 된것인가??&lt;br /&gt;
+Different distribution data를 학습시켰기 때문에 이 error 차이는 두가지 의미를 가진다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Train에 과대적합, 즉 variance가 높음&lt;/li&gt;
+  &lt;li&gt;Dev set과 Train set distribution의 난이도 차이(Data Mismatch)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2번째 상황을 예로 들어보자, 우리는 카메라 이미지를 가지고 있다. 인터넷 카메라 이미지는 화질이 높고, 정확하게 찍혔다.&lt;br /&gt;
+하지만 핸드폰 이미지는 화질이 낮고, 흐리며, 잘못 찍혔을 수 있다. 즉, 핸드폰 이미지 인식이 카메라 이미지 인식보다 어렵다.&lt;br /&gt;
+그렇기 때문에 Dev set의 error가 높게 나올 수 있다.&lt;br /&gt;
+이를 해결하기 위한 방법으로 &lt;strong&gt;Train Dev Set&lt;/strong&gt;을 사용할 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;train-dev-set&quot;&gt;Train Dev Set&lt;/h3&gt;
+&lt;p&gt;Train set에서 Train dev set을 따로 분리한다. 그러면 이제 Train set과 Train dev set은 같은 distribution을 가진다.&lt;br /&gt;
+Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;variance&lt;/strong&gt; 때문인지 &lt;strong&gt;data mismatch&lt;/strong&gt;때문인지 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;첫번째 예를 들어보면,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Train Error : 1%&lt;/li&gt;
+  &lt;li&gt;Train Dev Error : 8%&lt;/li&gt;
+  &lt;li&gt;Dev Error : 9%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 경우는 Train dev error와 Train error의 차이가 크기 때문에 variance 때문임을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;두번째 경우는&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Train Error : 1%&lt;/li&gt;
+  &lt;li&gt;Train Dev Error : 2%&lt;/li&gt;
+  &lt;li&gt;Dev Error : 9%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;여기서는 Dev Error가 큰 차이를 보이므로, Data Mismatch가 원인임을 알 수 있다.&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sun, 24 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/24/training-and-testing-on-different-distribution.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/24/training-and-testing-on-different-distribution.html</guid>
+        
+        <category>machinelearning</category>
+        
+        
+        <category>study</category>
+        
+      </item>
     
       <item>
         <title>Bayes Error</title>
@@ -227,13 +303,15 @@ divided by the total number of elements that actually belong to the positive cla
   &lt;li&gt;텍스트 문서를 기계어로 변환하는 프로그램을 만든다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이 프로그램이 &lt;strong&gt;Compiler&lt;/strong&gt; 이고,  텍스트 문서는 &lt;strong&gt;Source Code File&lt;/strong&gt; 또는 &lt;strong&gt;Source File&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;이 프로그램이 &lt;strong&gt;Compiler&lt;/strong&gt; 이고, 텍스트 문서는 &lt;strong&gt;Source Code File&lt;/strong&gt; 또는 &lt;strong&gt;Source File&lt;/strong&gt;이다.&lt;/p&gt;
+
 &lt;h2 id=&quot;linker&quot;&gt;Linker&lt;/h2&gt;
 
 &lt;p&gt;소스코드의 규모가 커지면서, 모든 소스코드를 한 파일안에 작성하는것은 불편하고 비효율적이었다.&lt;br /&gt;
 따라서 한 소스 파일을 여러 소스 파일로 분리하는 방법이 창안되었다.&lt;br /&gt;
 하지만 여러 소스 파일을 연결해야 하기때문에,
 &lt;strong&gt;Linker&lt;/strong&gt;라는 프로그램이 만들어졌다.&lt;/p&gt;
+
 &lt;h2 id=&quot;builder&quot;&gt;Builder&lt;/h2&gt;
 
 &lt;p&gt;실행 파일을 만드는 절차는 아래와 같다.&lt;/p&gt;
