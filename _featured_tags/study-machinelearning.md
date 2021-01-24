@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: Machinelearning
+title: Machine Learning
 slug: machinelearning
 category: study
 menu: false
