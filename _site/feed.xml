@@ -6,9 +6,90 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jan 2021 23:37:00 +0900</pubDate>
-    <lastBuildDate>Sun, 24 Jan 2021 23:37:00 +0900</lastBuildDate>
+    <pubDate>Thu, 28 Jan 2021 07:39:14 +0900</pubDate>
+    <lastBuildDate>Thu, 28 Jan 2021 07:39:14 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>MAC, IP, ARP</title>
+        <description>&lt;h2 id=&quot;mac-주소&quot;&gt;MAC 주소&lt;/h2&gt;
+&lt;p&gt;MAC 주소(Media Access Control Address)는 네트워크 세그먼트의 &lt;strong&gt;데이터 링크 계층&lt;/strong&gt;에서&lt;br /&gt;
+통신을 위한 네트워크 인터페이스에 할당된 교유 식별자이다.&lt;br /&gt;
+MAC 주소는 이더넷과 와이파이를 포함한 대부분의 IEEE 802 네트워크 기술에 네트워크 주소로 사용된다.&lt;br /&gt;
+MAC 주소는 하드웨어에 저장되어, 제조업체의 등록된 식별 번호로 인코딩되며 &lt;strong&gt;BIA(burned-in Address)&lt;/strong&gt;  로 부를수 있다.&lt;br /&gt;
+&lt;strong&gt;이더넷 하드웨어 주소(Ethernet hardware address, EHA), 하드웨어 주소, 물리주소&lt;/strong&gt;로 부르기도 한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;ip-주소&quot;&gt;IP 주소&lt;/h2&gt;
+&lt;p&gt;IP 주소는 컴퓨터 네트워크에서 장치들이 서로를 인식하고 통신을 하기 위해서 사용하는 특수한 번호이다.&lt;br /&gt;
+오늘날 주로 IPv4가 사용되고 있지만, 주소가 부족해지면서 IPv6가 사용되기 시작됐다.
+IP는 255.255.255.255까지 가능하다.&lt;br /&gt;
+127.0.0.1은 localhost IP로 자기자신을 가리킨다.&lt;/p&gt;
+
+&lt;h3 id=&quot;ip-datagram&quot;&gt;IP Datagram&lt;/h3&gt;
+&lt;p&gt;IP 계층의 패킷을 의미한다. Header+Data로 구성된다.
+Header의 구성 요소는&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Version : IPv4(0100), IPv6(0110)&lt;/li&gt;
+  &lt;li&gt;Header Length&lt;/li&gt;
+  &lt;li&gt;서비스타입(Differentiated Services) : QoS 제공을 위해 사용&lt;/li&gt;
+  &lt;li&gt;Total Length&lt;/li&gt;
+  &lt;li&gt;식별자(Identification)&lt;/li&gt;
+  &lt;li&gt;Flag&lt;/li&gt;
+  &lt;li&gt;단편옵셋(Fragmentation Offset)&lt;/li&gt;
+  &lt;li&gt;수명(TTL)&lt;/li&gt;
+  &lt;li&gt;Protocol&lt;/li&gt;
+  &lt;li&gt;Checksum&lt;/li&gt;
+  &lt;li&gt;Source Address&lt;/li&gt;
+  &lt;li&gt;Destination Address&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ip-class&quot;&gt;IP Class&lt;/h3&gt;
+&lt;p&gt;IP 주소는 32bit로 구성 1바이트.1바이트.1바이트.1바이트 (255.255.255.255)&lt;br /&gt;
+IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
+클래스는 어디부터가 네트워크 영역인지 호스트IP 영역인지를 나타낸다.
+&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99068D495BE8101D34&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;a-class&quot;&gt;A Class&lt;/h4&gt;
+&lt;p&gt;A Class는 0으로 시작한다.&lt;br /&gt;
+네트워크 주소 영역이 작기 때문에 많은 경우의 호스트 IP를 가질수 있다.&lt;br /&gt;
+&lt;strong&gt;IP 범위는 0.0.0.0 ~ 127.255.255.255&lt;/strong&gt;까지 이다.&lt;br /&gt;
+네트워크 주소는 &lt;strong&gt;2^7&lt;/strong&gt;&lt;br /&gt;
+호스트 주소의 경우의 수는 &lt;strong&gt;(2^24)-2&lt;/strong&gt; 이다.&lt;br /&gt;
+모두 1인경우와 모두 0인 경우는 각 각 브로트캐스트 주소, 네트워크 주소로 사용하기 때문에 제외한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;b-class&quot;&gt;B Class&lt;/h4&gt;
+&lt;p&gt;B Class는 10으로 시작한다.
+&lt;strong&gt;범위는 128.0.0.0 ~ 191.255.255.255&lt;/strong&gt;까지 이다.&lt;br /&gt;
+네트워크 주소 경우의 수는 &lt;strong&gt;2^14&lt;/strong&gt;&lt;br /&gt;
+호스트 주소 경우의 수는 &lt;strong&gt;(2^16)-2&lt;/strong&gt;이다.
+-2는 A class와 같은 이유이다.&lt;/p&gt;
+
+&lt;h4 id=&quot;c-class&quot;&gt;C Class&lt;/h4&gt;
+&lt;p&gt;110으로 시작한다.
+&lt;strong&gt;범위는 192.0.0.0 ~ 223.255.255.255&lt;/strong&gt;&lt;br /&gt;
+네트워크 경우의 수 &lt;strong&gt;2^21&lt;/strong&gt;&lt;br /&gt;
+호스트 주소 경우의 수 &lt;strong&gt;(2^8)-2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;arp&quot;&gt;ARP&lt;/h2&gt;
+&lt;p&gt;주소 결정 프로토콜(Address Resolution Protocol)은 네트워크 상에서 IP 주소를&lt;br /&gt;
+물리적 네트워크 주소로 대응 시키기 위해 사용되는 프로토콜이다.&lt;br /&gt;
+일종의 IP 주소와 MAC 주소를 대응 시켜놓은 table이다.&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 28 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/28/CS-mac-ip-arp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/28/CS-mac-ip-arp.html</guid>
+        
+        <category>computerscience</category>
+        
+        
+        <category>study</category>
+        
+      </item>
     
       <item>
         <title>Training and Testing on different distribution</title>
@@ -76,8 +157,8 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
 &lt;hr /&gt;
 </description>
         <pubDate>Sun, 24 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/24/training-and-testing-on-different-distribution.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/24/training-and-testing-on-different-distribution.html</guid>
+        <link>http://localhost:4000/study/2021/01/24/ML-training-and-testing-on-different-distribution.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/24/ML-training-and-testing-on-different-distribution.html</guid>
         
         <category>machinelearning</category>
         
