@@ -63,8 +63,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/page-2/" />
-<meta property="og:url" content="http://localhost:4000/page-2/" />
+<link rel="canonical" href="http://localhost:4000/page-3/" />
+<meta property="og:url" content="http://localhost:4000/page-3/" />
 
 <link
   rel="alternate"
@@ -166,17 +166,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
       
   
 
-<article id="post-study/2021/01/24/ML-training-and-testing-on-different-distribution" class="post mb6" role="article">
+<article id="post-study/2021/01/20/ML-ClEvMet" class="post mb6" role="article">
   <header>
 
     <h1 class="post-title">
-      <a href="/study/2021/01/24/ML-training-and-testing-on-different-distribution.html" data-flip="title">
-        Training and Testing on different distribution
+      <a href="/study/2021/01/20/ML-ClEvMet.html" data-flip="title">
+        Classification Evaluation Metrices
       </a>
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-01-24T00:00:00+09:00">24 Jan 2021</time>
+      <time datetime="2021-01-20T00:00:00+09:00">20 Jan 2021</time>
       
 
 
@@ -210,8 +210,8 @@ on <a href="/tag/study-machinelearning/" data-flip="title">Machine Learning</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/page-2/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-2/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/page-3/">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-3/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
@@ -219,15 +219,10 @@ on <a href="/tag/study-machinelearning/" data-flip="title">Machine Learning</a>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
 
-    <p>Training을 시킬 때 우리는 많은 데이터셋을 필요로한다.<br />
-하지만 우리가 학습시킬 수 있는 데이터셋이 많지 않을 때 비슷한 환경의 데이터 셋을 가져와서 학습시킬 수 있다.<br />
-예를 들어, 핸드폰 이미지 인식을 할 때, 우리가 가지고 있는 데이터 셋이 10000개 뿐이라고 가정하자,<br />
-하지만 인터넷에 카메라로 찍은 사진 데이터는 20만개가 존재한다.<br />
-카메라로 찍은 사진 데이터와 핸드폰으로 찍은 사진 데이터는 서로 다르다. 하지만 핸드폰 이미지 인식을 학습시킬 때,<br />
-카메라로 찍은 데이터를 사용하여 정확도를 높일 수 있다.</p>
+    <h2 id="precision--recall">Precision &amp; Recall</h2>
 
 
-    <p class="read-more"><a class="heading" href="/study/2021/01/24/ML-training-and-testing-on-different-distribution.html" data-flip="title">Continue reading </a></p>
+    <p class="read-more"><a class="heading" href="/study/2021/01/20/ML-ClEvMet.html" data-flip="title">Continue reading </a></p>
   
 
 </article>
@@ -236,89 +231,17 @@ on <a href="/tag/study-machinelearning/" data-flip="title">Machine Learning</a>
 
   
 
-<article id="post-study/2021/01/23/ML-bayeserror" class="post mb6" role="article">
+<article id="post-study/2021/01/20/CS-clb" class="post mb6" role="article">
   <header>
 
     <h1 class="post-title">
-      <a href="/study/2021/01/23/ML-bayeserror.html" data-flip="title">
-        Bayes Error
+      <a href="/study/2021/01/20/CS-clb.html" data-flip="title">
+        Compiler, Linker, Builder
       </a>
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-01-23T00:00:00+09:00">23 Jan 2021</time>
-      
-
-
-
-
-
-
-
-
-
-in <a href="/category/study/" data-flip="title">Study</a>
-
-      
-
-
-
-
-
-
-
-
-
-on <a href="/tag/study-machinelearning/" data-flip="title">Machine Learning</a>
-
-    </p>
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </header>
-  
-  <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/page-2/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-2/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
-    </a>
-  </div>
-
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-
-    <h2 id="bayes-error">Bayes Error</h2>
-<p><strong>Bayes error</strong>는 모든 machine learning 모델의 <strong>최소 오차</strong>이다.<br />
-즉, 모델의 error 참조점이 된다.<br />
-모델의 Bayes error 기준으로 train error와 test error를 비교하여,<br />
-모델의 bias를 줄여야 하는지 variance를 줄여야 하는 지 결정할 수 있다.<br />
-<strong>Bayes err</strong>는 <strong>human level error</strong>로 추정 할 수있지만,<br />
-요즘에는 인간의 능력치를 넘어서는 기계학습 분야와 모델이 존재하기 때문에<br />
-모델을 학습시키면서 추정해야 할 수도 있다.</p>
-
-
-    <p class="read-more"><a class="heading" href="/study/2021/01/23/ML-bayeserror.html" data-flip="title">Continue reading </a></p>
-  
-
-</article>
-
-
-
-  
-
-<article id="post-study/2021/01/22/CS-osi" class="post mb6" role="article">
-  <header>
-
-    <h1 class="post-title">
-      <a href="/study/2021/01/22/CS-osi.html" data-flip="title">
-        OSI Model
-      </a>
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2021-01-22T00:00:00+09:00">22 Jan 2021</time>
+      <time datetime="2021-01-20T00:00:00+09:00">20 Jan 2021</time>
       
 
 
@@ -352,8 +275,8 @@ on <a href="/tag/study-computerscience/" data-flip="title">Computer Science</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/page-2/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-2/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/page-3/">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-3/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
@@ -361,13 +284,10 @@ on <a href="/tag/study-computerscience/" data-flip="title">Computer Science</a>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
 
-    <h1 id="osi-model">OSI Model</h1>
-<p>OSI(Open System Interconnection Reference Model)은 국제표준화기구(ISO)에서 개발한 모델로,<br />
-컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 것이다. 일반적으로
-<strong>OSI 7 Layer</strong>라고 한다.</p>
+    <h2 id="compiler">Compiler</h2>
 
 
-    <p class="read-more"><a class="heading" href="/study/2021/01/22/CS-osi.html" data-flip="title">Continue reading </a></p>
+    <p class="read-more"><a class="heading" href="/study/2021/01/20/CS-clb.html" data-flip="title">Continue reading </a></p>
   
 
 </article>
@@ -380,12 +300,12 @@ on <a href="/tag/study-computerscience/" data-flip="title">Computer Science</a>
   <ul>
     <li class="pagination-item older" >
       
-        <a rel="next" href="/page-3/">Older</a>
+        <span>Older</span>
       
     </li>
     <li class="pagination-item newer" >
       
-        <a rel="prev" href="/">Newer</a>
+        <a rel="prev" href="/page-2/">Newer</a>
       
     </li>
   </ul>

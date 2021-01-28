@@ -1,4 +1,14 @@
 var tipuesearch = {"pages": [{
+    "title": "Transfer Learning",
+    "text": "전이학습은 학습 데이터가 부족한 모델을 구축하기 위해 사용되는 방법이다. 예를 들어, 학습 데이터가 부족한 x-lay 이미지를 판단하는 모델을 만들려할 때 우리는 학습 데이터가 많은 일반 이미지 인식 모델의 layers를 가져와서 x-lay 이미지 모델에 사용할 수 있다. 이처럼 실제 학습 데이터가 부족한 모델을 구축할 때, 비슷한 형태의 데이터를 사용하는 다량의 데이터로 구축된 모델을 전이학습하여 성능을 높일 수 있다.",
+    "tags": "machinelearning study",
+    "url": "/study/2021/01/29/ML-transfer-learning.html"
+  },{
+    "title": "Multi-task Learning",
+    "text": "Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다. 하지만 Multi-task Learning은 모델 A와 모델 B를 동시에 학습시키는 방법이다. 예로 길거리의 이미지로 정지 신호가 있는지 판단하는 모델 보행자가 있는지 판단하는 모델 차가 있는지 판단하는 모델 신호등을 판단하는 모델 을 동시에 학습시키는 방법이다. Input은 1개 이미지만 label은 4개가 존재하게 된다. Softmax regression과의 차이점은 Softmax는 하나의 label을 가지게 된다는 점이다. Multi-task learning은 세가지 상황에서 도움이 된다. 저수준의 구조가 비슷할 때 각 task의 데이터 양이 비슷할 때 모든 task의 충분히 큰 신경망을 학습시킬 수 있을 때 Rich Carona는 충분히 크지 않은 신경망을 multi-task learning 시키면 따로 학습시키는 것보다 성능이 저하된다는 사실을 알아냈다. 그러나 각 각 따로 학습시키는 것보다 데이터가 충분하고 신경망이 충분히 크면 multi-task learning이 도움이 된다는 건 확실하다. Transfer learning(전이학습)은 데이터가 적은 모델을 위한 방법이었다. 하지만 multi-task learning은 각 task 별 데이터가 필요하기 때문에 좀 더 특별한 상황에서 사용된다. 현재 전이학습이 더 많이 사용되고 있다. 하지만 두 방법 모두 도움이 되는 방법 임은 확실하다.",
+    "tags": "machinelearning study",
+    "url": "/study/2021/01/29/ML-multi-task-learning.html"
+  },{
     "title": "MAC, IP, ARP",
     "text": "MAC 주소 MAC 주소(Media Access Control Address)는 네트워크 세그먼트의 데이터 링크 계층에서 통신을 위한 네트워크 인터페이스에 할당된 교유 식별자이다. MAC 주소는 이더넷과 와이파이를 포함한 대부분의 IEEE 802 네트워크 기술에 네트워크 주소로 사용된다. MAC 주소는 하드웨어에 저장되어, 제조업체의 등록된 식별 번호로 인코딩되며 BIA(burned-in Address) 로 부를수 있다. 이더넷 하드웨어 주소(Ethernet hardware address, EHA), 하드웨어 주소, 물리주소로 부르기도 한다. IP 주소 IP 주소는 컴퓨터 네트워크에서 장치들이 서로를 인식하고 통신을 하기 위해서 사용하는 특수한 번호이다. 오늘날 주로 IPv4가 사용되고 있지만, 주소가 부족해지면서 IPv6가 사용되기 시작됐다. IP는 255.255.255.255까지 가능하다. 127.0.0.1은 localhost IP로 자기자신을 가리킨다. IP Datagram IP 계층의 패킷을 의미한다. Header+Data로 구성된다. Header의 구성 요소는 Version : IPv4(0100), IPv6(0110) Header Length 서비스타입(Differentiated Services) : QoS 제공을 위해 사용 Total Length 식별자(Identification) Flag 단편옵셋(Fragmentation Offset) 수명(TTL) Protocol Checksum Source Address Destination Address IP Class IP 주소는 32bit로 구성 1바이트.1바이트.1바이트.1바이트 (255.255.255.255) IP는 네트워크 영역과 호스트IP 영역이 구분되어있다. 클래스는 어디부터가 네트워크 영역인지 호스트IP 영역인지를 나타낸다. A Class A Class는 0으로 시작한다. 네트워크 주소 영역이 작기 때문에 많은 경우의 호스트 IP를 가질수 있다. IP 범위는 0.0.0.0 ~ 127.255.255.255까지 이다. 네트워크 주소는 2^7 호스트 주소의 경우의 수는 (2^24)-2 이다. 모두 1인경우와 모두 0인 경우는 각 각 브로트캐스트 주소, 네트워크 주소로 사용하기 때문에 제외한다. B Class B Class는 10으로 시작한다. 범위는 128.0.0.0 ~ 191.255.255.255까지 이다. 네트워크 주소 경우의 수는 2^14 호스트 주소 경우의 수는 (2^16)-2이다. -2는 A class와 같은 이유이다. C Class 110으로 시작한다. 범위는 192.0.0.0 ~ 223.255.255.255 네트워크 경우의 수 2^21 호스트 주소 경우의 수 (2^8)-2 ARP 주소 결정 프로토콜(Address Resolution Protocol)은 네트워크 상에서 IP 주소를 물리적 네트워크 주소로 대응 시키기 위해 사용되는 프로토콜이다. 일종의 IP 주소와 MAC 주소를 대응 시켜놓은 table이다.",
     "tags": "computerscience study",

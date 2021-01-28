@@ -6,9 +6,77 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Jan 2021 07:39:14 +0900</pubDate>
-    <lastBuildDate>Thu, 28 Jan 2021 07:39:14 +0900</lastBuildDate>
+    <pubDate>Fri, 29 Jan 2021 02:36:28 +0900</pubDate>
+    <lastBuildDate>Fri, 29 Jan 2021 02:36:28 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Transfer Learning</title>
+        <description>&lt;p&gt;전이학습은 학습 데이터가 부족한 모델을 구축하기 위해 사용되는 방법이다.&lt;br /&gt;
+예를 들어, 학습 데이터가 부족한 x-lay 이미지를 판단하는 모델을 만들려할 때&lt;br /&gt;
+우리는 학습 데이터가 많은 일반 이미지 인식 모델의 layers를 가져와서&lt;br /&gt;
+x-lay 이미지 모델에 사용할 수 있다.&lt;br /&gt;
+이처럼 실제 학습 데이터가 부족한 모델을 구축할 때, 비슷한 형태의 데이터를 사용하는&lt;br /&gt;
+다량의 데이터로 구축된 모델을 전이학습하여 성능을 높일 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/study/ML/Transferlearning.png&quot; alt=&quot;Transfer Learning&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 29 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/29/ML-transfer-learning.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/29/ML-transfer-learning.html</guid>
+        
+        <category>machinelearning</category>
+        
+        
+        <category>study</category>
+        
+      </item>
+    
+      <item>
+        <title>Multi-task Learning</title>
+        <description>&lt;p&gt;Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다.&lt;br /&gt;
+하지만 &lt;strong&gt;Multi-task Learning&lt;/strong&gt;은 모델 A와 모델 B를 동시에 학습시키는 방법이다.&lt;br /&gt;
+예로 길거리의 이미지로&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;정지 신호가 있는지 판단하는 모델&lt;/li&gt;
+  &lt;li&gt;보행자가 있는지 판단하는 모델&lt;/li&gt;
+  &lt;li&gt;차가 있는지 판단하는 모델&lt;/li&gt;
+  &lt;li&gt;신호등을 판단하는 모델&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;을 동시에 학습시키는 방법이다.&lt;br /&gt;
+Input은 1개 이미지만 label은 4개가 존재하게 된다.&lt;br /&gt;
+&lt;em&gt;Softmax regression과의 차이점은 Softmax는 하나의 label을 가지게 된다는 점이다.&lt;/em&gt;
+&lt;img src=&quot;/assets/img/study/ML/multitask.png&quot; alt=&quot;Multi-task Learning&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multi-task learning&lt;/strong&gt;은 세가지 상황에서 도움이 된다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;저수준의 구조가 비슷할 때&lt;/li&gt;
+  &lt;li&gt;각 task의 데이터 양이 비슷할 때&lt;/li&gt;
+  &lt;li&gt;모든 task의 충분히 큰 신경망을 학습시킬 수 있을 때&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Rich Carona는 충분히 크지 않은 신경망을 multi-task learning 시키면 따로 학습시키는 것보다&lt;br /&gt;
+성능이 저하된다는 사실을 알아냈다.&lt;br /&gt;
+그러나 각 각 따로 학습시키는 것보다 데이터가 충분하고 신경망이 충분히 크면&lt;br /&gt;
+multi-task learning이 도움이 된다는 건 확실하다.&lt;/p&gt;
+
+&lt;p&gt;Transfer learning(전이학습)은 데이터가 적은 모델을 위한 방법이었다.&lt;br /&gt;
+하지만 multi-task learning은 각 task 별 데이터가 필요하기 때문에 좀 더 특별한 상황에서 사용된다.&lt;br /&gt;
+현재 전이학습이 더 많이 사용되고 있다. 하지만 두 방법 모두 도움이 되는 방법 임은 확실하다.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 29 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html</link>
+        <guid isPermaLink="true">http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html</guid>
+        
+        <category>machinelearning</category>
+        
+        
+        <category>study</category>
+        
+      </item>
     
       <item>
         <title>MAC, IP, ARP</title>

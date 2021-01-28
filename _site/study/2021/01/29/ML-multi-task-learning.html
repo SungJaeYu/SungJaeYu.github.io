@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Blog" />
+<meta property="og:title" content="Multi-task Learning" />
 <meta property="og:type" content="article" />
 
  
@@ -39,16 +39,22 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>Blog &middot; SungJae Yu's Blog</title>
+<title>Multi-task Learning &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="For Study
+  content="Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다.
+하지만 Multi-task Learning은 모델 A와 모델 B를 동시에 학습시키는 방법이다.
+예로 길거리의 이미지로
+
 "
 />
 <meta
   property="og:description"
-  content="For Study
+  content="Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다.
+하지만 Multi-task Learning은 모델 A와 모델 B를 동시에 학습시키는 방법이다.
+예로 길거리의 이미지로
+
 "
 />
 
@@ -63,8 +69,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/page-2/" />
-<meta property="og:url" content="http://localhost:4000/page-2/" />
+<link rel="canonical" href="http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html" />
+<meta property="og:url" content="http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html" />
 
 <link
   rel="alternate"
@@ -73,7 +79,11 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
   href="http://localhost:4000/feed.xml"
 />
 
+
+<link rel="prev" href="http://localhost:4000/study/2021/01/28/CS-mac-ip-arp.html" />
  
+<link rel="next" href="http://localhost:4000/study/2021/01/29/ML-transfer-learning.html" />
+
 
 <link
   rel="apple-touch-icon"
@@ -164,19 +174,18 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
   <div class="fade-in">
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
-  
 
-<article id="post-study/2021/01/24/ML-training-and-testing-on-different-distribution" class="post mb6" role="article">
+<article id="post-study/2021/01/29/ML-multi-task-learning" class="post" role="article">
   <header>
 
     <h1 class="post-title">
-      <a href="/study/2021/01/24/ML-training-and-testing-on-different-distribution.html" data-flip="title">
-        Training and Testing on different distribution
-      </a>
+      
+        Multi-task Learning
+      
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-01-24T00:00:00+09:00">24 Jan 2021</time>
+      <time datetime="2021-01-29T00:00:00+09:00">29 Jan 2021</time>
       
 
 
@@ -210,188 +219,247 @@ on <a href="/tag/study-machinelearning/" data-flip="title">Machine Learning</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/page-2/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-2/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/study/2021/01/29/ML-multi-task-learning.html">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/study/2021/01/29/ML-multi-task-learning.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
-
-    <p>Training을 시킬 때 우리는 많은 데이터셋을 필요로한다.<br />
-하지만 우리가 학습시킬 수 있는 데이터셋이 많지 않을 때 비슷한 환경의 데이터 셋을 가져와서 학습시킬 수 있다.<br />
-예를 들어, 핸드폰 이미지 인식을 할 때, 우리가 가지고 있는 데이터 셋이 10000개 뿐이라고 가정하자,<br />
-하지만 인터넷에 카메라로 찍은 사진 데이터는 20만개가 존재한다.<br />
-카메라로 찍은 사진 데이터와 핸드폰으로 찍은 사진 데이터는 서로 다르다. 하지만 핸드폰 이미지 인식을 학습시킬 때,<br />
-카메라로 찍은 데이터를 사용하여 정확도를 높일 수 있다.</p>
-
-
-    <p class="read-more"><a class="heading" href="/study/2021/01/24/ML-training-and-testing-on-different-distribution.html" data-flip="title">Continue reading </a></p>
-  
-
-</article>
+    <div class="markdown-body">
 
 
 
-  
+<style>
+.googleads { display:block; width:98%; height: 280px; }
+@media(min-width: 600px) { .googleads { display: none; } }
+</style>
+<!--구글 에드센스
+<ins class="adsbygoogle myAd1190"
+    data-ad-client="ca-pub-1200017190012992"
+></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+-->
+      <!--게시물 내용-->
+      <p>Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다.<br />
+하지만 <strong>Multi-task Learning</strong>은 모델 A와 모델 B를 동시에 학습시키는 방법이다.<br />
+예로 길거리의 이미지로</p>
 
-<article id="post-study/2021/01/23/ML-bayeserror" class="post mb6" role="article">
-  <header>
+<ul>
+  <li>정지 신호가 있는지 판단하는 모델</li>
+  <li>보행자가 있는지 판단하는 모델</li>
+  <li>차가 있는지 판단하는 모델</li>
+  <li>신호등을 판단하는 모델</li>
+</ul>
 
-    <h1 class="post-title">
-      <a href="/study/2021/01/23/ML-bayeserror.html" data-flip="title">
-        Bayes Error
-      </a>
-    </h1>
+<p>을 동시에 학습시키는 방법이다.<br />
+Input은 1개 이미지만 label은 4개가 존재하게 된다.<br />
+<em>Softmax regression과의 차이점은 Softmax는 하나의 label을 가지게 된다는 점이다.</em>
+<img src="/assets/img/study/ML/multitask.png" alt="Multi-task Learning" /></p>
 
-    <p class="post-date heading">
-      <time datetime="2021-01-23T00:00:00+09:00">23 Jan 2021</time>
+<p><strong>Multi-task learning</strong>은 세가지 상황에서 도움이 된다.</p>
+
+<ol>
+  <li>저수준의 구조가 비슷할 때</li>
+  <li>각 task의 데이터 양이 비슷할 때</li>
+  <li>모든 task의 충분히 큰 신경망을 학습시킬 수 있을 때</li>
+</ol>
+
+<p>Rich Carona는 충분히 크지 않은 신경망을 multi-task learning 시키면 따로 학습시키는 것보다<br />
+성능이 저하된다는 사실을 알아냈다.<br />
+그러나 각 각 따로 학습시키는 것보다 데이터가 충분하고 신경망이 충분히 크면<br />
+multi-task learning이 도움이 된다는 건 확실하다.</p>
+
+<p>Transfer learning(전이학습)은 데이터가 적은 모델을 위한 방법이었다.<br />
+하지만 multi-task learning은 각 task 별 데이터가 필요하기 때문에 좀 더 특별한 상황에서 사용된다.<br />
+현재 전이학습이 더 많이 사용되고 있다. 하지만 두 방법 모두 도움이 되는 방법 임은 확실하다.</p>
+
+      <br/>
+      <!-- 블로그-하단-반응형 
+      <br/>
       
-
-
-
-
-
-
-
-
-
-in <a href="/category/study/" data-flip="title">Study</a>
-
+      <ins class="adsbygoogle"
+          style="display:block; width:100%; height:300px;"
+          data-ad-client="ca-pub-1200017190012992"
+          data-ad-format="auto"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
       
-
-
-
-
-
-
-
-
-
-on <a href="/tag/study-machinelearning/" data-flip="title">Machine Learning</a>
-
-    </p>
-
+    </div>
     
-  <div class="hr" style="padding-bottom:0"></div>
+    <script>
 
-
-  </header>
-  
-  <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/page-2/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-2/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
-    </a>
-  </div>
-
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-
-    <h2 id="bayes-error">Bayes Error</h2>
-<p><strong>Bayes error</strong>는 모든 machine learning 모델의 <strong>최소 오차</strong>이다.<br />
-즉, 모델의 error 참조점이 된다.<br />
-모델의 Bayes error 기준으로 train error와 test error를 비교하여,<br />
-모델의 bias를 줄여야 하는지 variance를 줄여야 하는 지 결정할 수 있다.<br />
-<strong>Bayes err</strong>는 <strong>human level error</strong>로 추정 할 수있지만,<br />
-요즘에는 인간의 능력치를 넘어서는 기계학습 분야와 모델이 존재하기 때문에<br />
-모델을 학습시키면서 추정해야 할 수도 있다.</p>
-
-
-    <p class="read-more"><a class="heading" href="/study/2021/01/23/ML-bayeserror.html" data-flip="title">Continue reading </a></p>
+    </script>
+    -->
   
 
 </article>
 
+  <hr class="dingbat" />
+<!--공유, 트위터, 페이스북-->
+  <!-- <div class="share">
+      <h2>Share this post</h2>
+      <div class="share-body">
+        <a href="http://twitter.com/share?text=Multi-task Learning&amp;url=http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="icon-twitter">
+            </span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="icon-facebook">
+            </span>
+        </a>
+    </div>
+  </div> -->
+  <br/>
 
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-CHFZEXLW0R"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  
+  gtag("config", "G-CHFZEXLW0R");
+</script>
 
-<article id="post-study/2021/01/22/CS-osi" class="post mb6" role="article">
-  <header>
-
-    <h1 class="post-title">
-      <a href="/study/2021/01/22/CS-osi.html" data-flip="title">
-        OSI Model
-      </a>
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2021-01-22T00:00:00+09:00">22 Jan 2021</time>
-      
-
-
-
-
-
-
-
-
-
-in <a href="/category/study/" data-flip="title">Study</a>
-
-      
-
-
-
-
-
-
-
-
-
-on <a href="/tag/study-computerscience/" data-flip="title">Computer Science</a>
-
-    </p>
-
+<div class="page-control">
+  <div>
     
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </header>
-  
-  <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/page-2/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-2/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
-    </a>
+    <a id="prev" class="button" href="/study/2021/01/28/CS-mac-ip-arp.html">&laquo;Prev</a>
+    
   </div>
+  <div>
+    
+    <a id="next" class="button" href="/study/2021/01/29/ML-transfer-learning.html">Next&raquo;</a>
+    
+  </div>
+</div>
+ 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <aside class="author" role="complementary">
+    <div class="author">
+  <h2 class="page-title hr">
+    About
+  </h2>
+<div class="author-body">
+  
+    
   
 
-    <h1 id="osi-model">OSI Model</h1>
-<p>OSI(Open System Interconnection Reference Model)은 국제표준화기구(ISO)에서 개발한 모델로,<br />
-컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 것이다. 일반적으로
-<strong>OSI 7 Layer</strong>라고 한다.</p>
-
-
-    <p class="read-more"><a class="heading" href="/study/2021/01/22/CS-osi.html" data-flip="title">Continue reading </a></p>
   
 
-</article>
+  <img
+    src="/assets/img/me.png"
+    class="me"
+    alt="SungJae Yu"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
+    
+  />
 
 
+  
+  <div class="author-body-description">
+    <p>Study Deep Learning and Computer Science</p>
+
+  </div>
+</div>
+</div>
+
+  </aside>
+
+ 
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+      
+      
+        
+        
+          
 
 
-<h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading" role="navigation">
-  <ul>
-    <li class="pagination-item older" >
+<li class="h4">
+  <a href="/study/2021/01/29/ML-transfer-learning.html" data-flip="title">
+    <span>Transfer Learning</span>
+  </a>
+  <small><time datetime="2021-01-29T00:00:00+09:00">
+    29 Jan 2021
+  </time></small>
+</li>
+
+        
       
-        <a rel="next" href="/page-3/">Older</a>
+        
+          
+          
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/2021/01/28/CS-mac-ip-arp.html" data-flip="title">
+    <span>MAC, IP, ARP</span>
+  </a>
+  <small><time datetime="2021-01-28T00:00:00+09:00">
+    28 Jan 2021
+  </time></small>
+</li>
+
+        
       
-    </li>
-    <li class="pagination-item newer" >
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/2021/01/24/ML-training-and-testing-on-different-distribution.html" data-flip="title">
+    <span>Training and Testing on different distribution</span>
+  </a>
+  <small><time datetime="2021-01-24T00:00:00+09:00">
+    24 Jan 2021
+  </time></small>
+</li>
+
+        
       
-        <a rel="prev" href="/">Newer</a>
-      
-    </li>
+    
   </ul>
-</nav>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr />
+  <script
+    src="https://utteranc.es/client.js"
+    repo="SungJaeYu/blog-comments-repo"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
+</aside>
 
       
 
