@@ -56,7 +56,10 @@ SungJae Yu(유승재)
 
 ### Certification
 
-- Neural Networks and Deep Learning(DeepLearning.AI/Coursera)
-- Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization(DeepLearning.AI/Coursera)
-- Technical Support Fundamentals(Google/Coursera)
+- Deep Learning Specialization(Coursera, DeepLearning.AI)
+  - Neural Networks and Deep Learning
+  - Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
+  - Structuring Machine Learning Projects
+- Google IT Support Professional Certificate(Coursera, Google)
+  - Technical Support Fundamentals
 - Engineer Information Communication(Republic of Korea, Ministry of Science and ICT)
