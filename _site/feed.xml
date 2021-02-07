@@ -6,9 +6,199 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Feb 2021 20:35:18 +0900</pubDate>
-    <lastBuildDate>Sun, 07 Feb 2021 20:35:18 +0900</lastBuildDate>
+    <pubDate>Sun, 07 Feb 2021 21:10:28 +0900</pubDate>
+    <lastBuildDate>Sun, 07 Feb 2021 21:10:28 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>TCP Port</title>
+        <description>&lt;h2 id=&quot;포트의-종류&quot;&gt;포트의 종류&lt;/h2&gt;
+&lt;h3 id=&quot;system-portwell-known-port&quot;&gt;System Port(well-known Port)&lt;/h3&gt;
+&lt;p&gt;범위 : 0~1023&lt;br /&gt;
+IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한&lt;br /&gt;
+TCP 및 UDP 포트 번호의 일부이다.&lt;br /&gt;
+대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다.&lt;br /&gt;
+강제 지정이 아닌 권고안이다.&lt;br /&gt;
+다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인 목적으로 포트를 변경하여&lt;br /&gt;
+사용하는 경우도 있다.&lt;/p&gt;
+
+&lt;p&gt;아래는 자주 사용하는 포트이다.&lt;br /&gt;
+자세한 포트 내용은 
+&lt;a href=&quot;https://ko.wikipedia.org/wiki/TCP/UDP%EC%9D%98_%ED%8F%AC%ED%8A%B8_%EB%AA%A9%EB%A1%9D&quot;&gt;위키피디아&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;포트&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;ECHO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;DISCARD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;DAYTIME&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;17&lt;/td&gt;
+      &lt;td&gt;QOTD(Quote of the Day)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;CHARGEN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;FTP 데이터 포트&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;FTP 제어 포트&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;SSH&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;Telnet&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;SMTP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;53&lt;/td&gt;
+      &lt;td&gt;DNS&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;BOOTP 서버, DHCP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;68&lt;/td&gt;
+      &lt;td&gt;BOOTP 클라이언트, DHCP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;TFTP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;Finger&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;HTTP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;POP3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;RPC&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;123&lt;/td&gt;
+      &lt;td&gt;NTP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;143&lt;/td&gt;
+      &lt;td&gt;IMAP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;161&lt;/td&gt;
+      &lt;td&gt;SNMP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;162&lt;/td&gt;
+      &lt;td&gt;SNMPTRAP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;179&lt;/td&gt;
+      &lt;td&gt;BGP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;220&lt;/td&gt;
+      &lt;td&gt;IMAPv3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;443&lt;/td&gt;
+      &lt;td&gt;SSL/TLS&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;500&lt;/td&gt;
+      &lt;td&gt;IKE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;user-portregistered-port&quot;&gt;USER Port(Registered Port)&lt;/h3&gt;
+&lt;p&gt;범위 : 1024~49151&lt;br /&gt;
+이 포트들은 RFC6335에 따라 IANA(인터넷 할당 번호 관리기관)에 등록한다.&lt;br /&gt;
+통상 이 구간의 포트들은 시스템에서 슈퍼유저 관한이 없어도 사용 가능하다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;포트&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1080&lt;/td&gt;
+      &lt;td&gt;SOCKS 프록시&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1194&lt;/td&gt;
+      &lt;td&gt;OpenVPN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3306&lt;/td&gt;
+      &lt;td&gt;MySQL&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3479, 3480&lt;/td&gt;
+      &lt;td&gt;플레이스테이션 네트워크&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3690&lt;/td&gt;
+      &lt;td&gt;Subversion&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6379&lt;/td&gt;
+      &lt;td&gt;Redis 서비스&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;17500&lt;/td&gt;
+      &lt;td&gt;Dropbox LanSync 프로토콜&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;private-portdynamic-port&quot;&gt;Private Port(Dynamic Port)&lt;/h3&gt;
+&lt;p&gt;범위 : 49152 ~ 65535&lt;br /&gt;
+임시포트로서, 어떤 프로세스에 의해서 사용 가능&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/communication/2021/02/07/tcp-port.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2021/02/07/tcp-port.html</guid>
+        
+        <category>network</category>
+        
+        
+        <category>communication</category>
+        
+      </item>
     
       <item>
         <title>Transfer Learning</title>
