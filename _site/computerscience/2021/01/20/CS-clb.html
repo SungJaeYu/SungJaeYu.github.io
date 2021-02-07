@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Blog" />
+<meta property="og:title" content="Compiler, Linker, Builder" />
 <meta property="og:type" content="article" />
 
  
@@ -39,16 +39,18 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>SungJae Yu's Blog &middot; SungJae Yu's Blog</title>
+<title>Compiler, Linker, Builder &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="For Study
+  content="Compiler
+
 "
 />
 <meta
   property="og:description"
-  content="For Study
+  content="Compiler
+
 "
 />
 
@@ -63,8 +65,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<link rel="canonical" href="http://localhost:4000/computerscience/2021/01/20/CS-clb.html" />
+<meta property="og:url" content="http://localhost:4000/computerscience/2021/01/20/CS-clb.html" />
 
 <link
   rel="alternate"
@@ -74,6 +76,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 />
 
  
+<link rel="next" href="http://localhost:4000/machinelearning/2021/01/20/ML-ClEvMet.html" />
+
 
 <link
   rel="apple-touch-icon"
@@ -164,19 +168,18 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
   <div class="fade-in">
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
-  
 
-<article id="post-machinelearning/2021/01/29/ML-transfer-learning" class="post mb6" role="article">
+<article id="post-computerscience/2021/01/20/CS-clb" class="post" role="article">
   <header>
 
     <h1 class="post-title">
-      <a href="/machinelearning/2021/01/29/ML-transfer-learning.html" data-flip="title">
-        Transfer Learning
-      </a>
+      
+        Compiler, Linker, Builder
+      
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-01-29T00:00:00+09:00">29 Jan 2021</time>
+      <time datetime="2021-01-20T00:00:00+09:00">20 Jan 2021</time>
       
 
 
@@ -187,7 +190,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-in <a href="/category/machinelearning/" data-flip="title">MachineLearning</a>
+in <a href="/category/computerscience/" data-flip="title">ComputerScience</a>
 
       
 
@@ -210,180 +213,198 @@ in <a href="/category/machinelearning/" data-flip="title">MachineLearning</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/computerscience/2021/01/20/CS-clb.html">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/computerscience/2021/01/20/CS-clb.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
-
-    <p>전이학습은 학습 데이터가 부족한 모델을 구축하기 위해 사용되는 방법이다.<br />
-예를 들어, 학습 데이터가 부족한 x-lay 이미지를 판단하는 모델을 만들려할 때<br />
-우리는 학습 데이터가 많은 일반 이미지 인식 모델의 layers를 가져와서<br />
-x-lay 이미지 모델에 사용할 수 있다.<br />
-이처럼 실제 학습 데이터가 부족한 모델을 구축할 때, 비슷한 형태의 데이터를 사용하는<br />
-다량의 데이터로 구축된 모델을 전이학습하여 성능을 높일 수 있다.</p>
-
-
-    <p class="read-more"><a class="heading" href="/machinelearning/2021/01/29/ML-transfer-learning.html" data-flip="title">Continue reading </a></p>
-  
-
-</article>
+    <div class="markdown-body">
 
 
 
-  
+<style>
+.googleads { display:block; width:98%; height: 280px; }
+@media(min-width: 600px) { .googleads { display: none; } }
+</style>
+<!--구글 에드센스
+<ins class="adsbygoogle myAd1190"
+    data-ad-client="ca-pub-1200017190012992"
+></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+-->
+      <!--게시물 내용-->
+      <h2 id="compiler">Compiler</h2>
 
-<article id="post-machinelearning/2021/01/29/ML-multi-task-learning" class="post mb6" role="article">
-  <header>
+<p>초기에 컴퓨터는 기계어로 프로그래밍 되었다. 하지만 기계어는 인간이 해석하기에 굉장히 어렵기때문에 새로운 방법이 필요했다.</p>
 
-    <h1 class="post-title">
-      <a href="/machinelearning/2021/01/29/ML-multi-task-learning.html" data-flip="title">
-        Multi-task Learning
-      </a>
-    </h1>
+<ul>
+  <li>기계어 집합을 표현하는 텍스트 문서를 만든다.</li>
+  <li>텍스트 문서를 기계어로 변환하는 프로그램을 만든다.</li>
+</ul>
 
-    <p class="post-date heading">
-      <time datetime="2021-01-29T00:00:00+09:00">29 Jan 2021</time>
+<p>이 프로그램이 <strong>Compiler</strong> 이고, 텍스트 문서는 <strong>Source Code File</strong> 또는 <strong>Source File</strong>이다.</p>
+
+<h2 id="linker">Linker</h2>
+
+<p>소스코드의 규모가 커지면서, 모든 소스코드를 한 파일안에 작성하는것은 불편하고 비효율적이었다.<br />
+따라서 한 소스 파일을 여러 소스 파일로 분리하는 방법이 창안되었다.<br />
+하지만 여러 소스 파일을 연결해야 하기때문에,
+<strong>Linker</strong>라는 프로그램이 만들어졌다.</p>
+
+<h2 id="builder">Builder</h2>
+
+<p>실행 파일을 만드는 절차는 아래와 같다.</p>
+
+<ul>
+  <li>Write Source Code File</li>
+  <li>Compile Source Code</li>
+  <li>Link object files that Compiler made</li>
+  <li>Excutable File is created</li>
+</ul>
+
+<p>이 절차를 <strong>Build</strong>한다고 하고, 이 때 사용되는 프로그램을 <strong>Builder</strong>라고 한다.</p>
+
+<p><strong>Compile + Link = Build<br />
+Compiler + Linker = Builder</strong></p>
+
+      <br/>
+      <!-- 블로그-하단-반응형 
+      <br/>
       
-
-
-
-
-
-
-
-
-
-in <a href="/category/machinelearning/" data-flip="title">MachineLearning</a>
-
+      <ins class="adsbygoogle"
+          style="display:block; width:100%; height:300px;"
+          data-ad-client="ca-pub-1200017190012992"
+          data-ad-format="auto"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
       
-
-
-
-
-
-
-
-
-
-
-
-    </p>
-
+    </div>
     
-  <div class="hr" style="padding-bottom:0"></div>
+    <script>
 
-
-  </header>
-  
-  <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
-    </a>
-  </div>
-
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-
-    <p>Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다.<br />
-하지만 <strong>Multi-task Learning</strong>은 모델 A와 모델 B를 동시에 학습시키는 방법이다.<br />
-예로 길거리의 이미지로</p>
-
-
-    <p class="read-more"><a class="heading" href="/machinelearning/2021/01/29/ML-multi-task-learning.html" data-flip="title">Continue reading </a></p>
+    </script>
+    -->
   
 
 </article>
 
+  <hr class="dingbat" />
+<!--공유, 트위터, 페이스북-->
+  <!-- <div class="share">
+      <h2>Share this post</h2>
+      <div class="share-body">
+        <a href="http://twitter.com/share?text=Compiler, Linker, Builder&amp;url=http://localhost:4000/computerscience/2021/01/20/CS-clb.html"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="icon-twitter">
+            </span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/computerscience/2021/01/20/CS-clb.html"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="icon-facebook">
+            </span>
+        </a>
+    </div>
+  </div> -->
+  <br/>
 
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-CHFZEXLW0R"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  
+  gtag("config", "G-CHFZEXLW0R");
+</script>
 
-<article id="post-communication/2021/01/28/CM-mac-ip-arp" class="post mb6" role="article">
-  <header>
-
-    <h1 class="post-title">
-      <a href="/communication/2021/01/28/CM-mac-ip-arp.html" data-flip="title">
-        MAC, IP, ARP
-      </a>
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2021-01-28T00:00:00+09:00">28 Jan 2021</time>
-      
-
-
-
-
-
-
-
-
-
-in <a href="/category/communication/" data-flip="title">Communication</a>
-
-      
-
-
-
-
-
-
-
-
-
-on <a href="/tag/comm-network/" data-flip="title">Network</a>
-
-    </p>
-
+<div class="page-control">
+  <div>
     
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </header>
-  
-  <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
-    </a>
   </div>
+  <div>
+    
+    <a id="next" class="button" href="/machinelearning/2021/01/20/ML-ClEvMet.html">Next&raquo;</a>
+    
+  </div>
+</div>
+ 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <aside class="author" role="complementary">
+    <div class="author">
+  <h2 class="page-title hr">
+    About
+  </h2>
+<div class="author-body">
+  
+    
   
 
-    <h2 id="mac-주소">MAC 주소</h2>
-
-
-    <p class="read-more"><a class="heading" href="/communication/2021/01/28/CM-mac-ip-arp.html" data-flip="title">Continue reading </a></p>
   
 
-</article>
+  <img
+    src="/assets/img/me.png"
+    class="me"
+    alt="SungJae Yu"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
+    
+  />
 
 
+  
+  <div class="author-body-description">
+    <p>Programmer at ROKAF</p>
 
+  </div>
+</div>
+</div>
 
-<h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading" role="navigation">
-  <ul>
-    <li class="pagination-item older" >
+  </aside>
+
+ 
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
       
-        <a rel="next" href="/page-2/">Older</a>
       
-    </li>
-    <li class="pagination-item newer" >
       
-        <span>Newer</span>
-      
-    </li>
+        
+          
+          
+    
   </ul>
-</nav>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr />
+  <script
+    src="https://utteranc.es/client.js"
+    repo="SungJaeYu/blog-comments-repo"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
+</aside>
 
       
 

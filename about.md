@@ -7,5 +7,5 @@ order: 2
 
 ## About
 
-I am Embedded Software Engineer at Republic of Korea
-To study Deep Learning, Embedded Software, Algorithm etc..
+I am Programmer at Republic of Korea AF  
+Blog For Study

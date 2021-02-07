@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Jan 2021 02:36:28 +0900</pubDate>
-    <lastBuildDate>Fri, 29 Jan 2021 02:36:28 +0900</lastBuildDate>
+    <pubDate>Sun, 07 Feb 2021 20:35:18 +0900</pubDate>
+    <lastBuildDate>Sun, 07 Feb 2021 20:35:18 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -22,13 +22,11 @@ x-lay 이미지 모델에 사용할 수 있다.&lt;br /&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/img/study/ML/Transferlearning.png&quot; alt=&quot;Transfer Learning&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/29/ML-transfer-learning.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/29/ML-transfer-learning.html</guid>
+        <link>http://localhost:4000/machinelearning/2021/01/29/ML-transfer-learning.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/29/ML-transfer-learning.html</guid>
+        
         
         <category>machinelearning</category>
-        
-        
-        <category>study</category>
         
       </item>
     
@@ -68,35 +66,38 @@ multi-task learning이 도움이 된다는 건 확실하다.&lt;/p&gt;
 현재 전이학습이 더 많이 사용되고 있다. 하지만 두 방법 모두 도움이 되는 방법 임은 확실하다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/29/ML-multi-task-learning.html</guid>
+        <link>http://localhost:4000/machinelearning/2021/01/29/ML-multi-task-learning.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/29/ML-multi-task-learning.html</guid>
+        
         
         <category>machinelearning</category>
-        
-        
-        <category>study</category>
         
       </item>
     
       <item>
         <title>MAC, IP, ARP</title>
         <description>&lt;h2 id=&quot;mac-주소&quot;&gt;MAC 주소&lt;/h2&gt;
+
 &lt;p&gt;MAC 주소(Media Access Control Address)는 네트워크 세그먼트의 &lt;strong&gt;데이터 링크 계층&lt;/strong&gt;에서&lt;br /&gt;
 통신을 위한 네트워크 인터페이스에 할당된 교유 식별자이다.&lt;br /&gt;
 MAC 주소는 이더넷과 와이파이를 포함한 대부분의 IEEE 802 네트워크 기술에 네트워크 주소로 사용된다.&lt;br /&gt;
-MAC 주소는 하드웨어에 저장되어, 제조업체의 등록된 식별 번호로 인코딩되며 &lt;strong&gt;BIA(burned-in Address)&lt;/strong&gt;  로 부를수 있다.&lt;br /&gt;
+MAC 주소는 하드웨어에 저장되어, 제조업체의 등록된 식별 번호로 인코딩되며 &lt;strong&gt;BIA(burned-in Address)&lt;/strong&gt; 로 부를수 있다.&lt;br /&gt;
 &lt;strong&gt;이더넷 하드웨어 주소(Ethernet hardware address, EHA), 하드웨어 주소, 물리주소&lt;/strong&gt;로 부르기도 한다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;ip-주소&quot;&gt;IP 주소&lt;/h2&gt;
+
 &lt;p&gt;IP 주소는 컴퓨터 네트워크에서 장치들이 서로를 인식하고 통신을 하기 위해서 사용하는 특수한 번호이다.&lt;br /&gt;
 오늘날 주로 IPv4가 사용되고 있지만, 주소가 부족해지면서 IPv6가 사용되기 시작됐다.
 IP는 255.255.255.255까지 가능하다.&lt;br /&gt;
 127.0.0.1은 localhost IP로 자기자신을 가리킨다.&lt;/p&gt;
 
 &lt;h3 id=&quot;ip-datagram&quot;&gt;IP Datagram&lt;/h3&gt;
+
 &lt;p&gt;IP 계층의 패킷을 의미한다. Header+Data로 구성된다.
 Header의 구성 요소는&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Version : IPv4(0100), IPv6(0110)&lt;/li&gt;
   &lt;li&gt;Header Length&lt;/li&gt;
@@ -113,12 +114,14 @@ Header의 구성 요소는&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;ip-class&quot;&gt;IP Class&lt;/h3&gt;
+
 &lt;p&gt;IP 주소는 32bit로 구성 1바이트.1바이트.1바이트.1바이트 (255.255.255.255)&lt;br /&gt;
 IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 클래스는 어디부터가 네트워크 영역인지 호스트IP 영역인지를 나타낸다.
 &lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99068D495BE8101D34&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;a-class&quot;&gt;A Class&lt;/h4&gt;
+
 &lt;p&gt;A Class는 0으로 시작한다.&lt;br /&gt;
 네트워크 주소 영역이 작기 때문에 많은 경우의 호스트 IP를 가질수 있다.&lt;br /&gt;
 &lt;strong&gt;IP 범위는 0.0.0.0 ~ 127.255.255.255&lt;/strong&gt;까지 이다.&lt;br /&gt;
@@ -127,6 +130,7 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 모두 1인경우와 모두 0인 경우는 각 각 브로트캐스트 주소, 네트워크 주소로 사용하기 때문에 제외한다.&lt;/p&gt;
 
 &lt;h4 id=&quot;b-class&quot;&gt;B Class&lt;/h4&gt;
+
 &lt;p&gt;B Class는 10으로 시작한다.
 &lt;strong&gt;범위는 128.0.0.0 ~ 191.255.255.255&lt;/strong&gt;까지 이다.&lt;br /&gt;
 네트워크 주소 경우의 수는 &lt;strong&gt;2^14&lt;/strong&gt;&lt;br /&gt;
@@ -134,6 +138,7 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 -2는 A class와 같은 이유이다.&lt;/p&gt;
 
 &lt;h4 id=&quot;c-class&quot;&gt;C Class&lt;/h4&gt;
+
 &lt;p&gt;110으로 시작한다.
 &lt;strong&gt;범위는 192.0.0.0 ~ 223.255.255.255&lt;/strong&gt;&lt;br /&gt;
 네트워크 경우의 수 &lt;strong&gt;2^21&lt;/strong&gt;&lt;br /&gt;
@@ -142,6 +147,7 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;arp&quot;&gt;ARP&lt;/h2&gt;
+
 &lt;p&gt;주소 결정 프로토콜(Address Resolution Protocol)은 네트워크 상에서 IP 주소를&lt;br /&gt;
 물리적 네트워크 주소로 대응 시키기 위해 사용되는 프로토콜이다.&lt;br /&gt;
 일종의 IP 주소와 MAC 주소를 대응 시켜놓은 table이다.&lt;/p&gt;
@@ -149,13 +155,13 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 &lt;hr /&gt;
 </description>
         <pubDate>Thu, 28 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/28/CS-mac-ip-arp.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/28/CS-mac-ip-arp.html</guid>
+        <link>http://localhost:4000/communication/2021/01/28/CM-mac-ip-arp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2021/01/28/CM-mac-ip-arp.html</guid>
         
-        <category>computerscience</category>
+        <category>network</category>
         
         
-        <category>study</category>
+        <category>communication</category>
         
       </item>
     
@@ -169,9 +175,13 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 카메라로 찍은 데이터를 사용하여 정확도를 높일 수 있다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;데이터-구성&quot;&gt;데이터 구성&lt;/h2&gt;
+
 &lt;p&gt;위 예에서 사용할 수 있는 데이터 구성은 이렇다.&lt;/p&gt;
+
 &lt;h3 id=&quot;1-option-1&quot;&gt;1. Option 1&lt;/h3&gt;
+
 &lt;p&gt;카메라 데이터와 핸드폰 데이터를 무작위로 섞은 뒤,&lt;br /&gt;
 흔히 하는 대로 적절한 비율로 Train, Dev, Test로 분리한다.&lt;br /&gt;
 하지만, 이렇게 할경우 Dev, Test Set이 우리가 원하는 환경과 다르게 된다.
@@ -180,6 +190,7 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 즉 이 방법은 옳지 못하다.&lt;/p&gt;
 
 &lt;h3 id=&quot;2-option-2&quot;&gt;2. Option 2&lt;/h3&gt;
+
 &lt;p&gt;우리가 원하는 결과를 얻기 위해 Dev, Test Set은 핸드폰 이미지로만 구성한다.
 그리고 Train Set에만 카메라 이미지를 포함시킨다.
 즉, Train Set을 20만개의 카메라 데이터 + 5000개의 핸드폰 데이터로 설정한다.&lt;br /&gt;
@@ -188,8 +199,10 @@ IP는 네트워크 영역과 호스트IP 영역이 구분되어있다.
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;에러의-중의성&quot;&gt;에러의 중의성&lt;/h2&gt;
+
 &lt;p&gt;Train error가 1%라고 할 때, Dev error가 8%라면 이는 Train에 과대적합 된것인가??&lt;br /&gt;
 Different distribution data를 학습시켰기 때문에 이 error 차이는 두가지 의미를 가진다.&lt;/p&gt;
+
 &lt;ol&gt;
   &lt;li&gt;Train에 과대적합, 즉 variance가 높음&lt;/li&gt;
   &lt;li&gt;Dev set과 Train set distribution의 난이도 차이(Data Mismatch)&lt;/li&gt;
@@ -201,10 +214,12 @@ Different distribution data를 학습시켰기 때문에 이 error 차이는 두
 이를 해결하기 위한 방법으로 &lt;strong&gt;Train Dev Set&lt;/strong&gt;을 사용할 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;train-dev-set&quot;&gt;Train Dev Set&lt;/h3&gt;
+
 &lt;p&gt;Train set에서 Train dev set을 따로 분리한다. 그러면 이제 Train set과 Train dev set은 같은 distribution을 가진다.&lt;br /&gt;
 Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;variance&lt;/strong&gt; 때문인지 &lt;strong&gt;data mismatch&lt;/strong&gt;때문인지 알 수 있다.&lt;/p&gt;
 
 &lt;p&gt;첫번째 예를 들어보면,&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Train Error : 1%&lt;/li&gt;
   &lt;li&gt;Train Dev Error : 8%&lt;/li&gt;
@@ -214,6 +229,7 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
 &lt;p&gt;이 경우는 Train dev error와 Train error의 차이가 크기 때문에 variance 때문임을 알 수 있다.&lt;/p&gt;
 
 &lt;p&gt;두번째 경우는&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Train Error : 1%&lt;/li&gt;
   &lt;li&gt;Train Dev Error : 2%&lt;/li&gt;
@@ -225,19 +241,18 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
 &lt;hr /&gt;
 </description>
         <pubDate>Sun, 24 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/24/ML-training-and-testing-on-different-distribution.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/24/ML-training-and-testing-on-different-distribution.html</guid>
+        <link>http://localhost:4000/machinelearning/2021/01/24/ML-training-and-testing-on-different-distribution.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/24/ML-training-and-testing-on-different-distribution.html</guid>
+        
         
         <category>machinelearning</category>
-        
-        
-        <category>study</category>
         
       </item>
     
       <item>
         <title>Bayes Error</title>
         <description>&lt;h2 id=&quot;bayes-error&quot;&gt;Bayes Error&lt;/h2&gt;
+
 &lt;p&gt;&lt;strong&gt;Bayes error&lt;/strong&gt;는 모든 machine learning 모델의 &lt;strong&gt;최소 오차&lt;/strong&gt;이다.&lt;br /&gt;
 즉, 모델의 error 참조점이 된다.&lt;br /&gt;
 모델의 Bayes error 기준으로 train error와 test error를 비교하여,&lt;br /&gt;
@@ -249,6 +264,7 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Bayes err : 2%&lt;/li&gt;
   &lt;li&gt;train err : 3%&lt;/li&gt;
@@ -263,32 +279,35 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 23 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/23/ML-bayeserror.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/23/ML-bayeserror.html</guid>
+        <link>http://localhost:4000/machinelearning/2021/01/23/ML-bayeserror.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/23/ML-bayeserror.html</guid>
+        
         
         <category>machinelearning</category>
-        
-        
-        <category>study</category>
         
       </item>
     
       <item>
         <title>OSI Model</title>
         <description>&lt;h1 id=&quot;osi-model&quot;&gt;OSI Model&lt;/h1&gt;
+
 &lt;p&gt;OSI(Open System Interconnection Reference Model)은 국제표준화기구(ISO)에서 개발한 모델로,&lt;br /&gt;
 컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 것이다. 일반적으로
 &lt;strong&gt;OSI 7 Layer&lt;/strong&gt;라고 한다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;physical-layer&quot;&gt;Physical Layer&lt;/h2&gt;
-&lt;p&gt;물리 계층은 네트워크의 기본 네트워크 하드웨어 전송 기술을 이룬다. &lt;br /&gt;
+
+&lt;p&gt;물리 계층은 네트워크의 기본 네트워크 하드웨어 전송 기술을 이룬다.&lt;br /&gt;
 네트워크의 높은 수준의 논리 데이터 구조를 기초로 하는 필수 계층이다.&lt;br /&gt;
 다양한 특징의 하드웨어 기술이 접목되어 있기에 OSI 아키텍처에서 가장 복잡한 계층으로 간주된다.&lt;br /&gt;
 Switch 이전에 사용되던 &lt;strong&gt;Hub&lt;/strong&gt;와, &lt;strong&gt;Cabling&lt;/strong&gt; 등이 물리 계층이다.&lt;/p&gt;
 
 &lt;h3 id=&quot;cable&quot;&gt;Cable&lt;/h3&gt;
+
 &lt;p&gt;&lt;strong&gt;Cable&lt;/strong&gt;은 두 종류로 나누어 진다.&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Fiber&lt;/li&gt;
   &lt;li&gt;Copper&lt;/li&gt;
@@ -296,7 +315,7 @@ Switch 이전에 사용되던 &lt;strong&gt;Hub&lt;/strong&gt;와, &lt;strong&gt
 
 &lt;p&gt;&lt;strong&gt;Fiber&lt;/strong&gt;는 일명 광케이블로 빛을 전송하는 한개 혹은 여러개의 optical fibers(광섬유)로 구성된다.&lt;br /&gt;
 Fiber optics는 전송속도가 빠르고 이동간 에너지 손실이 없기 때문에 원거리 통신에 사용가능하다.
-또한 전파 간섭이 없기 때문에 간섭을 통한 신호 에러도 피할 수 있다. &lt;br /&gt;
+또한 전파 간섭이 없기 때문에 간섭을 통한 신호 에러도 피할 수 있다.&lt;br /&gt;
 하지만 광섬유를 통한 광신호를 전자 신호로 변화하여 사용해야 하며,&lt;br /&gt;
 제조 물성이 한정적이며, 공정 다양성이 상대적으로 적고 제조가 까다롭다.&lt;/p&gt;
 
@@ -304,7 +323,9 @@ Fiber optics는 전송속도가 빠르고 이동간 에너지 손실이 없기 �
 Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;datalink-layer&quot;&gt;Datalink Layer&lt;/h2&gt;
+
 &lt;p&gt;데이터 링크 계층은 포인트 투 포인트 간 신뢰성 있는 전송을 보장하기 위한 계층으로 CRC 기반의 오류 제어와 흐름제어가 필요하다. 네트워크 위의 개체들간 데이터를 전달하고, 물리 계층에서 발생할 수 있는 오류를 찾아 내고, 수정하는 데 필요한 기능적, 절차적 수단을 제공한다. 주소 값은 물리적으로 할당 받는 MAC 주소를 사용한다.&lt;br /&gt;
 &lt;em&gt;MAC 주소는 네트워크 카드가 만들어질때 설정되는 고유한 물리 주소이다.&lt;/em&gt;&lt;br /&gt;
 데이터 링크 계층의 예는 이더넷이다. 이 외에도 HDLC나 ADCCP 같은 포인트 투 포인트 프로토콜이나&lt;br /&gt;
@@ -312,11 +333,14 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
 네트워크 &lt;strong&gt;Bridge(브릿지)&lt;/strong&gt; 나 &lt;strong&gt;Switch(스위치)&lt;/strong&gt; 등이 이 계층에서 동작한다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;network-layer&quot;&gt;Network Layer&lt;/h2&gt;
+
 &lt;p&gt;네트워크 계층은 여러 개의 노드를 거칠 때마다 경로를 찾아주는 역할을 하는 계층이다.
 다양한 길이의 데이터를 네트워크를 통해 전달하고, 그 과정에서 전송 계층이 요구하는 서비스 품질(QoS)를&lt;br /&gt;
 제공하기 위한 기능적, 절차적 수단을 제공한다.&lt;br /&gt;
 네트워크 계층은&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Routing&lt;/li&gt;
   &lt;li&gt;흐름 제어&lt;/li&gt;
@@ -329,7 +353,9 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
 &lt;/ul&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;transport-layer&quot;&gt;Transport Layer&lt;/h2&gt;
+
 &lt;p&gt;전송 계층은 양 끝단 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해주며,
 상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다.&lt;br /&gt;
 시퀀스 넘버 기반의 오류 제어 방식을 사용한다. 전송 계층은 특정 연결의 유효성을 제어하고,&lt;br /&gt;
@@ -338,8 +364,11 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
 &lt;strong&gt;TCP(Transmission Control Protocol)&lt;/strong&gt; 과 &lt;strong&gt;UDP(User Datagram Protocl)&lt;/strong&gt; 가 전송 계층의 프로토콜이다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;session-layer&quot;&gt;Session Layer&lt;/h2&gt;
+
 &lt;p&gt;세션 계층은 양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다.&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Duplex&lt;/li&gt;
   &lt;li&gt;Half-duplex&lt;/li&gt;
@@ -351,19 +380,25 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
 &lt;/ul&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;presentation-layer&quot;&gt;Presentation Layer&lt;/h2&gt;
+
 &lt;p&gt;표현 계층은 코드 간의 번역을 담당하여 사용자 시스템에서 데이터의 형식상 차이를 다루는 부담을&lt;br /&gt;
 응용 계층으로 부터 덜어준다. MIME 인코딩이나 암호화 등의 동작이 표현 계층에서 이루어진다.&lt;br /&gt;
 &lt;em&gt;예로 EBCDIC로 인코딩된 문서 파일을 ASCII로 인코딩된 파일로 바꾸어주는 것이 표현 계층의 역할이다&lt;/em&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;사용자의 명령어를 완성 및 결과 표현&lt;/li&gt;
   &lt;li&gt;포장/압축/암호화&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
+
 &lt;h2 id=&quot;application-layer&quot;&gt;Application Layer&lt;/h2&gt;
+
 &lt;p&gt;응용 계층은 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. 일반적인 응용 서비스는&lt;br /&gt;
 관련된 응용 프로세스들 사이의 전환을 제공한다. 응용 서비스의 예로, 가성 터미널 등이 있다.&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;네트워크 소프트웨어 UI&lt;/li&gt;
   &lt;li&gt;사용자의 입출력&lt;/li&gt;
@@ -372,13 +407,13 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
 &lt;hr /&gt;
 </description>
         <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/22/CS-osi.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/22/CS-osi.html</guid>
+        <link>http://localhost:4000/communication/2021/01/22/CM-osi.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2021/01/22/CM-osi.html</guid>
         
-        <category>computerscience</category>
+        <category>network</category>
         
         
-        <category>study</category>
+        <category>communication</category>
         
       </item>
     
@@ -431,13 +466,11 @@ divided by the total number of elements that actually belong to the positive cla
 왜냐하면 사용되는 조화평균이 Precision과 Recall 사이의 불균형을 잘 보정해주기 때문이다.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/20/ML-ClEvMet.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/ML-ClEvMet.html</guid>
+        <link>http://localhost:4000/machinelearning/2021/01/20/ML-ClEvMet.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/20/ML-ClEvMet.html</guid>
+        
         
         <category>machinelearning</category>
-        
-        
-        <category>study</category>
         
       </item>
     
@@ -478,13 +511,11 @@ divided by the total number of elements that actually belong to the positive cla
 Compiler + Linker = Builder&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/study/2021/01/20/CS-clb.html</link>
-        <guid isPermaLink="true">http://localhost:4000/study/2021/01/20/CS-clb.html</guid>
+        <link>http://localhost:4000/computerscience/2021/01/20/CS-clb.html</link>
+        <guid isPermaLink="true">http://localhost:4000/computerscience/2021/01/20/CS-clb.html</guid>
+        
         
         <category>computerscience</category>
-        
-        
-        <category>study</category>
         
       </item>
     

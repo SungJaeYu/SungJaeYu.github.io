@@ -2,9 +2,7 @@
 title: Transfer Learning
 layout: post
 categories:
-- study
-tags:
-- machinelearning
+  - machinelearning
 comments: true
 subtitle: 전이 학습
 ---

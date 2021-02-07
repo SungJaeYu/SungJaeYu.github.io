@@ -15,13 +15,8 @@ SungJae Yu(유승재)
 </span>
 </center>
 
-<center>MAJOR : Military Digital Convergence(Computer Science & Information Communication & Military System)</center>
-
-<center>Ajou University</center>
-
-<center>Republic of Korea Airforce</center>
-
-<center>Seosan City, Chung-nam Province, Republic of Korea</center>
+<center>Ajou University(Military Digital Convergence)</center>
+<center>Programmer at Republic of Korea Airforce</center>
 
 ## Personal Data
 
@@ -52,6 +47,7 @@ SungJae Yu(유승재)
 ### Language
 
 - Python
+- C++
 - C
 
 ### Certification
