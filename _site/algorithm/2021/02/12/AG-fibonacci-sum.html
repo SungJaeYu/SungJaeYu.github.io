@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Algorithm" />
+<meta property="og:title" content="Fibonacci Sum" />
 <meta property="og:type" content="article" />
 
  
@@ -39,16 +39,18 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>Algorithm &middot; SungJae Yu's Blog</title>
+<title>Fibonacci Sum &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="Algorithm
+  content="Fibonacci Sum
+
 "
 />
 <meta
   property="og:description"
-  content="Algorithm
+  content="Fibonacci Sum
+
 "
 />
 
@@ -63,8 +65,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/category/algorithm/" />
-<meta property="og:url" content="http://localhost:4000/category/algorithm/" />
+<link rel="canonical" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html" />
+<meta property="og:url" content="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html" />
 
 <link
   rel="alternate"
@@ -73,8 +75,10 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
   href="http://localhost:4000/feed.xml"
 />
 
+
+<link rel="prev" href="http://localhost:4000/communication/2021/02/07/tcp-port.html" />
  
-<link rel="next" href="http://localhost:4000/category/communication/" />
+<link rel="next" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci.html" />
 
 
 <link
@@ -167,31 +171,235 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
 
-
-
+<article id="post-algorithm/2021/02/12/AG-fibonacci-sum" class="post" role="article">
   <header>
-    <h1 class="page-title">Algorithm</h1>
+
+    <h1 class="post-title">
+      
+        Fibonacci Sum
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2021-02-12T00:00:00+09:00">12 Feb 2021</time>
+      
+
+
+
+
+
+
+
+
+
+in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+
     
-  
-  
-<p class="message">Algorithm</p>
-
-
+  <div class="hr" style="padding-bottom:0"></div>
 
 
   </header>
-  <hr class="sr-only"/>
-
-
-
   
+  <div style="text-align: center;">
+    <a href="https://hits.seeyoufarm.com/localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    </a>
+  </div>
+
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+    <div class="markdown-body">
+
+
+
+<style>
+.googleads { display:block; width:98%; height: 280px; }
+@media(min-width: 600px) { .googleads { display: none; } }
+</style>
+<!--구글 에드센스
+<ins class="adsbygoogle myAd1190"
+    data-ad-client="ca-pub-1200017190012992"
+></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+-->
+      <!--게시물 내용-->
+      <h2 id="fibonacci-sum">Fibonacci Sum</h2>
+
+<p>피보나치 수의 합은 모든 피보나치 수를 구하면서 더 하는 방법을 사용할 수 있다.<br />
+이 방법은 모든 숫자를 구하면서 진행된다.<br />
+하지만 빠르게 수학적으로 피보나치 수의 합을 구할 수 있다.
+<img src="/assets/img/study/ALG/fibonacciSum.png" alt="Fibonacci Sum" /></p>
+
+<p>결국 우리는 fibonacci(n+2) 만 구하면 된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long fibonacci_sum_fast(long long n) {
+	long long result = get_fibonacci(n + 2) - 1;
+	return result;
+}
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="fibonacci-partial-sum">Fibonacci Partial Sum</h2>
+
+<p>위와 같은 방법으로 부분 합을 구할 수 있다. from indexA to indexB라고 했을 때,<br />
+indexA까지의 합 : F(A+2)-1<br />
+indexB-1까지의 합 : F(B+1)-1<br />
+이므로, 부분합은 F(A+2) - F(B+1)이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long get_fibonacci_partial_sum_fast(int from, int to) {
+	long long result = get_fibonacci(to + 2) - get_fibonacci(from + 1);
+	return result;
+}
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="fibonacci-square-sum">Fibonacci Square Sum</h2>
+
+<p><img src="/assets/img/study/ALG/fibonacciSqSum.png" alt="Fibonacci Square Sum" />
+피보나치 수의 제곱 합은 위 그림처럼 표현 할 수 있다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long fibonacci_sum_squares_fast(long long n) {
+	long long result = get_fibonacci(n + 1)*get_fibonacci(n);
+	return result;
+}
+</code></pre></div></div>
+
+      <br/>
+      <!-- 블로그-하단-반응형 
+      <br/>
+      
+      <ins class="adsbygoogle"
+          style="display:block; width:100%; height:300px;"
+          data-ad-client="ca-pub-1200017190012992"
+          data-ad-format="auto"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      
+    </div>
+    
+    <script>
+
+    </script>
+    -->
+  
+
+</article>
+
+  <hr class="dingbat" />
+<!--공유, 트위터, 페이스북-->
+  <!-- <div class="share">
+      <h2>Share this post</h2>
+      <div class="share-body">
+        <a href="http://twitter.com/share?text=Fibonacci Sum&amp;url=http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="icon-twitter">
+            </span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="icon-facebook">
+            </span>
+        </a>
+    </div>
+  </div> -->
+  <br/>
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-CHFZEXLW0R"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-CHFZEXLW0R");
+</script>
+
+<div class="page-control">
+  <div>
+    
+    <a id="prev" class="button" href="/communication/2021/02/07/tcp-port.html">&laquo;Prev</a>
+    
+  </div>
+  <div>
+    
+    <a id="next" class="button" href="/algorithm/2021/02/12/AG-fibonacci.html">Next&raquo;</a>
+    
+  </div>
+</div>
+ 
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  <h2 class="page-title hr">
+    About
+  </h2>
+<div class="author-body">
   
     
-    <h2 id="y2021" class="hr">2021</h2>
-    <ul class="related-posts">
+  
+
+  
+
+  <img
+    src="/assets/img/me.png"
+    class="me"
+    alt="SungJae Yu"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
     
+  />
+
+
   
-  
+  <div class="author-body-description">
+    <p>Programmer at ROKAF</p>
+
+  </div>
+</div>
+</div>
+
+  </aside>
+
+ 
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+      
+      
+        
+        
+          
 
 
 <li class="h4">
@@ -199,15 +407,15 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <span>Greatest Common Divisor & Least Common Multiple</span>
   </a>
   <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb
+    12 Feb 2021
   </time></small>
 </li>
 
-  
-
-  
-  
-  
+        
+      
+        
+        
+          
 
 
 <li class="h4">
@@ -215,29 +423,34 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <span>Fibonacci Number</span>
   </a>
   <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb
+    12 Feb 2021
   </time></small>
 </li>
 
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/algorithm/2021/02/12/AG-fibonacci-sum.html" data-flip="title">
-    <span>Fibonacci Sum</span>
-  </a>
-  <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb
-  </time></small>
-</li>
-
+        
+      
+        
+          
+          
+    
   </ul>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr />
+  <script
+    src="https://utteranc.es/client.js"
+    repo="SungJaeYu/blog-comments-repo"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
+</aside>
 
       
 
@@ -358,7 +571,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <li>
       <input type="checkbox" id="list-item-3"/>
       <div  class="list-wrapper">
-      <a class="sidebar-nav-item active" href="/category/algorithm/">Algorithm</a>
+      <a class="sidebar-nav-item" href="/category/algorithm/">Algorithm</a>
        
     </div>
      <ul class="list-body">
