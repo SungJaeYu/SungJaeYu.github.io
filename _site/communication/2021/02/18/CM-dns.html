@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Greatest Common Divisor & Least Common Multiple" />
+<meta property="og:title" content="DNS(Domain Name System) Server" />
 <meta property="og:type" content="article" />
 
  
@@ -39,17 +39,19 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>Greatest Common Divisor & Least Common Multiple &middot; SungJae Yu's Blog</title>
+<title>DNS(Domain Name System) Server &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="Greatest Common Divisor(GCD)
+  content="DNS(Domain Name System)는 사람이 읽을 수 있는 도메인 이름(예: www.google.com)을
+IP 주소로 변환하는 역할을 한다.
 
 "
 />
 <meta
   property="og:description"
-  content="Greatest Common Divisor(GCD)
+  content="DNS(Domain Name System)는 사람이 읽을 수 있는 도메인 이름(예: www.google.com)을
+IP 주소로 변환하는 역할을 한다.
 
 "
 />
@@ -65,8 +67,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html" />
-<meta property="og:url" content="http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html" />
+<link rel="canonical" href="http://localhost:4000/communication/2021/02/18/CM-dns.html" />
+<meta property="og:url" content="http://localhost:4000/communication/2021/02/18/CM-dns.html" />
 
 <link
   rel="alternate"
@@ -76,10 +78,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 />
 
 
-<link rel="prev" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci.html" />
+<link rel="prev" href="http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html" />
  
-<link rel="next" href="http://localhost:4000/communication/2021/02/18/CM-dns.html" />
-
 
 <link
   rel="apple-touch-icon"
@@ -171,17 +171,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
 
-<article id="post-algorithm/2021/02/12/AG-gcd-lcm" class="post" role="article">
+<article id="post-communication/2021/02/18/CM-dns" class="post" role="article">
   <header>
 
     <h1 class="post-title">
       
-        Greatest Common Divisor & Least Common Multiple
+        DNS(Domain Name System) Server
       
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-02-12T00:00:00+09:00">12 Feb 2021</time>
+      <time datetime="2021-02-18T00:00:00+09:00">18 Feb 2021</time>
       
 
 
@@ -192,7 +192,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
+in <a href="/category/communication/" data-flip="title">Communication</a>
 
       
 
@@ -204,7 +204,7 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 
 
 
-
+on <a href="/tag/comm-network/" data-flip="title">Network</a>
 
     </p>
 
@@ -215,8 +215,8 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/communication/2021/02/18/CM-dns.html">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/communication/2021/02/18/CM-dns.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
@@ -241,55 +241,83 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 <br/>
 -->
       <!--게시물 내용-->
-      <h2 id="greatest-common-divisorgcd">Greatest Common Divisor(GCD)</h2>
+      <p>DNS(Domain Name System)는 사람이 읽을 수 있는 도메인 이름(예: www.google.com)을<br />
+IP 주소로 변환하는 역할을 한다.</p>
 
-<p>최대공약수를 구하는 법은 단순하게 확인하는 숫자보다 작은 모든 숫자를 확인하면서<br />
-두 숫자를 나눌 수 있는 수 중에 가장 큰것을 출력하는 것이다.</p>
+<p>IP 주소로 접속하기 위해서는 모든 서버의 IP를 외우고 있어야 한다.<br />
+하지만 도메인 이름을 사용함으로서 암기가 원활해졌고, DNS는 도메인 이름으로
+실제 서버의 IP를 찾기위해 사용된다..</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int gcd_naive(int a, int b) {
-  int current_gcd = 1;
-  for (int d = 2; d &lt;= a &amp;&amp; d &lt;= b; d++) {
-    if (a % d == 0 &amp;&amp; b % d == 0) {
-      if (d &gt; current_gcd) {
-        current_gcd = d;
-      }
-    }
-  }
-  return current_gcd;
-}
-</code></pre></div></div>
+<h3 id="dns-서버-종류">DNS 서버 종류</h3>
 
-<p>이 방법은 모든 숫자를 확인해야 되기 때문에 항상 O(max(a, b)) 만큼 걸린다.<br />
-하지만 유클리드 호제법(Euclidean Algorithm)을 사용하면 더 빠르게 구할 수 있다.<br />
-유클리드 호제법 : <a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C_%ED%98%B8%EC%A0%9C%EB%B2%95#:~:text=%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C%20%ED%98%B8%EC%A0%9C%EB%B2%95(%2D%E4%BA%92%E9%99%A4%E6%B3%95,%EB%A5%BC%20%EC%96%BB%EB%8A%94%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%84%20%EB%82%98%ED%83%80%EB%82%B8%EB%8B%A4.">위키피디아 참고</a><br />
-유클리드 호제법을 사용하면 아래와 같다.</p>
+<ol>
+  <li>Caching name servers</li>
+  <li>Recursive name servers</li>
+  <li>Root name servers</li>
+  <li>TLD name servers</li>
+  <li>Authoritative name servers</li>
+</ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int gcd_fast(int a, int b) {
-	int R;
-	while ((a % b) &gt; 0) {
-		R = a % b;
-		a = b;
-		b = R;
-	}
-	return b;
-}
-</code></pre></div></div>
+<h4 id="cachingrecursive">Caching/Recursive</h4>
 
-<p>위 방법보다 훨씬 빠르다.</p>
+<p>Caching/Recursive name server는 ISP나 local network에 의해 제공된다.<br />
+이 두 서버는 아래와 같이 동작한다.</p>
+
+<ol>
+  <li>처음으로 한 유저가 “www.google.com” 의 IP를 요구한다.</li>
+  <li>Recursive 서버가 DNS 절차를 모두 거쳐 IP를 보내준다.</li>
+  <li>다른 유저가 똑같이 구글의 IP를 요구한다.</li>
+  <li>Caching 서버에 cache된 이전 요청의 답을 보낸다</li>
+</ol>
+
+<p>위 과정을 통해서 전체 look-up과정을 줄일 수 있다.</p>
+
+<h3 id="dns-절차">DNS 절차</h3>
+
+<ol>
+  <li>User가 Caching/recursive 서버에게 IP 주소 요청</li>
+  <li>Caching 되어 있다면 바로 응답 아닐 경우 아래 절차 진행</li>
+  <li>Recursive 서버가 Root DNS 서버에게 IP 주소를 요청</li>
+  <li>Root DNS 서버가 Top Level DNS 서버의 IP 주소 응답</li>
+  <li>Recursive 서버가 Top Level DNS 서버에게 IP 주소를 요청</li>
+  <li>Top Level DNS 서버가 Authoritative name 서버의 IP 주소 응답</li>
+  <li>Recursive 서버가 Authoritative name 서버에게 IP 주소를 요청</li>
+  <li>Authoritative name 서버가 IP 주소 응답</li>
+</ol>
+
+<h3 id="dns-look-up-tcp">DNS Look-up (TCP)</h3>
+
+<p>DNS request는 UDP를 사용한다. 하지만 아래는 TCP DNS look-up 과정이다.</p>
+
+<ol>
+  <li>User가 Caching/Recursive Name server에 53번 포트로 SYN 패킷 전송</li>
+  <li>SYN-ACK와 ACK를 보내며 3 way hand shake 절차 진행(Connection Established)</li>
+  <li>User가 Request 전송 및 Caching/Recursive Name server ACK 전송(여기까지 5 Packets)</li>
+</ol>
 
 <hr />
 
-<h2 id="least-common-multiplelcm">Least Common Multiple(LCM)</h2>
+<ol>
+  <li>Caching/Recursive Name server가 Root name 서버에 3 hand-shake 절차(3 Packets)</li>
+  <li>C/R Name 서버와 Root 서버는 REQ, REQ-ACK, RES, RES-ACK(4 Packets)</li>
+  <li>C/R Name 서버와 Root 서버 연결 해제(4 way handshake, 4 Packets)</li>
+  <li>나머지 서버(TLD, Authoritative)와 각 각 11 Packets를 교환하며 IP 확인</li>
+</ol>
 
-<p>최소공배수를 구하는 방법은 간단하다. 두 수의 곱은 GCD * LCM이다.<br />
-그러므로 두 수 a, b의 최소공배수는 (a * b)/GCD 이다.</p>
+<p>결국 최소 5 + 11 + 11 + 11 = 38 패킷 교환</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long lcm_fast(int a, int b) {
-	long long lcm = (long long)a * b / (long long)gcd_fast(a, b);
-	return lcm;
-}
+<h3 id="dns-look-up-udp">DNS Look-up (UDP)</h3>
 
-</code></pre></div></div>
+<ol>
+  <li>User가 C/R 서버에 Req 1 패킷 전송</li>
+  <li>C/R 서버가 Root 서버에 Req 전송 및 Res 수신</li>
+  <li>나머지 서버 동일</li>
+</ol>
+
+<p>총 7 패킷 사용<br />
+이런 패킷 차이 때문에 DNS look-up 과정에서는 UDP를 사용한다.<br />
+하지만 오류가 났을 때는 어떻게 할까?<br />
+그냥 다시 보내면 된다.</p>
 
       <br/>
       <!-- 블로그-하단-반응형 
@@ -318,12 +346,12 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
   <!-- <div class="share">
       <h2>Share this post</h2>
       <div class="share-body">
-        <a href="http://twitter.com/share?text=Greatest Common Divisor & Least Common Multiple&amp;url=http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html"
+        <a href="http://twitter.com/share?text=DNS(Domain Name System) Server&amp;url=http://localhost:4000/communication/2021/02/18/CM-dns.html"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <span class="icon-twitter">
             </span>
         </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html"
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/communication/2021/02/18/CM-dns.html"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <span class="icon-facebook">
             </span>
@@ -350,12 +378,10 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 <div class="page-control">
   <div>
     
-    <a id="prev" class="button" href="/algorithm/2021/02/12/AG-fibonacci.html">&laquo;Prev</a>
+    <a id="prev" class="button" href="/algorithm/2021/02/12/AG-gcd-lcm.html">&laquo;Prev</a>
     
   </div>
   <div>
-    
-    <a id="next" class="button" href="/communication/2021/02/18/CM-dns.html">Next&raquo;</a>
     
   </div>
 </div>
@@ -412,11 +438,11 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 
 
 <li class="h4">
-  <a href="/algorithm/2021/02/12/AG-fibonacci.html" data-flip="title">
-    <span>Fibonacci Number</span>
+  <a href="/communication/2021/02/07/CM-tcp-port.html" data-flip="title">
+    <span>TCP Port</span>
   </a>
-  <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb 2021
+  <small><time datetime="2021-02-07T00:00:00+09:00">
+    07 Feb 2021
   </time></small>
 </li>
 
@@ -428,11 +454,27 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 
 
 <li class="h4">
-  <a href="/algorithm/2021/02/12/AG-fibonacci-sum.html" data-flip="title">
-    <span>Fibonacci Sum</span>
+  <a href="/communication/2021/01/28/CM-mac-ip-arp.html" data-flip="title">
+    <span>MAC, IP, ARP</span>
   </a>
-  <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb 2021
+  <small><time datetime="2021-01-28T00:00:00+09:00">
+    28 Jan 2021
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/communication/2021/01/22/CM-osi.html" data-flip="title">
+    <span>OSI Model</span>
+  </a>
+  <small><time datetime="2021-01-22T00:00:00+09:00">
+    22 Jan 2021
   </time></small>
 </li>
 

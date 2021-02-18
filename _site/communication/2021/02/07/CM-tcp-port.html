@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Greatest Common Divisor & Least Common Multiple" />
+<meta property="og:title" content="TCP Port" />
 <meta property="og:type" content="article" />
 
  
@@ -39,19 +39,15 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>Greatest Common Divisor & Least Common Multiple &middot; SungJae Yu's Blog</title>
+<title>TCP Port &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="Greatest Common Divisor(GCD)
-
-"
+  content="포트의 종류 System Port(well-known Port) 범위 : 0~1023 IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한 TCP 및 UDP 포트 번호의 일부이다. 대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다. 강제 지정이 아닌 권고안이다. 다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인..."
 />
 <meta
   property="og:description"
-  content="Greatest Common Divisor(GCD)
-
-"
+  content="포트의 종류 System Port(well-known Port) 범위 : 0~1023 IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한 TCP 및 UDP 포트 번호의 일부이다. 대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다. 강제 지정이 아닌 권고안이다. 다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인..."
 />
 
 
@@ -65,8 +61,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html" />
-<meta property="og:url" content="http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html" />
+<link rel="canonical" href="http://localhost:4000/communication/2021/02/07/CM-tcp-port.html" />
+<meta property="og:url" content="http://localhost:4000/communication/2021/02/07/CM-tcp-port.html" />
 
 <link
   rel="alternate"
@@ -76,9 +72,9 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 />
 
 
-<link rel="prev" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci.html" />
+<link rel="prev" href="http://localhost:4000/machinelearning/2021/01/29/ML-transfer-learning.html" />
  
-<link rel="next" href="http://localhost:4000/communication/2021/02/18/CM-dns.html" />
+<link rel="next" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html" />
 
 
 <link
@@ -171,17 +167,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
 
-<article id="post-algorithm/2021/02/12/AG-gcd-lcm" class="post" role="article">
+<article id="post-communication/2021/02/07/CM-tcp-port" class="post" role="article">
   <header>
 
     <h1 class="post-title">
       
-        Greatest Common Divisor & Least Common Multiple
+        TCP Port
       
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-02-12T00:00:00+09:00">12 Feb 2021</time>
+      <time datetime="2021-02-07T00:00:00+09:00">07 Feb 2021</time>
       
 
 
@@ -192,7 +188,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
+in <a href="/category/communication/" data-flip="title">Communication</a>
 
       
 
@@ -204,7 +200,7 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 
 
 
-
+on <a href="/tag/comm-network/" data-flip="title">Network</a>
 
     </p>
 
@@ -215,8 +211,8 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/communication/2021/02/07/CM-tcp-port.html">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/communication/2021/02/07/CM-tcp-port.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
@@ -241,55 +237,182 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 <br/>
 -->
       <!--게시물 내용-->
-      <h2 id="greatest-common-divisorgcd">Greatest Common Divisor(GCD)</h2>
+      <h2 id="포트의-종류">포트의 종류</h2>
+<h3 id="system-portwell-known-port">System Port(well-known Port)</h3>
+<p>범위 : 0~1023<br />
+IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한<br />
+TCP 및 UDP 포트 번호의 일부이다.<br />
+대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다.<br />
+강제 지정이 아닌 권고안이다.<br />
+다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인 목적으로 포트를 변경하여<br />
+사용하는 경우도 있다.</p>
 
-<p>최대공약수를 구하는 법은 단순하게 확인하는 숫자보다 작은 모든 숫자를 확인하면서<br />
-두 숫자를 나눌 수 있는 수 중에 가장 큰것을 출력하는 것이다.</p>
+<p>아래는 자주 사용하는 포트이다.<br />
+자세한 포트 내용은 
+<a href="https://ko.wikipedia.org/wiki/TCP/UDP%EC%9D%98_%ED%8F%AC%ED%8A%B8_%EB%AA%A9%EB%A1%9D">위키피디아</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int gcd_naive(int a, int b) {
-  int current_gcd = 1;
-  for (int d = 2; d &lt;= a &amp;&amp; d &lt;= b; d++) {
-    if (a % d == 0 &amp;&amp; b % d == 0) {
-      if (d &gt; current_gcd) {
-        current_gcd = d;
-      }
-    }
-  }
-  return current_gcd;
-}
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th>포트</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7</td>
+      <td>ECHO</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>DISCARD</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>DAYTIME</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>QOTD(Quote of the Day)</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>CHARGEN</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>FTP 데이터 포트</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>FTP 제어 포트</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>SSH</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Telnet</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>SMTP</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>DNS</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>BOOTP 서버, DHCP</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>BOOTP 클라이언트, DHCP</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>TFTP</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>Finger</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>HTTP</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>POP3</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>RPC</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td>NTP</td>
+    </tr>
+    <tr>
+      <td>143</td>
+      <td>IMAP</td>
+    </tr>
+    <tr>
+      <td>161</td>
+      <td>SNMP</td>
+    </tr>
+    <tr>
+      <td>162</td>
+      <td>SNMPTRAP</td>
+    </tr>
+    <tr>
+      <td>179</td>
+      <td>BGP</td>
+    </tr>
+    <tr>
+      <td>220</td>
+      <td>IMAPv3</td>
+    </tr>
+    <tr>
+      <td>443</td>
+      <td>SSL/TLS</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>IKE</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>이 방법은 모든 숫자를 확인해야 되기 때문에 항상 O(max(a, b)) 만큼 걸린다.<br />
-하지만 유클리드 호제법(Euclidean Algorithm)을 사용하면 더 빠르게 구할 수 있다.<br />
-유클리드 호제법 : <a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C_%ED%98%B8%EC%A0%9C%EB%B2%95#:~:text=%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C%20%ED%98%B8%EC%A0%9C%EB%B2%95(%2D%E4%BA%92%E9%99%A4%E6%B3%95,%EB%A5%BC%20%EC%96%BB%EB%8A%94%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%84%20%EB%82%98%ED%83%80%EB%82%B8%EB%8B%A4.">위키피디아 참고</a><br />
-유클리드 호제법을 사용하면 아래와 같다.</p>
+<h3 id="user-portregistered-port">USER Port(Registered Port)</h3>
+<p>범위 : 1024~49151<br />
+이 포트들은 RFC6335에 따라 IANA(인터넷 할당 번호 관리기관)에 등록한다.<br />
+통상 이 구간의 포트들은 시스템에서 슈퍼유저 관한이 없어도 사용 가능하다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int gcd_fast(int a, int b) {
-	int R;
-	while ((a % b) &gt; 0) {
-		R = a % b;
-		a = b;
-		b = R;
-	}
-	return b;
-}
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th>포트</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1080</td>
+      <td>SOCKS 프록시</td>
+    </tr>
+    <tr>
+      <td>1194</td>
+      <td>OpenVPN</td>
+    </tr>
+    <tr>
+      <td>3306</td>
+      <td>MySQL</td>
+    </tr>
+    <tr>
+      <td>3479, 3480</td>
+      <td>플레이스테이션 네트워크</td>
+    </tr>
+    <tr>
+      <td>3690</td>
+      <td>Subversion</td>
+    </tr>
+    <tr>
+      <td>6379</td>
+      <td>Redis 서비스</td>
+    </tr>
+    <tr>
+      <td>17500</td>
+      <td>Dropbox LanSync 프로토콜</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>위 방법보다 훨씬 빠르다.</p>
-
-<hr />
-
-<h2 id="least-common-multiplelcm">Least Common Multiple(LCM)</h2>
-
-<p>최소공배수를 구하는 방법은 간단하다. 두 수의 곱은 GCD * LCM이다.<br />
-그러므로 두 수 a, b의 최소공배수는 (a * b)/GCD 이다.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long lcm_fast(int a, int b) {
-	long long lcm = (long long)a * b / (long long)gcd_fast(a, b);
-	return lcm;
-}
-
-</code></pre></div></div>
+<h3 id="private-portdynamic-port">Private Port(Dynamic Port)</h3>
+<p>범위 : 49152 ~ 65535<br />
+임시포트로서, 어떤 프로세스에 의해서 사용 가능</p>
 
       <br/>
       <!-- 블로그-하단-반응형 
@@ -318,12 +441,12 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
   <!-- <div class="share">
       <h2>Share this post</h2>
       <div class="share-body">
-        <a href="http://twitter.com/share?text=Greatest Common Divisor & Least Common Multiple&amp;url=http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html"
+        <a href="http://twitter.com/share?text=TCP Port&amp;url=http://localhost:4000/communication/2021/02/07/CM-tcp-port.html"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <span class="icon-twitter">
             </span>
         </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/algorithm/2021/02/12/AG-gcd-lcm.html"
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/communication/2021/02/07/CM-tcp-port.html"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <span class="icon-facebook">
             </span>
@@ -350,12 +473,12 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 <div class="page-control">
   <div>
     
-    <a id="prev" class="button" href="/algorithm/2021/02/12/AG-fibonacci.html">&laquo;Prev</a>
+    <a id="prev" class="button" href="/machinelearning/2021/01/29/ML-transfer-learning.html">&laquo;Prev</a>
     
   </div>
   <div>
     
-    <a id="next" class="button" href="/communication/2021/02/18/CM-dns.html">Next&raquo;</a>
+    <a id="next" class="button" href="/algorithm/2021/02/12/AG-fibonacci-sum.html">Next&raquo;</a>
     
   </div>
 </div>
@@ -404,6 +527,22 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
       
       
         
+        
+          
+
+
+<li class="h4">
+  <a href="/communication/2021/02/18/CM-dns.html" data-flip="title">
+    <span>DNS(Domain Name System) Server</span>
+  </a>
+  <small><time datetime="2021-02-18T00:00:00+09:00">
+    18 Feb 2021
+  </time></small>
+</li>
+
+        
+      
+        
           
           
         
@@ -412,11 +551,11 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 
 
 <li class="h4">
-  <a href="/algorithm/2021/02/12/AG-fibonacci.html" data-flip="title">
-    <span>Fibonacci Number</span>
+  <a href="/communication/2021/01/28/CM-mac-ip-arp.html" data-flip="title">
+    <span>MAC, IP, ARP</span>
   </a>
-  <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb 2021
+  <small><time datetime="2021-01-28T00:00:00+09:00">
+    28 Jan 2021
   </time></small>
 </li>
 
@@ -428,11 +567,11 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 
 
 <li class="h4">
-  <a href="/algorithm/2021/02/12/AG-fibonacci-sum.html" data-flip="title">
-    <span>Fibonacci Sum</span>
+  <a href="/communication/2021/01/22/CM-osi.html" data-flip="title">
+    <span>OSI Model</span>
   </a>
-  <small><time datetime="2021-02-12T00:00:00+09:00">
-    12 Feb 2021
+  <small><time datetime="2021-01-22T00:00:00+09:00">
+    22 Jan 2021
   </time></small>
 </li>
 

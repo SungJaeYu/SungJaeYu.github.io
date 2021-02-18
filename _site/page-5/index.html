@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="TCP Port" />
+<meta property="og:title" content="Blog" />
 <meta property="og:type" content="article" />
 
  
@@ -39,15 +39,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>TCP Port &middot; SungJae Yu's Blog</title>
+<title>Blog &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="포트의 종류 System Port(well-known Port) 범위 : 0~1023 IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한 TCP 및 UDP 포트 번호의 일부이다. 대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다. 강제 지정이 아닌 권고안이다. 다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인..."
+  content="For Study
+"
 />
 <meta
   property="og:description"
-  content="포트의 종류 System Port(well-known Port) 범위 : 0~1023 IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한 TCP 및 UDP 포트 번호의 일부이다. 대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다. 강제 지정이 아닌 권고안이다. 다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인..."
+  content="For Study
+"
 />
 
 
@@ -61,8 +63,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/communication/2021/02/07/tcp-port.html" />
-<meta property="og:url" content="http://localhost:4000/communication/2021/02/07/tcp-port.html" />
+<link rel="canonical" href="http://localhost:4000/page-5/" />
+<meta property="og:url" content="http://localhost:4000/page-5/" />
 
 <link
   rel="alternate"
@@ -71,11 +73,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
   href="http://localhost:4000/feed.xml"
 />
 
-
-<link rel="prev" href="http://localhost:4000/machinelearning/2021/01/29/ML-transfer-learning.html" />
  
-<link rel="next" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html" />
-
 
 <link
   rel="apple-touch-icon"
@@ -166,18 +164,19 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
   <div class="fade-in">
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
+  
 
-<article id="post-communication/2021/02/07/tcp-port" class="post" role="article">
+<article id="post-computerscience/2021/01/20/CS-clb" class="post mb6" role="article">
   <header>
 
     <h1 class="post-title">
-      
-        TCP Port
-      
+      <a href="/computerscience/2021/01/20/CS-clb.html" data-flip="title">
+        Compiler, Linker, Builder
+      </a>
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-02-07T00:00:00+09:00">07 Feb 2021</time>
+      <time datetime="2021-01-20T00:00:00+09:00">20 Jan 2021</time>
       
 
 
@@ -188,7 +187,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-in <a href="/category/communication/" data-flip="title">Communication</a>
+in <a href="/category/computerscience/" data-flip="title">ComputerScience</a>
 
       
 
@@ -200,7 +199,7 @@ in <a href="/category/communication/" data-flip="title">Communication</a>
 
 
 
-on <a href="/tag/comm-network/" data-flip="title">Network</a>
+
 
     </p>
 
@@ -211,375 +210,43 @@ on <a href="/tag/comm-network/" data-flip="title">Network</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/communication/2021/02/07/tcp-port.html">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/communication/2021/02/07/tcp-port.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/page-5/">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/page-5/&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
-    <div class="markdown-body">
+
+    <h2 id="compiler">Compiler</h2>
 
 
-
-<style>
-.googleads { display:block; width:98%; height: 280px; }
-@media(min-width: 600px) { .googleads { display: none; } }
-</style>
-<!--구글 에드센스
-<ins class="adsbygoogle myAd1190"
-    data-ad-client="ca-pub-1200017190012992"
-></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br/>
--->
-      <!--게시물 내용-->
-      <h2 id="포트의-종류">포트의 종류</h2>
-<h3 id="system-portwell-known-port">System Port(well-known Port)</h3>
-<p>범위 : 0~1023<br />
-IANA(Internet Assigned Numbers Authority, 인터넷 할당 번호 관리기관)에서 할당한<br />
-TCP 및 UDP 포트 번호의 일부이다.<br />
-대부분의 유닉스 계열 운영 체제의 경우, 잘 알려진 포트를 열려면 루트 권한이 있어야 한다.<br />
-강제 지정이 아닌 권고안이다.<br />
-다른 용도로 사용할 경우 트로이 목마와 같은 프로그램들이 악의전인 목적으로 포트를 변경하여<br />
-사용하는 경우도 있다.</p>
-
-<p>아래는 자주 사용하는 포트이다.<br />
-자세한 포트 내용은 
-<a href="https://ko.wikipedia.org/wiki/TCP/UDP%EC%9D%98_%ED%8F%AC%ED%8A%B8_%EB%AA%A9%EB%A1%9D">위키피디아</a></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>포트</th>
-      <th>설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>7</td>
-      <td>ECHO</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>DISCARD</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>DAYTIME</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>QOTD(Quote of the Day)</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td>CHARGEN</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>FTP 데이터 포트</td>
-    </tr>
-    <tr>
-      <td>21</td>
-      <td>FTP 제어 포트</td>
-    </tr>
-    <tr>
-      <td>22</td>
-      <td>SSH</td>
-    </tr>
-    <tr>
-      <td>23</td>
-      <td>Telnet</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>SMTP</td>
-    </tr>
-    <tr>
-      <td>53</td>
-      <td>DNS</td>
-    </tr>
-    <tr>
-      <td>67</td>
-      <td>BOOTP 서버, DHCP</td>
-    </tr>
-    <tr>
-      <td>68</td>
-      <td>BOOTP 클라이언트, DHCP</td>
-    </tr>
-    <tr>
-      <td>69</td>
-      <td>TFTP</td>
-    </tr>
-    <tr>
-      <td>79</td>
-      <td>Finger</td>
-    </tr>
-    <tr>
-      <td>80</td>
-      <td>HTTP</td>
-    </tr>
-    <tr>
-      <td>110</td>
-      <td>POP3</td>
-    </tr>
-    <tr>
-      <td>111</td>
-      <td>RPC</td>
-    </tr>
-    <tr>
-      <td>123</td>
-      <td>NTP</td>
-    </tr>
-    <tr>
-      <td>143</td>
-      <td>IMAP</td>
-    </tr>
-    <tr>
-      <td>161</td>
-      <td>SNMP</td>
-    </tr>
-    <tr>
-      <td>162</td>
-      <td>SNMPTRAP</td>
-    </tr>
-    <tr>
-      <td>179</td>
-      <td>BGP</td>
-    </tr>
-    <tr>
-      <td>220</td>
-      <td>IMAPv3</td>
-    </tr>
-    <tr>
-      <td>443</td>
-      <td>SSL/TLS</td>
-    </tr>
-    <tr>
-      <td>500</td>
-      <td>IKE</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="user-portregistered-port">USER Port(Registered Port)</h3>
-<p>범위 : 1024~49151<br />
-이 포트들은 RFC6335에 따라 IANA(인터넷 할당 번호 관리기관)에 등록한다.<br />
-통상 이 구간의 포트들은 시스템에서 슈퍼유저 관한이 없어도 사용 가능하다.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>포트</th>
-      <th>설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1080</td>
-      <td>SOCKS 프록시</td>
-    </tr>
-    <tr>
-      <td>1194</td>
-      <td>OpenVPN</td>
-    </tr>
-    <tr>
-      <td>3306</td>
-      <td>MySQL</td>
-    </tr>
-    <tr>
-      <td>3479, 3480</td>
-      <td>플레이스테이션 네트워크</td>
-    </tr>
-    <tr>
-      <td>3690</td>
-      <td>Subversion</td>
-    </tr>
-    <tr>
-      <td>6379</td>
-      <td>Redis 서비스</td>
-    </tr>
-    <tr>
-      <td>17500</td>
-      <td>Dropbox LanSync 프로토콜</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="private-portdynamic-port">Private Port(Dynamic Port)</h3>
-<p>범위 : 49152 ~ 65535<br />
-임시포트로서, 어떤 프로세스에 의해서 사용 가능</p>
-
-      <br/>
-      <!-- 블로그-하단-반응형 
-      <br/>
-      
-      <ins class="adsbygoogle"
-          style="display:block; width:100%; height:300px;"
-          data-ad-client="ca-pub-1200017190012992"
-          data-ad-format="auto"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      
-    </div>
-    
-    <script>
-
-    </script>
-    -->
+    <p class="read-more"><a class="heading" href="/computerscience/2021/01/20/CS-clb.html" data-flip="title">Continue reading </a></p>
   
 
 </article>
 
-  <hr class="dingbat" />
-<!--공유, 트위터, 페이스북-->
-  <!-- <div class="share">
-      <h2>Share this post</h2>
-      <div class="share-body">
-        <a href="http://twitter.com/share?text=TCP Port&amp;url=http://localhost:4000/communication/2021/02/07/tcp-port.html"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-            <span class="icon-twitter">
-            </span>
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/communication/2021/02/07/tcp-port.html"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-            <span class="icon-facebook">
-            </span>
-        </a>
-    </div>
-  </div> -->
-  <br/>
-
- <!-- Global site tag (gtag.js) - Google Analytics -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-CHFZEXLW0R"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-CHFZEXLW0R");
-</script>
-
-<div class="page-control">
-  <div>
-    
-    <a id="prev" class="button" href="/machinelearning/2021/01/29/ML-transfer-learning.html">&laquo;Prev</a>
-    
-  </div>
-  <div>
-    
-    <a id="next" class="button" href="/algorithm/2021/02/12/AG-fibonacci-sum.html">Next&raquo;</a>
-    
-  </div>
-</div>
- 
 
 
-  <aside class="author" role="complementary">
-    <div class="author">
-  <h2 class="page-title hr">
-    About
-  </h2>
-<div class="author-body">
-  
-    
-  
 
-  
-
-  <img
-    src="/assets/img/me.png"
-    class="me"
-    alt="SungJae Yu"
-    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
-    
-  />
-
-
-  
-  <div class="author-body-description">
-    <p>Programmer at ROKAF</p>
-
-  </div>
-</div>
-</div>
-
-  </aside>
-
- 
-
-<aside class="related" role="complementary">
-  <h2 class="hr">Related Posts</h2>
-
-  <ul class="related-posts">
-    
+<h2 class="sr-only">Pagination</h2>
+<nav class="pagination heading" role="navigation">
+  <ul>
+    <li class="pagination-item older" >
       
+        <span>Older</span>
       
+    </li>
+    <li class="pagination-item newer" >
       
-        
-          
-          
-        
-        
-          
-
-
-<li class="h4">
-  <a href="/communication/2021/01/28/CM-mac-ip-arp.html" data-flip="title">
-    <span>MAC, IP, ARP</span>
-  </a>
-  <small><time datetime="2021-01-28T00:00:00+09:00">
-    28 Jan 2021
-  </time></small>
-</li>
-
-        
+        <a rel="prev" href="/page-4/">Newer</a>
       
-        
-        
-          
-
-
-<li class="h4">
-  <a href="/communication/2021/01/22/CM-osi.html" data-flip="title">
-    <span>OSI Model</span>
-  </a>
-  <small><time datetime="2021-01-22T00:00:00+09:00">
-    22 Jan 2021
-  </time></small>
-</li>
-
-        
-      
-    
+    </li>
   </ul>
-</aside>
+</nav>
 
 
-
-      
-        <aside class="comments" role="complementary">
-  <h2>Comments</h2>
-  <hr />
-  <script
-    src="https://utteranc.es/client.js"
-    repo="SungJaeYu/blog-comments-repo"
-    issue-term="pathname"
-    theme="github-light"
-    crossorigin="anonymous"
-    async
-  ></script>
-</aside>
 
       
 

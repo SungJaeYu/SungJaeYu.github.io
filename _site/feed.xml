@@ -6,9 +6,100 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Feb 2021 19:19:34 +0900</pubDate>
-    <lastBuildDate>Sun, 14 Feb 2021 19:19:34 +0900</lastBuildDate>
+    <pubDate>Thu, 18 Feb 2021 12:32:28 +0900</pubDate>
+    <lastBuildDate>Thu, 18 Feb 2021 12:32:28 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>DNS(Domain Name System) Server</title>
+        <description>&lt;p&gt;DNS(Domain Name System)는 사람이 읽을 수 있는 도메인 이름(예: www.google.com)을&lt;br /&gt;
+IP 주소로 변환하는 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;IP 주소로 접속하기 위해서는 모든 서버의 IP를 외우고 있어야 한다.&lt;br /&gt;
+하지만 도메인 이름을 사용함으로서 암기가 원활해졌고, DNS는 도메인 이름으로
+실제 서버의 IP를 찾기위해 사용된다..&lt;/p&gt;
+
+&lt;h3 id=&quot;dns-서버-종류&quot;&gt;DNS 서버 종류&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Caching name servers&lt;/li&gt;
+  &lt;li&gt;Recursive name servers&lt;/li&gt;
+  &lt;li&gt;Root name servers&lt;/li&gt;
+  &lt;li&gt;TLD name servers&lt;/li&gt;
+  &lt;li&gt;Authoritative name servers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;cachingrecursive&quot;&gt;Caching/Recursive&lt;/h4&gt;
+
+&lt;p&gt;Caching/Recursive name server는 ISP나 local network에 의해 제공된다.&lt;br /&gt;
+이 두 서버는 아래와 같이 동작한다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;처음으로 한 유저가 “www.google.com” 의 IP를 요구한다.&lt;/li&gt;
+  &lt;li&gt;Recursive 서버가 DNS 절차를 모두 거쳐 IP를 보내준다.&lt;/li&gt;
+  &lt;li&gt;다른 유저가 똑같이 구글의 IP를 요구한다.&lt;/li&gt;
+  &lt;li&gt;Caching 서버에 cache된 이전 요청의 답을 보낸다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;위 과정을 통해서 전체 look-up과정을 줄일 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;dns-절차&quot;&gt;DNS 절차&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User가 Caching/recursive 서버에게 IP 주소 요청&lt;/li&gt;
+  &lt;li&gt;Caching 되어 있다면 바로 응답 아닐 경우 아래 절차 진행&lt;/li&gt;
+  &lt;li&gt;Recursive 서버가 Root DNS 서버에게 IP 주소를 요청&lt;/li&gt;
+  &lt;li&gt;Root DNS 서버가 Top Level DNS 서버의 IP 주소 응답&lt;/li&gt;
+  &lt;li&gt;Recursive 서버가 Top Level DNS 서버에게 IP 주소를 요청&lt;/li&gt;
+  &lt;li&gt;Top Level DNS 서버가 Authoritative name 서버의 IP 주소 응답&lt;/li&gt;
+  &lt;li&gt;Recursive 서버가 Authoritative name 서버에게 IP 주소를 요청&lt;/li&gt;
+  &lt;li&gt;Authoritative name 서버가 IP 주소 응답&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;dns-look-up-tcp&quot;&gt;DNS Look-up (TCP)&lt;/h3&gt;
+
+&lt;p&gt;DNS request는 UDP를 사용한다. 하지만 아래는 TCP DNS look-up 과정이다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User가 Caching/Recursive Name server에 53번 포트로 SYN 패킷 전송&lt;/li&gt;
+  &lt;li&gt;SYN-ACK와 ACK를 보내며 3 way hand shake 절차 진행(Connection Established)&lt;/li&gt;
+  &lt;li&gt;User가 Request 전송 및 Caching/Recursive Name server ACK 전송(여기까지 5 Packets)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Caching/Recursive Name server가 Root name 서버에 3 hand-shake 절차(3 Packets)&lt;/li&gt;
+  &lt;li&gt;C/R Name 서버와 Root 서버는 REQ, REQ-ACK, RES, RES-ACK(4 Packets)&lt;/li&gt;
+  &lt;li&gt;C/R Name 서버와 Root 서버 연결 해제(4 way handshake, 4 Packets)&lt;/li&gt;
+  &lt;li&gt;나머지 서버(TLD, Authoritative)와 각 각 11 Packets를 교환하며 IP 확인&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;결국 최소 5 + 11 + 11 + 11 = 38 패킷 교환&lt;/p&gt;
+
+&lt;h3 id=&quot;dns-look-up-udp&quot;&gt;DNS Look-up (UDP)&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User가 C/R 서버에 Req 1 패킷 전송&lt;/li&gt;
+  &lt;li&gt;C/R 서버가 Root 서버에 Req 전송 및 Res 수신&lt;/li&gt;
+  &lt;li&gt;나머지 서버 동일&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;총 7 패킷 사용&lt;br /&gt;
+이런 패킷 차이 때문에 DNS look-up 과정에서는 UDP를 사용한다.&lt;br /&gt;
+하지만 오류가 났을 때는 어떻게 할까?&lt;br /&gt;
+그냥 다시 보내면 된다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 18 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/communication/2021/02/18/CM-dns.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2021/02/18/CM-dns.html</guid>
+        
+        <category>network</category>
+        
+        
+        <category>communication</category>
+        
+      </item>
     
       <item>
         <title>Greatest Common Divisor &amp; Least Common Multiple</title>
@@ -472,8 +563,8 @@ TCP 및 UDP 포트 번호의 일부이다.&lt;br /&gt;
 임시포트로서, 어떤 프로세스에 의해서 사용 가능&lt;/p&gt;
 </description>
         <pubDate>Sun, 07 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/communication/2021/02/07/tcp-port.html</link>
-        <guid isPermaLink="true">http://localhost:4000/communication/2021/02/07/tcp-port.html</guid>
+        <link>http://localhost:4000/communication/2021/02/07/CM-tcp-port.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2021/02/07/CM-tcp-port.html</guid>
         
         <category>network</category>
         
