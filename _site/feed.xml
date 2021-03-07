@@ -6,9 +6,76 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Mar 2021 12:04:08 +0900</pubDate>
-    <lastBuildDate>Sun, 07 Mar 2021 12:04:08 +0900</lastBuildDate>
+    <pubDate>Sun, 07 Mar 2021 12:39:45 +0900</pubDate>
+    <lastBuildDate>Sun, 07 Mar 2021 12:39:45 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[Divide &amp; Conquer] Polynomial Multiplication</title>
+        <description>&lt;h1 id=&quot;polynomial-multiplication&quot;&gt;Polynomial Multiplication&lt;/h1&gt;
+
+&lt;p&gt;작은 수의 곱은 컴퓨터에서 쉽게 처리할 수 있다.&lt;br /&gt;
+하지만 큰 수의 곱은 컴퓨터에서 쉽게 처리하기 어렵기 때문에 큰 수는 Polynomial하게 처리하여&lt;br /&gt;
+속도를 높일 수 있다.&lt;br /&gt;
+여기서는 일반적인 Polynomial Multiply의 Time complexity를&lt;br /&gt;
+Divide Conquer를 통해 줄이는 방법을 소개한다.&lt;/p&gt;
+
+&lt;p&gt;두 개의 다항식을 곱하는 상황을 고려해보면, 아래 그림과 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/study/ALG/polynomialmulti.png&quot; alt=&quot;Polynomial Multiplication&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;naive&quot;&gt;Naive&lt;/h2&gt;
+
+&lt;p&gt;Naive한 방법으로는 이중 반복문을 통해 모든 수를 곱하고 더하는 방법이 있다.&lt;br /&gt;
+하지만 이 방법은 이중 반복문을 사용하기 때문에 다항식의 개수 = n 일 때,&lt;br /&gt;
+O(n^2) 이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;divide-and-conquer&quot;&gt;Divide and Conquer&lt;/h2&gt;
+
+&lt;p&gt;그림처럼 다항식을 반으로 나눈다. 그 후에 따로 계산된 값을 더하여 원하는 값을 출력한다.&lt;br /&gt;
+(A(x) = D1, D0 / B(x) = E1, E0로 나누었다.)
+&lt;img src=&quot;/assets/img/study/ALG/pn2.png&quot; alt=&quot;PN2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이 경우에는 보는 것 처럼 AB를 출력하기 위해 4가지의 하위 Task(D1E1, D1E0, D0E1, D0E0)&lt;br /&gt;
+가 이루어 지고, 이를 합치기 위해 kn의 Task가 이루어진다.&lt;br /&gt;
+즉, T(n) = 4 * T(n/2) + kn&lt;br /&gt;
+이를 Master Theorem으로 계산해보면 O(n^2)이 나온다.&lt;br /&gt;
+이는 Naive한 접근과 다르지 않다. 그렇다면 Divide Conquer가 소용이 없는것일까?&lt;/p&gt;
+
+&lt;h2 id=&quot;karatsuba-divide-and-conquer&quot;&gt;Karatsuba Divide and Conquer&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/study/ALG/pn3.png&quot; alt=&quot;PN3&quot; /&gt;&lt;br /&gt;
+이 공식을 사용하면 4가지 Task가 아닌 3가지 Multiplication Task만 시행하면 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;D1E1&lt;/li&gt;
+  &lt;li&gt;D0E0&lt;/li&gt;
+  &lt;li&gt;( D1 + D0 )(E1 + E0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;T(n) = 3 * T(n/2) + kn 이므로,&lt;br /&gt;
+O(n^(log_2(3)) = O(n^(1.58))이다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;big-number-multiplication&quot;&gt;Big Number Multiplication&lt;/h1&gt;
+
+&lt;p&gt;312 * 514를 한다고 가정하면,&lt;br /&gt;
+3 * 10^2 + 1 * 10 + 2 * 10^0&lt;br /&gt;
+5 * 10^2 + 1 * 10 + 4 * 10^0&lt;/p&gt;
+
+&lt;p&gt;이를 다항식으로 계산하여 처리할 수 있다.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html</link>
+        <guid isPermaLink="true">http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html</guid>
+        
+        
+        <category>algorithm</category>
+        
+      </item>
     
       <item>
         <title>[Divide &amp; Conquer]Master Theorem</title>
@@ -32,6 +99,8 @@
 =&amp;gt; log_b(a) = log_2(4) = 2&lt;br /&gt;
 =&amp;gt; d &amp;lt; log_b(a)&lt;br /&gt;
 =&amp;gt; T(n) = O(n^(log_b(a))) = O(n^2)&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&quot;proof&quot;&gt;Proof&lt;/h1&gt;
 

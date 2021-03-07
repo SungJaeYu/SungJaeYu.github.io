@@ -29,7 +29,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<meta property="og:title" content="Fibonacci Sum" />
+<meta property="og:title" content="[Divide & Conquer] Polynomial Multiplication" />
 <meta property="og:type" content="article" />
 
  
@@ -39,17 +39,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="360" />
  
-<title>Fibonacci Sum &middot; SungJae Yu's Blog</title>
+<title>[Divide & Conquer] Polynomial Multiplication &middot; SungJae Yu's Blog</title>
  
 <meta
   name="description"
-  content="Fibonacci Sum
+  content="Polynomial Multiplication
 
 "
 />
 <meta
   property="og:description"
-  content="Fibonacci Sum
+  content="Polynomial Multiplication
 
 "
 />
@@ -65,8 +65,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html" />
-<meta property="og:url" content="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html" />
+<link rel="canonical" href="http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html" />
+<meta property="og:url" content="http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html" />
 
 <link
   rel="alternate"
@@ -76,10 +76,8 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 />
 
 
-<link rel="prev" href="http://localhost:4000/communication/2021/02/07/CM-tcp-port.html" />
+<link rel="prev" href="http://localhost:4000/algorithm/2021/03/07/AG-mastertheorem.html" />
  
-<link rel="next" href="http://localhost:4000/algorithm/2021/02/12/AG-fibonacci.html" />
-
 
 <link
   rel="apple-touch-icon"
@@ -171,17 +169,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/main_left.JPG">
       
 
-<article id="post-algorithm/2021/02/12/AG-fibonacci-sum" class="post" role="article">
+<article id="post-algorithm/2021/03/07/AG-polymultiply" class="post" role="article">
   <header>
 
     <h1 class="post-title">
       
-        Fibonacci Sum
+        [Divide & Conquer] Polynomial Multiplication
       
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2021-02-12T00:00:00+09:00">12 Feb 2021</time>
+      <time datetime="2021-03-07T00:00:00+09:00">07 Mar 2021</time>
       
 
 
@@ -215,8 +213,8 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
   </header>
   
   <div style="text-align: center;">
-    <a href="https://hits.seeyoufarm.com/localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
+    <a href="https://hits.seeyoufarm.com/localhost:4000/algorithm/2021/03/07/AG-polymultiply.html">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flocalhost:4000/algorithm/2021/03/07/AG-polymultiply.html&count_bg=%231FC6CF&title_bg=%23292929&icon=jupyter.svg&icon_color=%23FFFFFF&title=views&edge_flat=false"/>
     </a>
   </div>
 
@@ -241,49 +239,61 @@ in <a href="/category/algorithm/" data-flip="title">Algorithm</a>
 <br/>
 -->
       <!--게시물 내용-->
-      <h2 id="fibonacci-sum">Fibonacci Sum</h2>
+      <h1 id="polynomial-multiplication">Polynomial Multiplication</h1>
 
-<p>피보나치 수의 합은 모든 피보나치 수를 구하면서 더 하는 방법을 사용할 수 있다.<br />
-이 방법은 모든 숫자를 구하면서 진행된다.<br />
-하지만 빠르게 수학적으로 피보나치 수의 합을 구할 수 있다.
-<img src="/assets/img/study/ALG/fibonacciSum.png" alt="Fibonacci Sum" /></p>
+<p>작은 수의 곱은 컴퓨터에서 쉽게 처리할 수 있다.<br />
+하지만 큰 수의 곱은 컴퓨터에서 쉽게 처리하기 어렵기 때문에 큰 수는 Polynomial하게 처리하여<br />
+속도를 높일 수 있다.<br />
+여기서는 일반적인 Polynomial Multiply의 Time complexity를<br />
+Divide Conquer를 통해 줄이는 방법을 소개한다.</p>
 
-<p>결국 우리는 fibonacci(n+2) 만 구하면 된다.</p>
+<p>두 개의 다항식을 곱하는 상황을 고려해보면, 아래 그림과 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long fibonacci_sum_fast(long long n) {
-	long long result = get_fibonacci(n + 2) - 1;
-	return result;
-}
-</code></pre></div></div>
+<p><img src="/assets/img/study/ALG/polynomialmulti.png" alt="Polynomial Multiplication" /></p>
 
 <hr />
 
-<h2 id="fibonacci-partial-sum">Fibonacci Partial Sum</h2>
+<h2 id="naive">Naive</h2>
 
-<p>위와 같은 방법으로 부분 합을 구할 수 있다. from indexA to indexB라고 했을 때,<br />
-indexA까지의 합 : F(A+2)-1<br />
-indexB-1까지의 합 : F(B+1)-1<br />
-이므로, 부분합은 F(A+2) - F(B+1)이다.</p>
+<p>Naive한 방법으로는 이중 반복문을 통해 모든 수를 곱하고 더하는 방법이 있다.<br />
+하지만 이 방법은 이중 반복문을 사용하기 때문에 다항식의 개수 = n 일 때,<br />
+O(n^2) 이다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long get_fibonacci_partial_sum_fast(int from, int to) {
-	long long result = get_fibonacci(to + 2) - get_fibonacci(from + 1);
-	return result;
-}
+<h2 id="divide-and-conquer">Divide and Conquer</h2>
 
-</code></pre></div></div>
+<p>그림처럼 다항식을 반으로 나눈다. 그 후에 따로 계산된 값을 더하여 원하는 값을 출력한다.<br />
+(A(x) = D1, D0 / B(x) = E1, E0로 나누었다.)
+<img src="/assets/img/study/ALG/pn2.png" alt="PN2" /></p>
+
+<p>이 경우에는 보는 것 처럼 AB를 출력하기 위해 4가지의 하위 Task(D1E1, D1E0, D0E1, D0E0)<br />
+가 이루어 지고, 이를 합치기 위해 kn의 Task가 이루어진다.<br />
+즉, T(n) = 4 * T(n/2) + kn<br />
+이를 Master Theorem으로 계산해보면 O(n^2)이 나온다.<br />
+이는 Naive한 접근과 다르지 않다. 그렇다면 Divide Conquer가 소용이 없는것일까?</p>
+
+<h2 id="karatsuba-divide-and-conquer">Karatsuba Divide and Conquer</h2>
+
+<p><img src="/assets/img/study/ALG/pn3.png" alt="PN3" /><br />
+이 공식을 사용하면 4가지 Task가 아닌 3가지 Multiplication Task만 시행하면 된다.</p>
+
+<ul>
+  <li>D1E1</li>
+  <li>D0E0</li>
+  <li>( D1 + D0 )(E1 + E0)</li>
+</ul>
+
+<p>T(n) = 3 * T(n/2) + kn 이므로,<br />
+O(n^(log_2(3)) = O(n^(1.58))이다.</p>
 
 <hr />
 
-<h2 id="fibonacci-square-sum">Fibonacci Square Sum</h2>
+<h1 id="big-number-multiplication">Big Number Multiplication</h1>
 
-<p><img src="/assets/img/study/ALG/fibonacciSqSum.png" alt="Fibonacci Square Sum" />
-피보나치 수의 제곱 합은 위 그림처럼 표현 할 수 있다.</p>
+<p>312 * 514를 한다고 가정하면,<br />
+3 * 10^2 + 1 * 10 + 2 * 10^0<br />
+5 * 10^2 + 1 * 10 + 4 * 10^0</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long long fibonacci_sum_squares_fast(long long n) {
-	long long result = get_fibonacci(n + 1)*get_fibonacci(n);
-	return result;
-}
-</code></pre></div></div>
+<p>이를 다항식으로 계산하여 처리할 수 있다.</p>
 
       <br/>
       <!-- 블로그-하단-반응형 
@@ -312,12 +322,12 @@ indexB-1까지의 합 : F(B+1)-1<br />
   <!-- <div class="share">
       <h2>Share this post</h2>
       <div class="share-body">
-        <a href="http://twitter.com/share?text=Fibonacci Sum&amp;url=http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html"
+        <a href="http://twitter.com/share?text=[Divide & Conquer] Polynomial Multiplication&amp;url=http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <span class="icon-twitter">
             </span>
         </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/algorithm/2021/02/12/AG-fibonacci-sum.html"
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <span class="icon-facebook">
             </span>
@@ -344,12 +354,10 @@ indexB-1까지의 합 : F(B+1)-1<br />
 <div class="page-control">
   <div>
     
-    <a id="prev" class="button" href="/communication/2021/02/07/CM-tcp-port.html">&laquo;Prev</a>
+    <a id="prev" class="button" href="/algorithm/2021/03/07/AG-mastertheorem.html">&laquo;Prev</a>
     
   </div>
   <div>
-    
-    <a id="next" class="button" href="/algorithm/2021/02/12/AG-fibonacci.html">Next&raquo;</a>
     
   </div>
 </div>
@@ -398,21 +406,8 @@ indexB-1까지의 합 : F(B+1)-1<br />
       
       
         
-        
           
-
-
-<li class="h4">
-  <a href="/algorithm/2021/03/07/AG-polymultiply.html" data-flip="title">
-    <span>[Divide & Conquer] Polynomial Multiplication</span>
-  </a>
-  <small><time datetime="2021-03-07T00:00:00+09:00">
-    07 Mar 2021
-  </time></small>
-</li>
-
-        
-      
+          
         
         
           
@@ -446,6 +441,19 @@ indexB-1까지의 합 : F(B+1)-1<br />
         
       
         
+        
+          
+
+
+<li class="h4">
+  <a href="/algorithm/2021/02/12/AG-fibonacci.html" data-flip="title">
+    <span>Fibonacci Number</span>
+  </a>
+  <small><time datetime="2021-02-12T00:00:00+09:00">
+    12 Feb 2021
+  </time></small>
+</li>
+
         
       
     

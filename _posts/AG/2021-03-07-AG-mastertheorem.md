@@ -26,6 +26,8 @@ ex) T(n) = 4 \* T(n/2) + O(n)
 => d < log_b(a)  
 => T(n) = O(n^(log_b(a))) = O(n^2)
 
+---
+
 # Proof
 
 ![Master Theorem Proof](/assets/img/study/ALG/mastertheorem.png)
