@@ -6,9 +6,51 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Mar 2021 12:39:45 +0900</pubDate>
-    <lastBuildDate>Sun, 07 Mar 2021 12:39:45 +0900</lastBuildDate>
+    <pubDate>Sun, 07 Mar 2021 15:38:14 +0900</pubDate>
+    <lastBuildDate>Sun, 07 Mar 2021 15:38:14 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>DHCP(Dynamic Host Configuration Protocol)</title>
+        <description>&lt;h1 id=&quot;dhcp&quot;&gt;DHCP&lt;/h1&gt;
+
+&lt;p&gt;DHCP란 호스트의 IP주소와 각종 TCP/IP 프로토콜의 기본 설정을&lt;br /&gt;
+클라이언트에게 자동적으로 제공해주는 프로토콜이다.&lt;/p&gt;
+
+&lt;p&gt;클라이언트가 DHCP 서버에게 IP를 요구하면 IP를 할당해주게 된다.
+DHCP는 Application Layer Protocol이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;dhcp-allocation&quot;&gt;DHCP Allocation&lt;/h2&gt;
+
+&lt;p&gt;DHCP는 IP를 세 가지 방식으로 할당한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dynamic Allocation : 동적으로 IP를 할당&lt;/li&gt;
+  &lt;li&gt;Automatic Allocation : 같은 Machine에 같은 IP를 할당&lt;/li&gt;
+  &lt;li&gt;Fixed Allocation : MAC 주소에 대응하는 IP를 table에서 찾아서 할당&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dhcp-discovery&quot;&gt;DHCP Discovery&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Source가 DHCP DISCOVERY 메시지를 broadcast한다.&lt;/li&gt;
+  &lt;li&gt;메시지를 받은 DHCP 서버가 DHCP OFFER 메시지를 전송한다.&lt;/li&gt;
+  &lt;li&gt;메시지를 받은 Source가 DHCP REQUEST 메시지를 전송한다.&lt;br /&gt;
+&lt;em&gt;(여기서 Source가 OFFER 메시지를 거절할 수 있다. 왜냐하면 여러 DHCP가 존재할 경우 한 서버에게만
+Request하기 위해서 이다.)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Request를 받은 DHCP 서버는 DHCP ACK를 전송한다.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 07 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/communication/2021/03/07/CM-dhcp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2021/03/07/CM-dhcp.html</guid>
+        
+        <category>network</category>
+        
+        
+        <category>communication</category>
+        
+      </item>
     
       <item>
         <title>[Divide &amp; Conquer] Polynomial Multiplication</title>
