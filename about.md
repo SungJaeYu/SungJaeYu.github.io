@@ -7,5 +7,5 @@ order: 2
 
 ## About
 
-I am Programmer at Republic of Korea AF  
-Blog For Study
+Blog For
+My Computer Science Study of Algorithms, Machine Learning, Computer Network, etc...

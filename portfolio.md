@@ -16,7 +16,7 @@ SungJae Yu(유승재)
 </center>
 
 <center>Ajou University(Military Digital Convergence)</center>
-<center>Programmer at Republic of Korea Airforce</center>
+<center>Software Engineer at Republic of Korea Airforce</center>
 
 ## Personal Data
 
@@ -56,6 +56,7 @@ SungJae Yu(유승재)
   - Neural Networks and Deep Learning
   - Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
   - Structuring Machine Learning Projects
+  - Convolution Neural Networks
 - Google IT Support Professional Certificate(Coursera, Google)
   - Technical Support Fundamentals
-- Engineer Information Communication(Republic of Korea, Ministry of Science and ICT)
+  - The Bits and Bytes of Computer Networking

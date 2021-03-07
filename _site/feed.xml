@@ -6,9 +6,89 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Feb 2021 12:32:28 +0900</pubDate>
-    <lastBuildDate>Thu, 18 Feb 2021 12:32:28 +0900</lastBuildDate>
+    <pubDate>Sun, 07 Mar 2021 12:04:08 +0900</pubDate>
+    <lastBuildDate>Sun, 07 Mar 2021 12:04:08 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[Divide &amp; Conquer]Master Theorem</title>
+        <description>&lt;h1 id=&quot;master-theorem&quot;&gt;Master Theorem&lt;/h1&gt;
+
+&lt;p&gt;Master Theorem은 Divide &amp;amp; Conquer(분할정복)에 사용되는 Theorem(정리)이다.&lt;br /&gt;
+분할 정복에서는 재귀 호출 방식을 사용하는데 이 때 이 모든 연산 절차의 Time Complexity를&lt;br /&gt;
+계산하는 일종의 공식이다.&lt;/p&gt;
+
+&lt;p&gt;T(n) = a * T( ceil( n / b )) + O(n^d)&lt;br /&gt;
+이라고 가정했을 때, 세 가지 상황으로 구분되어 T(n)을 구할 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;T(n) = O(n^d) if d &amp;gt; log_b(a)&lt;/li&gt;
+  &lt;li&gt;T(n) = O(n^d * log(n)) if d == log_b(a)&lt;/li&gt;
+  &lt;li&gt;T(n) = O(n^(log_b(a))) if d &amp;lt; log_b(a)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ex) T(n) = 4 * T(n/2) + O(n)&lt;br /&gt;
+=&amp;gt; a = 4, b = 2, d = 1&lt;br /&gt;
+=&amp;gt; log_b(a) = log_2(4) = 2&lt;br /&gt;
+=&amp;gt; d &amp;lt; log_b(a)&lt;br /&gt;
+=&amp;gt; T(n) = O(n^(log_b(a))) = O(n^2)&lt;/p&gt;
+
+&lt;h1 id=&quot;proof&quot;&gt;Proof&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/study/ALG/mastertheorem.png&quot; alt=&quot;Master Theorem Proof&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;총 재귀되는 level은 ceil( log_b(n) )이다.&lt;br /&gt;
+만약 n = 8일 때, 이분할하여(b=2) 연산 한다고 하면,&lt;br /&gt;
+총 재귀의 level은 8 - (4, 4) - (2, 2, 2, 2) - (1, 1, 1, 1, 1, 1, 1, 1)&lt;br /&gt;
+leve은 보는것처럼 시작이 level = 0 이라고 할 때,&lt;br /&gt;
+총 level == 3으로 log_b(a) = log_2(8) = 3이다.&lt;br /&gt;
+즉 재귀 level 은 log_b(n) 이다.&lt;br /&gt;
+각 재귀로 호출 되는 Task 들의 관계(T(n) = a * T(n/b) + O(n^d))를 계산하면,&lt;br /&gt;
+이 모든 work의 합은 등비수열 합의 공식으로 구할 수 있다.&lt;br /&gt;
+등비수열의 합 공식은 곱해지는 수에 따라 결과값이 바뀌므로 아래와 같은 세 가지 상황으로 구분되게 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;r == 1&lt;/li&gt;
+  &lt;li&gt;r &amp;gt; 1&lt;/li&gt;
+  &lt;li&gt;r &amp;lt; 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;r = (a/b^d) 이므로, Master Theorem 공식처럼&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;d &amp;gt; log_b(a)&lt;/li&gt;
+  &lt;li&gt;d == log_b(a)&lt;/li&gt;
+  &lt;li&gt;d &amp;lt; log_b(a)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;세 가지로 구분된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;d--log_ba&quot;&gt;d &amp;gt; log_b(a)&lt;/h2&gt;
+
+&lt;p&gt;등비수열 합 공식에 따라서 아래와 같다.&lt;br /&gt;
+&lt;img src=&quot;/assets/img/study/ALG/mastertheorempr1.png&quot; alt=&quot;Master Toeorem Proof1&quot; /&gt;&lt;br /&gt;
+이 때, d &amp;gt; log_b(a) 이므로, 결국 O(n^d) 가 된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;d--log_ba-1&quot;&gt;d &amp;lt; log_b(a)&lt;/h2&gt;
+
+&lt;p&gt;위 그림과 똑같지만&lt;br /&gt;
+d &amp;lt; log_b(a) 이므로, O(n^(log_b(a))가 된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;d--log_ba-2&quot;&gt;d == log_b(a)&lt;/h2&gt;
+
+&lt;p&gt;곱해지는 수가 1이면(d == log*b(a)), 총 합은 level * O(n^d) 이 된다.&lt;br /&gt;
+&lt;em&gt;r == 1이면 초항 * 개수이므로, 초항 = O(n^d), 개수는 level 수가 된다.&lt;/em&gt;&lt;br /&gt;
+여기서 level = log_b(n), r = a/b^d 이므로,&lt;br /&gt;
+log_b(n) * O(n^d)이므로 결국 O(log(n) * n^d)&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/algorithm/2021/03/07/AG-mastertheorem.html</link>
+        <guid isPermaLink="true">http://localhost:4000/algorithm/2021/03/07/AG-mastertheorem.html</guid>
+        
+        
+        <category>algorithm</category>
+        
+      </item>
     
       <item>
         <title>DNS(Domain Name System) Server</title>
