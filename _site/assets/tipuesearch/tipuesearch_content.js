@@ -6,12 +6,12 @@ var tipuesearch = {"pages": [{
   },{
     "title": "[Divide &amp; Conquer] Polynomial Multiplication",
     "text": "Polynomial Multiplication 작은 수의 곱은 컴퓨터에서 쉽게 처리할 수 있다. 하지만 큰 수의 곱은 컴퓨터에서 쉽게 처리하기 어렵기 때문에 큰 수는 Polynomial하게 처리하여 속도를 높일 수 있다. 여기서는 일반적인 Polynomial Multiply의 Time complexity를 Divide Conquer를 통해 줄이는 방법을 소개한다. 두 개의 다항식을 곱하는 상황을 고려해보면, 아래 그림과 같다. Naive Naive한 방법으로는 이중 반복문을 통해 모든 수를 곱하고 더하는 방법이 있다. 하지만 이 방법은 이중 반복문을 사용하기 때문에 다항식의 개수 = n 일 때, O(n^2) 이다. Divide and Conquer 그림처럼 다항식을 반으로 나눈다. 그 후에 따로 계산된 값을 더하여 원하는 값을 출력한다. (A(x) = D1, D0 / B(x) = E1, E0로 나누었다.) 이 경우에는 보는 것 처럼 AB를 출력하기 위해 4가지의 하위 Task(D1E1, D1E0, D0E1, D0E0) 가 이루어 지고, 이를 합치기 위해 kn의 Task가 이루어진다. 즉, T(n) = 4 * T(n/2) + kn 이를 Master Theorem으로 계산해보면 O(n^2)이 나온다. 이는 Naive한 접근과 다르지 않다. 그렇다면 Divide Conquer가 소용이 없는것일까? Karatsuba Divide and Conquer 이 공식을 사용하면 4가지 Task가 아닌 3가지 Multiplication Task만 시행하면 된다. D1E1 D0E0 ( D1 + D0 )(E1 + E0) T(n) = 3 * T(n/2) + kn 이므로, O(n^(log_2(3)) = O(n^(1.58))이다. Big Number Multiplication 312 * 514를 한다고 가정하면, 3 * 10^2 + 1 * 10 + 2 * 10^0 5 * 10^2 + 1 * 10 + 4 * 10^0 이를 다항식으로 계산하여 처리할 수 있다.",
-    "tags": "algorithm",
+    "tags": "dc algorithm",
     "url": "/algorithm/2021/03/07/AG-polymultiply.html"
   },{
-    "title": "[Divide &amp; Conquer]Master Theorem",
+    "title": "[Divide &amp; Conquer] Master Theorem",
     "text": "Master Theorem Master Theorem은 Divide &amp; Conquer(분할정복)에 사용되는 Theorem(정리)이다. 분할 정복에서는 재귀 호출 방식을 사용하는데 이 때 이 모든 연산 절차의 Time Complexity를 계산하는 일종의 공식이다. T(n) = a * T( ceil( n / b )) + O(n^d) 이라고 가정했을 때, 세 가지 상황으로 구분되어 T(n)을 구할 수 있다. T(n) = O(n^d) if d &gt; log_b(a) T(n) = O(n^d * log(n)) if d == log_b(a) T(n) = O(n^(log_b(a))) if d &lt; log_b(a) ex) T(n) = 4 * T(n/2) + O(n) =&gt; a = 4, b = 2, d = 1 =&gt; log_b(a) = log_2(4) = 2 =&gt; d &lt; log_b(a) =&gt; T(n) = O(n^(log_b(a))) = O(n^2) Proof 총 재귀되는 level은 ceil( log_b(n) )이다. 만약 n = 8일 때, 이분할하여(b=2) 연산 한다고 하면, 총 재귀의 level은 8 - (4, 4) - (2, 2, 2, 2) - (1, 1, 1, 1, 1, 1, 1, 1) leve은 보는것처럼 시작이 level = 0 이라고 할 때, 총 level == 3으로 log_b(a) = log_2(8) = 3이다. 즉 재귀 level 은 log_b(n) 이다. 각 재귀로 호출 되는 Task 들의 관계(T(n) = a * T(n/b) + O(n^d))를 계산하면, 이 모든 work의 합은 등비수열 합의 공식으로 구할 수 있다. 등비수열의 합 공식은 곱해지는 수에 따라 결과값이 바뀌므로 아래와 같은 세 가지 상황으로 구분되게 된다. r == 1 r &gt; 1 r &lt; 1 r = (a/b^d) 이므로, Master Theorem 공식처럼 d &gt; log_b(a) d == log_b(a) d &lt; log_b(a) 세 가지로 구분된다. d &gt; log_b(a) 등비수열 합 공식에 따라서 아래와 같다. 이 때, d &gt; log_b(a) 이므로, 결국 O(n^d) 가 된다. d &lt; log_b(a) 위 그림과 똑같지만 d &lt; log_b(a) 이므로, O(n^(log_b(a))가 된다. d == log_b(a) 곱해지는 수가 1이면(d == log*b(a)), 총 합은 level * O(n^d) 이 된다. r == 1이면 초항 * 개수이므로, 초항 = O(n^d), 개수는 level 수가 된다. 여기서 level = log_b(n), r = a/b^d 이므로, log_b(n) * O(n^d)이므로 결국 O(log(n) * n^d)",
-    "tags": "algorithm",
+    "tags": "dc algorithm",
     "url": "/algorithm/2021/03/07/AG-mastertheorem.html"
   },{
     "title": "DNS(Domain Name System) Server",
@@ -41,12 +41,12 @@ var tipuesearch = {"pages": [{
   },{
     "title": "Transfer Learning",
     "text": "전이학습은 학습 데이터가 부족한 모델을 구축하기 위해 사용되는 방법이다. 예를 들어, 학습 데이터가 부족한 x-lay 이미지를 판단하는 모델을 만들려할 때 우리는 학습 데이터가 많은 일반 이미지 인식 모델의 layers를 가져와서 x-lay 이미지 모델에 사용할 수 있다. 이처럼 실제 학습 데이터가 부족한 모델을 구축할 때, 비슷한 형태의 데이터를 사용하는 다량의 데이터로 구축된 모델을 전이학습하여 성능을 높일 수 있다.",
-    "tags": "machinelearning",
+    "tags": "strategy machinelearning",
     "url": "/machinelearning/2021/01/29/ML-transfer-learning.html"
   },{
     "title": "Multi-task Learning",
     "text": "Transfer learning(전이학습)은 빅 데이터의 모델 A를 적은 데이터 모델 B에 적용시키는 순차적인 방법이었다. 하지만 Multi-task Learning은 모델 A와 모델 B를 동시에 학습시키는 방법이다. 예로 길거리의 이미지로 정지 신호가 있는지 판단하는 모델 보행자가 있는지 판단하는 모델 차가 있는지 판단하는 모델 신호등을 판단하는 모델 을 동시에 학습시키는 방법이다. Input은 1개 이미지만 label은 4개가 존재하게 된다. Softmax regression과의 차이점은 Softmax는 하나의 label을 가지게 된다는 점이다. Multi-task learning은 세가지 상황에서 도움이 된다. 저수준의 구조가 비슷할 때 각 task의 데이터 양이 비슷할 때 모든 task의 충분히 큰 신경망을 학습시킬 수 있을 때 Rich Carona는 충분히 크지 않은 신경망을 multi-task learning 시키면 따로 학습시키는 것보다 성능이 저하된다는 사실을 알아냈다. 그러나 각 각 따로 학습시키는 것보다 데이터가 충분하고 신경망이 충분히 크면 multi-task learning이 도움이 된다는 건 확실하다. Transfer learning(전이학습)은 데이터가 적은 모델을 위한 방법이었다. 하지만 multi-task learning은 각 task 별 데이터가 필요하기 때문에 좀 더 특별한 상황에서 사용된다. 현재 전이학습이 더 많이 사용되고 있다. 하지만 두 방법 모두 도움이 되는 방법 임은 확실하다.",
-    "tags": "machinelearning",
+    "tags": "strategy machinelearning",
     "url": "/machinelearning/2021/01/29/ML-multi-task-learning.html"
   },{
     "title": "MAC, IP, ARP",
@@ -56,12 +56,12 @@ var tipuesearch = {"pages": [{
   },{
     "title": "Training and Testing on different distribution",
     "text": "Training을 시킬 때 우리는 많은 데이터셋을 필요로한다. 하지만 우리가 학습시킬 수 있는 데이터셋이 많지 않을 때 비슷한 환경의 데이터 셋을 가져와서 학습시킬 수 있다. 예를 들어, 핸드폰 이미지 인식을 할 때, 우리가 가지고 있는 데이터 셋이 10000개 뿐이라고 가정하자, 하지만 인터넷에 카메라로 찍은 사진 데이터는 20만개가 존재한다. 카메라로 찍은 사진 데이터와 핸드폰으로 찍은 사진 데이터는 서로 다르다. 하지만 핸드폰 이미지 인식을 학습시킬 때, 카메라로 찍은 데이터를 사용하여 정확도를 높일 수 있다. 데이터 구성 위 예에서 사용할 수 있는 데이터 구성은 이렇다. 1. Option 1 카메라 데이터와 핸드폰 데이터를 무작위로 섞은 뒤, 흔히 하는 대로 적절한 비율로 Train, Dev, Test로 분리한다. 하지만, 이렇게 할경우 Dev, Test Set이 우리가 원하는 환경과 다르게 된다. 우리의 목표는 핸드폰 이미지를 인식하는 것이다. 하지만 카메라 이미지를 Dev, Test Set에 놓는 것은 옳지 못한 결과를 낼 수 있다. 즉 이 방법은 옳지 못하다. 2. Option 2 우리가 원하는 결과를 얻기 위해 Dev, Test Set은 핸드폰 이미지로만 구성한다. 그리고 Train Set에만 카메라 이미지를 포함시킨다. 즉, Train Set을 20만개의 카메라 데이터 + 5000개의 핸드폰 데이터로 설정한다. 그리고 Dev, Test를 각 2500개로 설정한다. 에러의 중의성 Train error가 1%라고 할 때, Dev error가 8%라면 이는 Train에 과대적합 된것인가?? Different distribution data를 학습시켰기 때문에 이 error 차이는 두가지 의미를 가진다. Train에 과대적합, 즉 variance가 높음 Dev set과 Train set distribution의 난이도 차이(Data Mismatch) 2번째 상황을 예로 들어보자, 우리는 카메라 이미지를 가지고 있다. 인터넷 카메라 이미지는 화질이 높고, 정확하게 찍혔다. 하지만 핸드폰 이미지는 화질이 낮고, 흐리며, 잘못 찍혔을 수 있다. 즉, 핸드폰 이미지 인식이 카메라 이미지 인식보다 어렵다. 그렇기 때문에 Dev set의 error가 높게 나올 수 있다. 이를 해결하기 위한 방법으로 Train Dev Set을 사용할 수 있다. Train Dev Set Train set에서 Train dev set을 따로 분리한다. 그러면 이제 Train set과 Train dev set은 같은 distribution을 가진다. Train dev set의 error를 확인하면 이 error 차이가 variance 때문인지 data mismatch때문인지 알 수 있다. 첫번째 예를 들어보면, Train Error : 1% Train Dev Error : 8% Dev Error : 9% 이 경우는 Train dev error와 Train error의 차이가 크기 때문에 variance 때문임을 알 수 있다. 두번째 경우는 Train Error : 1% Train Dev Error : 2% Dev Error : 9% 여기서는 Dev Error가 큰 차이를 보이므로, Data Mismatch가 원인임을 알 수 있다.",
-    "tags": "machinelearning",
+    "tags": "strategy machinelearning",
     "url": "/machinelearning/2021/01/24/ML-training-and-testing-on-different-distribution.html"
   },{
     "title": "Bayes Error",
     "text": "Bayes Error Bayes error는 모든 machine learning 모델의 최소 오차이다. 즉, 모델의 error 참조점이 된다. 모델의 Bayes error 기준으로 train error와 test error를 비교하여, 모델의 bias를 줄여야 하는지 variance를 줄여야 하는 지 결정할 수 있다. Bayes err는 human level error로 추정 할 수있지만, 요즘에는 인간의 능력치를 넘어서는 기계학습 분야와 모델이 존재하기 때문에 모델을 학습시키면서 추정해야 할 수도 있다. Example Bayes err : 2% train err : 3% test err : 3.5% 이 경우에는 Bayes err와 train err의 차이가 1%인 반면에 train과 test err 차이가 0.5%이기 때문에 bias를 줄이는 것을 목표로 해야된다. Bayes err : 2% train err : 3% test err : 5% 이 경우에는 Bayes err와 train err의 차이가 1%, train과 test err 차이가 2%이므로 variance를 줄이기 위해 노력해야함을 알 수 있다.",
-    "tags": "machinelearning",
+    "tags": "strategy machinelearning",
     "url": "/machinelearning/2021/01/23/ML-bayeserror.html"
   },{
     "title": "OSI Model",
@@ -69,9 +69,9 @@ var tipuesearch = {"pages": [{
     "tags": "network communication",
     "url": "/communication/2021/01/22/CM-osi.html"
   },{
-    "title": "Classification Evaluation Metrices",
+    "title": "Classification Evaluation Metrics",
     "text": "Precision &amp; Recall Precision 머신러닝에서 분류 작업을 할 때, Precision은 Positive로 분류된 element 중 실제 Positive element의 비율이다. In a classification task, the Precision for a class is the number of true positives divided by the total number of elements labelled as belonging to the positive class Recall Recall은 실제 Positive class 중 positive로 올바르게 분류된 것의 비율이다. Recall is defined as the number of true positives divided by the total number of elements that actually belong to the positive class Precision-Recall Trade-off 이상적인 시나리오는 Precision과 Recall이 둘 다 1.0인 경우이다. 하지만 대부분의 상황에서 이 두가지가 모두 만점을 받게 하긴 어렵다. 왜냐하면 대부분의 데이터셋에는 noise가 존재하기 때문에 완벽하게 분리하기란 어렵다. 따라서 모델은 Threshold를 사용하여 Precision과 Recall의 trade-off를 반영하여 선택되어야 한다. Accuracy Precision과 Recall은 Positive 상황만 고려한다. 하지만 False 상황 또한 고려할 수 있는 요소이다. Accuracy는 False 상황을 고려하여 계산된다. 이를 통해 False와 True가 모두 고려된 평가를 할 수 있다. Accuracy는 가장 직관적으로 모델의 성능을 나타내는 지표이다. 그러나, Bias of Domain이 고려되어야 하므로 이를 보완하는 지표가 필요하다. 만약 입력 데이터가 불균형 데이터라면 Accuracy는 올바른 평가를 내지 못한다. 즉, 데이터가 균형적일때 Accuracy는 좋은 선택이 된다. F1 Score F1 Score는 Precision과 Recall의 harmonic mean(조화평균)이다. F1 Score는 불균형 데이터에서도 준수한 성능 측정을 보여준다. 왜냐하면 사용되는 조화평균이 Precision과 Recall 사이의 불균형을 잘 보정해주기 때문이다.",
-    "tags": "machinelearning",
+    "tags": "strategy machinelearning",
     "url": "/machinelearning/2021/01/20/ML-ClEvMet.html"
   },{
     "title": "Compiler, Linker, Builder",

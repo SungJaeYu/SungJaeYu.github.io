@@ -4,6 +4,8 @@ layout: post
 subtitle: 베이즈 에러
 categories:
   - machinelearning
+tag:
+  - strategy
 comments: true
 ---
 

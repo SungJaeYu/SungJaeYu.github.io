@@ -1,10 +1,10 @@
 ---
 layout: list
-title: MachineLearning
+title: Machine Learning
 slug: machinelearning
 menu: true
-submenu: false
-order: 4
+submenu: true
+order: 5
 description: >
   Machine Learning
 ---

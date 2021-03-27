@@ -1,10 +1,10 @@
 ---
 layout: list
-title: ComputerScience
+title: Computer Science
 slug: computerscience
 menu: true
-submenu: false
-order: 5
+submenu: true
+order: 6
 description: >
   Computer Science
 ---

@@ -3,8 +3,8 @@ layout: list
 title: Communication
 slug: communication
 menu: true
-submenu: false
-order: 3
+submenu: true
+order: 4
 description: >
   Communication
 ---

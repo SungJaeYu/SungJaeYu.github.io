@@ -7,5 +7,4 @@ order: 2
 
 ## About
 
-Blog For
-My Computer Science Study of Algorithms, Machine Learning, Computer Network, etc...
+Blog For My CS Study

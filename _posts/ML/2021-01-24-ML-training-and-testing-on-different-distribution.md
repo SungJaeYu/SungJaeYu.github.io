@@ -3,6 +3,8 @@ title: Training and Testing on different distribution
 layout: post
 categories:
   - machinelearning
+tag:
+  - strategy
 comments: true
 subtitle: 다른 분포를 가진 데이터 학습 및 검증
 ---

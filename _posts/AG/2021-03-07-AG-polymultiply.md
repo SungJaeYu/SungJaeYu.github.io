@@ -4,6 +4,8 @@ layout: post
 subtitle: 다항식 곱 알고리즘
 categories:
   - algorithm
+tags:
+  - dc
 comments: true
 ---
 

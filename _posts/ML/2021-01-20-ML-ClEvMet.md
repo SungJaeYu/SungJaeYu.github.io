@@ -1,9 +1,11 @@
 ---
-title: Classification Evaluation Metrices
+title: Classification Evaluation Metrics
 layout: post
 subtitle: 분류성능평가지표
 categories:
   - machinelearning
+tag:
+  - strategy
 comments: true
 ---
 

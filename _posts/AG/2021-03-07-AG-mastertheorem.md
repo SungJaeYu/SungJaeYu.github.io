@@ -1,9 +1,11 @@
 ---
-title: "[Divide & Conquer]Master Theorem"
+title: "[Divide & Conquer] Master Theorem"
 layout: post
 subtitle: Master Theorem
 categories:
   - algorithm
+tags:
+  - dc
 comments: true
 ---
 

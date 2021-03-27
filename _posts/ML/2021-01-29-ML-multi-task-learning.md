@@ -3,6 +3,8 @@ title: Multi-task Learning
 layout: post
 categories:
   - machinelearning
+tag:
+  - strategy
 comments: true
 subtitle: Multi-task 학습
 ---

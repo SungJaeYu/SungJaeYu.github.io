@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SungJae Yu's Blog</title>
-    <description>For Study
+    <title>SJ Yu - BLOG</title>
+    <description>For My Study Journal
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Mar 2021 15:38:14 +0900</pubDate>
-    <lastBuildDate>Sun, 07 Mar 2021 15:38:14 +0900</lastBuildDate>
+    <pubDate>Sat, 27 Mar 2021 15:30:12 +0900</pubDate>
+    <lastBuildDate>Sat, 27 Mar 2021 15:30:12 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -114,13 +114,15 @@ O(n^(log_2(3)) = O(n^(1.58))이다.&lt;/p&gt;
         <link>http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html</link>
         <guid isPermaLink="true">http://localhost:4000/algorithm/2021/03/07/AG-polymultiply.html</guid>
         
+        <category>dc</category>
+        
         
         <category>algorithm</category>
         
       </item>
     
       <item>
-        <title>[Divide &amp; Conquer]Master Theorem</title>
+        <title>[Divide &amp; Conquer] Master Theorem</title>
         <description>&lt;h1 id=&quot;master-theorem&quot;&gt;Master Theorem&lt;/h1&gt;
 
 &lt;p&gt;Master Theorem은 Divide &amp;amp; Conquer(분할정복)에 사용되는 Theorem(정리)이다.&lt;br /&gt;
@@ -195,6 +197,8 @@ log_b(n) * O(n^d)이므로 결국 O(log(n) * n^d)&lt;/p&gt;
         <pubDate>Sun, 07 Mar 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/algorithm/2021/03/07/AG-mastertheorem.html</link>
         <guid isPermaLink="true">http://localhost:4000/algorithm/2021/03/07/AG-mastertheorem.html</guid>
+        
+        <category>dc</category>
         
         
         <category>algorithm</category>
@@ -779,6 +783,8 @@ x-lay 이미지 모델에 사용할 수 있다.&lt;br /&gt;
         <link>http://localhost:4000/machinelearning/2021/01/29/ML-transfer-learning.html</link>
         <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/29/ML-transfer-learning.html</guid>
         
+        <category>strategy</category>
+        
         
         <category>machinelearning</category>
         
@@ -822,6 +828,8 @@ multi-task learning이 도움이 된다는 건 확실하다.&lt;/p&gt;
         <pubDate>Fri, 29 Jan 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/machinelearning/2021/01/29/ML-multi-task-learning.html</link>
         <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/29/ML-multi-task-learning.html</guid>
+        
+        <category>strategy</category>
         
         
         <category>machinelearning</category>
@@ -998,6 +1006,8 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
         <link>http://localhost:4000/machinelearning/2021/01/24/ML-training-and-testing-on-different-distribution.html</link>
         <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/24/ML-training-and-testing-on-different-distribution.html</guid>
         
+        <category>strategy</category>
+        
         
         <category>machinelearning</category>
         
@@ -1035,6 +1045,8 @@ Train dev set의 error를 확인하면 이 error 차이가 &lt;strong&gt;varianc
         <pubDate>Sat, 23 Jan 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/machinelearning/2021/01/23/ML-bayeserror.html</link>
         <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/23/ML-bayeserror.html</guid>
+        
+        <category>strategy</category>
         
         
         <category>machinelearning</category>
@@ -1172,7 +1184,7 @@ Fiber의 가격이 내려감에 따라 Copper Cable의 사용도가 낮아졌다
       </item>
     
       <item>
-        <title>Classification Evaluation Metrices</title>
+        <title>Classification Evaluation Metrics</title>
         <description>&lt;h2 id=&quot;precision--recall&quot;&gt;Precision &amp;amp; Recall&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/study/ML/Precisionrecall.svg&quot; alt=&quot;Precision &amp;amp; Recall&quot; /&gt;&lt;/p&gt;
@@ -1222,6 +1234,8 @@ divided by the total number of elements that actually belong to the positive cla
         <pubDate>Wed, 20 Jan 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/machinelearning/2021/01/20/ML-ClEvMet.html</link>
         <guid isPermaLink="true">http://localhost:4000/machinelearning/2021/01/20/ML-ClEvMet.html</guid>
+        
+        <category>strategy</category>
         
         
         <category>machinelearning</category>

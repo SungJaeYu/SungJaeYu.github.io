@@ -3,6 +3,8 @@ title: Transfer Learning
 layout: post
 categories:
   - machinelearning
+tag:
+  - strategy
 comments: true
 subtitle: 전이 학습
 ---
