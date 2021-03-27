@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Strategy
-slug: strategy
+title: ML
+slug: ml
 category: machinelearning
 menu: false
-order: 4
+order: 1
 ---
