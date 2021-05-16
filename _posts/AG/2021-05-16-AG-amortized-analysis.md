@@ -5,6 +5,7 @@ subtitle: 분할상환분석
 categories:
   - algorithm
 comments: true
+use_math: true
 ---
 
 # Amortized Analysis
@@ -25,13 +26,23 @@ Dynamic Array의 PushBack을 예로들면
 
 ci = i 번째 pushback의 cost
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=c_{i}&space;=&space;1&space;&plus;&space;\left\{\begin{matrix}&space;i&space;-&space;1&space;&&space;if\&space;i-1\&space;is\&space;a\&space;power\&space;of\&space;2\\&space;0&space;&&space;otherwise&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?c_{i}&space;=&space;1&space;&plus;&space;\left\{\begin{matrix}&space;i&space;-&space;1&space;&&space;if\&space;i-1\&space;is\&space;a\&space;power\&space;of\&space;2\\&space;0&space;&&space;otherwise&space;\end{matrix}\right." title="c_{i} = 1 + \left\{\begin{matrix} i - 1 & if\ i-1\ is\ a\ power\ of\ 2\\ 0 & otherwise \end{matrix}\right." /></a>
+$$
+c_{i} = 1 + \left\{\begin{matrix} i - 1 & if\ i-1\ is\ a\ power\ of\ 2\\ 0 & otherwise \end{matrix}\right.
+$$
 
-즉 우리는  
-<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\sum_{i&space;=&space;1}^{n}c_{i}}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\sum_{i&space;=&space;1}^{n}c_{i}}{n}" title="\frac{\sum_{i = 1}^{n}c_{i}}{n}" /></a>  
+즉 우리는
+
+$$
+\frac{\sum_{i = 1}^{n}c_{i}}{n}
+$$
+
 를 구하면 된다.
 
-이는 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{n&space;&plus;&space;\sum_{j&space;=&space;1}^{\left&space;\lfloor&space;log_{2}(n-1)&space;\right&space;\rfloor}2^{^{j}}}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{n&space;&plus;&space;\sum_{j&space;=&space;1}^{\left&space;\lfloor&space;log_{2}(n-1)&space;\right&space;\rfloor}2^{^{j}}}{n}" title="\frac{n + \sum_{j = 1}^{\left \lfloor log_{2}(n-1) \right \rfloor}2^{^{j}}}{n}" /></a>
+이는
+
+$$
+\frac{n + \sum_{j = 1}^{\left \lfloor log_{2}(n-1) \right \rfloor}2^{j}}{n}
+$$
 
 결국 O(n) / n 이므로 O(1)이 된다.
 
@@ -58,13 +69,19 @@ e 삽입, e 저축, a 저축
 
 Potential function을 정의한다. 여기선 간단하게 p(ht)로 정의하겠다.
 p(h0) = 0, p(ht) >= 0 조건을 가진다.  
-operation t의 Amoritized Cost는  
-<a href="https://www.codecogs.com/eqnedit.php?latex=c_{t}&space;&plus;&space;p(h_{t})&space;-&space;p(h_{t&space;-&space;1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?c_{t}&space;&plus;&space;p(h_{t})&space;-&space;p(h_{t&space;-&space;1})" title="c_{t} + p(h_{t}) - p(h_{t - 1})" /></a>
+operation t의 Amoritized Cost는
+
+$$
+c*{t} + p(h_{t}) - p(h_{t-1})
+$$
 
 만약 ct가 작으면 p(ht) - p(ht-1)은 증가하고, ct가 크면 p(ht) - p(ht-1)은 감소해야 한다.
 
-amortized cost의 합은  
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{i=1}^{n}(c_{i}&space;&plus;&space;p(h_{i})&space;-&space;p(h_{i&space;-&space;1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}(c_{i}&space;&plus;&space;p(h_{i})&space;-&space;p(h_{i&space;-&space;1}))" title="\sum_{i=1}^{n}(c_{i} + p(h_{i}) - p(h_{i - 1}))" /></a>
+amortized cost의 합은
+
+$$
+\sum_{i=1}^{n}(c_{i} + p(h_{i}) - p(h_{i-1}))
+$$
 
 이는 c1 + p(h1) - p(h0) + c2 + p(h2) - p(h1) ... cn + p(hn) - p(hn-1)이므로  
 p(hn) - p(h0) + sum of n operation이다.
