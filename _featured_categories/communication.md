@@ -4,7 +4,7 @@ title: Communication
 slug: communication
 menu: true
 submenu: true
-order: 4
+order: 3
 description: >
   Communication
 ---

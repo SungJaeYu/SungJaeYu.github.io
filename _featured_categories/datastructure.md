@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Data Structure
-slug: datastructure
+title: Reinforcement Learning
+slug: rl
 menu: true
 submenu: true
-order: 3
+order: 4
 description: >
-  Data Structure
+  Reinforcement Learning
 ---
