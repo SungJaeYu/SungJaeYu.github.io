@@ -1,5 +1,5 @@
 ---
-title: "[Tree] 트리 탐색 순서"
+title: Tree Order
 layout: post
 subtitle: 트리 탐색 순서
 categories:

@@ -59,8 +59,8 @@ vvs:
     # delicious:       <username>
     # stumbleupon:     <username>
     # paypal:          <username>
-    email:           ysj8781@gmail.com
-    rss:             https://SungJaeYu.github.io/feed.xml
+    #email:           ysj8781@gmail.com
+    #rss:             https://SungJaeYu.github.io/feed.xml
 
 # Another author
 author2:
