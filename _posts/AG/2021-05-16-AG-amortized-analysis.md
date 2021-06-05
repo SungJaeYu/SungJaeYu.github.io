@@ -18,9 +18,7 @@ Worst Case 즉, Resize 해야되는 상황에서는 O(n)
 일반적인 상황에서는 O(1) 이다.  
 
 Amortized Cost는 주어진 n번의 연산에서  
-$$
-\frac{cost(n-operations)}{n}
-$$ 이다.
+<img src="https://latex.codecogs.com/gif.latex?\frac{cost(n-operations)}{n}\" title="\frac{cost(n-operations)}{n}\" /> 이다.
 
 ## Aggregate Method
 
@@ -28,23 +26,17 @@ Dynamic Array의 PushBack을 예로들면
 
 ci = i 번째 pushback의 cost  
 
-$$
-c_{i} = 1 + \left{\begin{matrix} i - 1 & if\ i-1\ is\ a\ power\ of\ 2\ 0 & otherwise \end{matrix}\right.
-$$
+<img src="https://latex.codecogs.com/gif.latex?c_{i}&space;=&space;1&space;&plus;&space;\left\{\begin{matrix}&space;i&space;-&space;1&space;&&space;if\&space;i-1\&space;is\&space;a\&space;power\&space;of\&space;2\\0&space;&&space;otherwise&space;\end{matrix}\right." title="c_{i} = 1 + \left\{\begin{matrix} i - 1 & if\ i-1\ is\ a\ power\ of\ 2\\0 & otherwise \end{matrix}\right." />
 
 즉 우리는  
 
-$$
-\frac{\sum_{i = 1}^{n}c_{i}}{n}
-$$
+<img src="https://latex.codecogs.com/gif.latex?\frac{\sum_{i&space;=&space;1}^{n}c_{i}}{n}" title="\frac{\sum_{i = 1}^{n}c_{i}}{n}" />
 
 를 구하면 된다.  
 
 이는  
 
-$$
-\frac{n + \sum_{j = 1}^{\left \lfloor log_{2}(n-1) \right \rfloor}2^{j}}{n}
-$$  
+<img src="https://latex.codecogs.com/gif.latex?\frac{n&space;&plus;&space;\sum_{j&space;=&space;1}^{\left&space;\lfloor&space;log_{2}(n-1)&space;\right&space;\rfloor}2^{j}}{n}" title="\frac{n + \sum_{j = 1}^{\left \lfloor log_{2}(n-1) \right \rfloor}2^{j}}{n}" />
 
 결국 O(n) / n 이므로 O(1)이 된다.  
 
@@ -70,21 +62,17 @@ e 삽입, e 저축, a 저축
 ## Physicist's Method
 
 Potential function을 정의한다. 여기선 간단하게 p(ht)로 정의하겠다.
-$$p(h_{0}) = 0,\ p(h_{t}) >= 0$$ 조건을 가진다.
+<img src="https://latex.codecogs.com/gif.latex?p(h_{0})&space;=&space;0,\&space;p(h_{t})&space;>=&space;0" title="p(h_{0}) = 0,\ p(h_{t}) >= 0" /> 조건을 가진다.
 operation t의 Amoritized Cost는
 
-$$
-c_{t} + p(h_{t}) - p(h_{t-1})
-$$
+<img src="https://latex.codecogs.com/gif.latex?c_{t}&space;&plus;&space;p(h_{t})&space;-&space;p(h_{t-1})" title="c_{t} + p(h_{t}) - p(h_{t-1})" />
 
 만약 ct가 작으면 p(ht) - p(ht-1)은 증가하고, ct가 크면 p(ht) - p(ht-1)은 감소해야 한다.
 왜냐하면, 이건 amortized된 값이므로 모든값이 같은 값을 가져야한다. 그러므로 연산량이 많은 경우에는 p가 낮아야한다.  
   
 amortized cost의 합은
 
-$$
-\sum_{i=1}^{n}(c_{i} + p(h_{i}) - p(h_{i-1}))
-$$  
+<img src="https://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}(c_{i}&space;&plus;&space;p(h_{i})&space;-&space;p(h_{i-1}))" title="\sum_{i=1}^{n}(c_{i} + p(h_{i}) - p(h_{i-1}))" />
 
 이는 c1 + p(h1) - p(h0) + c2 + p(h2) - p(h1) ... cn + p(hn) - p(hn-1)이므로  
 p(hn) - p(h0) + sum of n operation이다.  
