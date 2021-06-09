@@ -1,7 +1,7 @@
 ---
-title: "[RL] Value Function"
+title: "[RL] 2. Value Function"
 layout: post
-subtitle: Reinforcement Learning
+subtitle: Value Function
 categories:
   - reinforcementlearning
 comments: true
