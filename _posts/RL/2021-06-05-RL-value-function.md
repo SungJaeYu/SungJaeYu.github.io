@@ -26,3 +26,7 @@ comments: true
 하지만 상태와 상관없이 행동에 관해서만 reward를 고려할 경우에는
 <img src="https://latex.codecogs.com/gif.latex?q(a)&space;=&space;E[R_{t}\&space;|\&space;A_{t}&space;=a&space;]" title="q(a) = E[R_{t}\ |\ A_{t} =a ]" />
 로 표기한다.
+
+여기서 <img src="https://latex.codecogs.com/gif.latex?G_{t}" title="G_{t}" />
+는 현재 t에서의 이득으로, 이후 시간(t+1, ...., T)의 Reward를 가산한 값이다.   
+하지만 이 부분의 계산은 "4. Task 종류"를 참고하기 바란다.
