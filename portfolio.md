@@ -66,4 +66,5 @@ SungJae Yu(유승재)
   - Proceeding ~
 - Reinforcement Learning Specialization
   - Fundamentals of Reinforcement Learning
+  - Sample-based Learning Methods
   - Proceeding ~
