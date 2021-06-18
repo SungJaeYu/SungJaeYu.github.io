@@ -63,6 +63,7 @@ SungJae Yu(유승재)
   - Proceeding ~
 - Data Structures and Algorithm Specialization
   - Algorithm Toolbox
+  - Data Structures
   - Proceeding ~
 - Reinforcement Learning Specialization
   - Fundamentals of Reinforcement Learning
