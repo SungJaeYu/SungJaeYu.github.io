@@ -1,5 +1,12 @@
 ---
 title: "[Pytorch] 기본 사용법"
+layout: post
+categories:
+  - python
+tag:
+  - pytorch
+comments: true
+subtitle: pytorch basic
 ---
 
 # Tensor 생성
